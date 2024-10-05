@@ -5,40 +5,42 @@
         "chain": "89",
         "title": "Victionary - Everything About Viction",
         "description": "Comphresion detail and learn about Viction and there ecosystem",
-        "image": "https://symphony.is/-next/image?url=https%3A%2F%2Fprod-api.symphony.is%2Fassets%2Fartboard-1-29-5.webp&w=3840&q=75"
+        "image": "https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/assets/cover.png"
     },
     "quests": [
         {
             "path": "02_vrrf/01_deploying_a_random_dice",
             "type": "deployment",
-            "bytecode": "0x160d47cfb2f6fffa3868150476e03c95cd5ed89542233f6e1578799ec44afcdb"
+            "bytecode": "0x8efa2f00aa36cb68760cc814ad72249396b47b4ef5df11dbac8f0785bee9a5c6"
         },
         {
             "path": "01-deploy-your-first-token/02_roll_dice_on_onchain",
             "type": "transaction",
-            "args": [
-                "Vitalik"
-            ],
             "abi": [
                 {
-                    "inputs": [
+                    "inputs": [],
+                    "name": "roll",
+                    "outputs": [
                         {
-                            "internalType": "string",
-                            "name": "-name",
-                            "type": "string"
+                            "internalType": "uint8",
+                            "name": "",
+                            "type": "uint8"
                         }
                     ],
-                    "name": "set",
-                    "outputs": [],
                     "stateMutability": "nonpayable",
                     "type": "function"
                 }
             ]
         },
         {
-            "path": "02-tokens-using-openzeppelin",
+            "path": "content/03_vrc25/02_deploying_a_vrc_25_token",
             "type": "deployment",
-            "bytecode": "0xb699d754c71a3a0e23e2fdd1a18a0a42cfe40eb8f28851d8d15b2f7fbf88b085"
+            "bytecode": "0x70b152e863b57d3c92ddbe556e0228a91ecc066d3e222fdb0387b214612e8b3e"
+        },
+        {
+            "path": "content/04_vrc_725/02_deploying_vrc_725",
+            "type": "deployment",
+            "bytecode": ""
         }
     ]
 }
