@@ -1,0 +1,44 @@
+{
+    "metadata": {
+        "owner": "5208980",
+        "name": "pol-template",
+        "chain": "656476",
+        "title": "Solidity Starter (POL Template)",
+        "description": "This is a template for creating a new learn path",
+        "image": "https://symphony.is/_next/image?url=https%3A%2F%2Fprod-api.symphony.is%2Fassets%2Fartboard-1-29-5.webp&w=3840&q=75"
+    },
+    "quests": [
+        {
+            "path": "01_deploy_your_first_token/05_deploy",
+            "type": "deployment",
+            "bytecode": "0x160d47cfb2f6fffa3868150476e03c95cd5ed89542233f6e1578799ec44afcdb"
+        },
+        {
+            "path": "01_deploy_your_first_token/06_set",
+            "type": "transaction",
+            "args": [
+                "Vitalik"
+            ],
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "_name",
+                            "type": "string"
+                        }
+                    ],
+                    "name": "set",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                }
+            ]
+        },
+        {
+            "path": "02_tokens_using_openzeppelin",
+            "type": "deployment",
+            "bytecode": "0xb699d754c71a3a0e23e2fdd1a18a0a42cfe40eb8f28851d8d15b2f7fbf88b085"
+        }
+    ]
+}
