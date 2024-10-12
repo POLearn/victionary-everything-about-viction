@@ -10,20 +10,19 @@ This uncertainty impacts user experiences, particularly in financial transaction
 
 Ultimately, both consensus mechanisms offer unique benefits and challenges, but guaranteed finality is a crucial factor for improving blockchain usability.
 
-## Consensus Mechanism
+Here’s a table outlining the key differences between **Proof of Stake (PoS)** and **Proof of Work (PoW)**:
 
-**Viction** employs a unique **_Proof-of-Stake Voting (PoSV)_** consensus mechanism that combines robust security features with high transaction efficiency. The consensus process is designed to ensure fairness and reliability while maintaining decentralization. Here’s how it works:
+| **Aspect**                  | **Proof of Work (PoW)**                                 | **Proof of Stake (PoS)**                               |
+|-----------------------------|---------------------------------------------------------|--------------------------------------------------------|
+| **Mechanism**                | Miners solve complex mathematical problems to validate transactions and add blocks. | Validators are chosen to create new blocks based on the amount of cryptocurrency they "stake." |
+| **Energy Consumption**       | High energy consumption due to the computational work required for mining. | Low energy consumption since no complex computations are needed. |
+| **Hardware Requirement**     | Requires specialized hardware (e.g., ASICs, GPUs) for mining. | No specialized hardware needed; relies on staking coins. |
+| **Decentralization**         | Can be centralized by large mining farms with massive computational power. | More decentralized, as staking reduces the advantage of having powerful hardware. |
+| **Security Model**           | Secured by the computational difficulty and energy cost of mining, making attacks expensive. | Secured by the economic stake of validators, as they are penalized (slashed) for malicious actions. |
+| **Block Creation**           | Miners compete to solve puzzles, and the first to solve it gets to add the block. | Validators are selected randomly (often weighted by stake) to propose and validate blocks. |
+| **Rewards**                  | Mining rewards are given to the first miner to solve the puzzle. | Validators receive rewards based on their staked amount and participation in block validation. |
+| **51% Attack Resistance**    | Vulnerable if a single entity controls 51% of the mining power. | Vulnerable if a single entity controls 51% of the staked tokens, but penalties discourage this. |
+| **Environmental Impact**     | High, due to energy-intensive mining.                   | Low, as validation requires minimal energy.             |
+| **Adoption**                 | Used by Bitcoin, Ethereum (before the merge), and other older blockchains. | Used by newer blockchains like Ethereum 2.0 (post-merge), Cardano, and Polkadot. |
 
-1. **🛠️ Masternode Participation**: Viction operates a network of **150 Masternodes**, where token holders can stake a minimum of **50,000 VIC** tokens to become **Masternode candidates**.
-
-2. **🗳️ Voting and Selection**: Token holders actively participate in the governance process by voting for **Masternode candidates**. The candidates receiving the most votes are elected as **Masternodes**.
-
-3. **🔄 Block Creation and Double Validation**: Once elected, Masternodes take turns generating blocks in a **round-robin** manner. To enhance security, each block creation is verified by another randomly selected Masternode through a process called **_double validation_**.
-
-4. **⚡ Rapid Finality**: This innovative consensus mechanism allows Viction to achieve impressive performance, processing up to **2,000 transactions per second (TPS)** with a **block confirmation time** of just **2 seconds**.
-
-The **PoSV** consensus algorithm not only optimizes transaction throughput but also reinforces the network’s security, making **Viction** a reliable platform for decentralized applications and Web3 projects. 
-
-### Enhanced Security and Scalability
-
-By leveraging double validation, Viction addresses common challenges faced by traditional proof-of-stake systems, such as potential collusion and nothing-at-stake attacks. This innovative approach ensures a high level of trust within the network, fostering a secure environment for users and developers alike. With Viction's ability to scale efficiently while maintaining security, the platform is well-equipped to support a wide array of applications, from finance to gaming and beyond. As more developers and projects join the Viction ecosystem, the network's potential for growth and innovation continues to expand, paving the way for the future of decentralized technology.
+Viction uses a special type of PoS called PoSV, which we'll cover in the next section.
