@@ -30,3 +30,5 @@ contract Dice {
 ```
 
 Here, we can define the **VRRF** and place it in the constructor: `IVRRF public immutable vrrf;`. Once the contract is compiled, depending on the Viction network you are deploying to, you'll need to pass the address. For this guide, we'll be deploying to Viction Testnet (89). Details to add to the testnet can be found [here](https://docs.viction.xyz/developer-guide/deploy-on-viction/viction-testnet). Afterward, we can use the testnet **VRRF** (`0xDb14c007634F6589Fb542F64199821c3308A9d92`) to define it in the Dice contract.
+
+> To deploy the contract for submission. Compile the contract with **version 0.8.19**. If you need reference to what the contract should look like, you can check this contract on [Viction testnet](https://testnet.vicscan.xyz/address/0x442c9b1B3058944A71a4B4DC67805532348791DE)

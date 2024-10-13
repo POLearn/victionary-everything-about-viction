@@ -19,3 +19,5 @@ This data decodes to a roll value of 2. Additionally, you can view the raw value
 VRRF (Verifiable Random Function) offers a robust solution for generating verifiable random numbers on the Viction. Its seamless integration and on-chain processing capabilities make it an great for applications such as games, distributing tasks, or minting NFTs, ensuring reliable and unbiased randomness.
 
 By leveraging VRRF, smart contracts can obtain a pseudo-random `bytes32` value, which can be easily converted to a `uint256`. This conversion is perfect for on-chain randomness, providing a cost-effective and secure method within a smart contract. VRRF's reliability and efficiency make it a valuable tool for any blockchain application requiring dependable random number generation.
+
+> For this submission, provide the transaction of the invokation of the `roll` method in the Dice deployed on Viction.

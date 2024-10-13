@@ -39,3 +39,5 @@ You can enable gasless transactions for your VRC25 token by deploying the token 
 If you take call `tokens()`. It will return the entire list of applied tokens available for the Issuer. The applied token address from before should be there.
 
 ![Token List](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/vic/main/exploring-viction-ecosystem/deep-dive-viction-issuer/assets/token-list.png)
+
+>

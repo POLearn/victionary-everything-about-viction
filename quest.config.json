@@ -33,14 +33,33 @@
             ]
         },
         {
-            "path": "content/03_vrc25/02_deploying_a_vrc_25_token",
+            "path": "content/03_vrc_25/02_deploying_a_vrc_25_token",
             "type": "deployment",
             "bytecode": "0x70b152e863b57d3c92ddbe556e0228a91ecc066d3e222fdb0387b214612e8b3e"
         },
         {
             "path": "content/04_vrc_725/02_deploying_vrc_725",
             "type": "deployment",
-            "bytecode": ""
+            "bytecode": "0x686e6b19a12520a8312df641cd08a945aa7d7c01504ad80139545957dcac8da9"
+        },
+        {
+            "path": "content/05_vic_issuer/01_applying_vrc_token_with_issuer",
+            "type": "transaction",
+            "contract": "0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee",
+            "abi": [{
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "token",
+                        "type": "address"
+                    }
+                ],
+                "name": "apply",
+                "outputs": [],
+                "payable": true,
+                "stateMutability": "payable",
+                "type": "function"
+            }]
         }
     ]
 }

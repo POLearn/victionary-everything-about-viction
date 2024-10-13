@@ -15,6 +15,11 @@ contract NFTMock is VRC725Enumerable {
 ```
 
 The `NFTMock` contract inherits from `VRC725Enumerable`, leveraging the VRC725 standard with added enumerable capabilities. The contract initialization follows a pattern similar to ERC721, but for VRC725, it uses `__VRC725_init` for proper setup. After deployment, the ABI will include all ERC721 methods, enabling minting, transferring, approving, with the addition permit functionalities.
+
 ## Setting up for VRC Gasless
 
 Once the VRC725 token has been deployed, developers can set up their NFT contract on Viction for gasless transactions, similar to VRC25 tokens. An in-depth guide is available [here](https://dapp.solide0x.tech/learn/exploring-viction-ecosystem). Essentially, the contract must be registered with the Viction Issuer contract, and the contract owner needs to deposit 10+ $VIC to support and sponsor gas fees for their users.
+
+> For this submission, deploy the `VRC725` contract called, `NFTMock` providing it the name of "POL VRC725", "POL", and Viction testnet issuer, `0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee`.
+
+> Make sure to compile with **version 0.8.19**
