@@ -1,5 +1,10 @@
-## Example Smart Contract: Dice Game
-Below is an example of a Dice game smart contract that uses VRRF to roll a dice called `Dice.sol`. 
+## Dice Game
+
+Let’s look at a practical example of using Viction's VRRF in a smart contract. In this scenario, we'll create a Dice smart contract that allows users to roll a virtual dice and receive a random outcome between 1 and 6 on chain. This application hopes to demonstrates how VRRF ensures that each roll is fair and verifiable, providing a manipulation-resistant source of randomness on-chain. By integrating VRRF into the smart contract, we can guarantee that every player experiences a truly random dice roll.
+
+### Code 
+
+The source code can be loaded in our IDE with this [Github source](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/Dice.sol)
 
 ```solidity
 contract Dice {
@@ -29,6 +34,17 @@ contract Dice {
 }
 ```
 
-Here, we can define the **VRRF** and place it in the constructor: `IVRRF public immutable vrrf;`. Once the contract is compiled, depending on the Viction network you are deploying to, you'll need to pass the address. For this guide, we'll be deploying to Viction Testnet (89). Details to add to the testnet can be found [here](https://docs.viction.xyz/developer-guide/deploy-on-viction/viction-testnet). Afterward, we can use the testnet **VRRF** (`0xDb14c007634F6589Fb542F64199821c3308A9d92`) to define it in the Dice contract.
+The `roll` function will simulates a dice roll within the smart contract. When executed, it captures the current block number and creates a salt from the hash of the previous block, enhancing randomness. It then calls the VRRF that is defined to obtain a pseudo-random number, which is converted to a value between 1 and 6 by taking the modulus and adding 1.
 
-> To deploy the contract for submission. Compile the contract with **version 0.8.19**. If you need reference to what the contract should look like, you can check this contract on [Viction testnet](https://testnet.vicscan.xyz/address/0x442c9b1B3058944A71a4B4DC67805532348791DE)
+Similarly `rollWithSalt` function allows users to roll the dice using a custom salt, enabling controlled randomness. This is useful for applications requiring predictable outcomes when the same salt is used.
+
+### Deploying on Viction Testnet
+
+To get started, compile the Dice smart contract using Solidity version 0.8.19. If you’d like to see a reference, you can view an example deployment on the Viction Testnet.
+
+When deploying on the Viction network, make sure to specify the network address. In this guide, we’ll deploy to Viction Testnet (chain ID 89). You can find more setup details here. In the contract’s constructor, use the Testnet VRRF address (0xDb14c007634F6589Fb542F64199821c3308A9d92) to link the VRRF to your Dice contract.
+
+Congratulations! You've deployed on the Viction Testnet. Switching networks in MetaMask can allow you to test on different testnets or even deploy to the mainnet. Just ensure you have enough VIC tokens to cover the deployment costs.
+
+> ❗**IMPORTANT**
+> Make sure to complete the quest by providing the deployed transaction.

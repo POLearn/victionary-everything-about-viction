@@ -1,6 +1,6 @@
-Looking at the functions of `Dice`, Line 27 `roll()` utilise VRRF and Viction's `block.number`. The process utilizes the `blockhash(block.number - 1)` to introduce unpredictability, enhancing randomness the randomness on-chain. While this is deterministic, the block hash's unpredictability at block creation ensures integrity. Moreover, by incorporating the previous block's hash as a salt, the function further complicates prediction, safeguarding against manipulation and ensuring fairness in random number generation of the dice. To simulates a six-sided dice roll by taking a VRRF result the contract calculates to get a value between 1 and 6. The result is cast to a `uint8` type and returned. Similar the other function `rollWithSalt()` with the purpose to give more control to the roll. 
+### Rolling the on chain Dice
 
-If you want to use an existing contract, load `0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D` into an IDE. Then click on roll and the result should be a value between 1 to 6. Note, that the result will change upon after a few seconds. According to the Viction documentation it is good to note that *VRRF relies on the order of calling transaction, protocols who make use of VRRF must wait for a short period of time (say 8-10 seconds) before displaying random result to end-users to avoid issues related to block re-org.*
+If you haven't deployed a Dice contract in our previouslt, you can want to use an existing contract. Just load `0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D` into an IDE, or use [Solide IDE](https://solide0x.tech/address/89/0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D). Then click on `roll` method and it should execute with a confirmed transacton. Note, that the result will change upon after a few seconds. According to the Viction documentation it is good to note that *VRRF relies on the order of calling transaction, protocols who make use of VRRF must wait for a short period of time (say 8-10 seconds) before displaying random result to end-users to avoid issues related to block re-org.*
 
 ### Debugging the `roll()`
 
@@ -20,4 +20,5 @@ VRRF (Verifiable Random Function) offers a robust solution for generating verifi
 
 By leveraging VRRF, smart contracts can obtain a pseudo-random `bytes32` value, which can be easily converted to a `uint256`. This conversion is perfect for on-chain randomness, providing a cost-effective and secure method within a smart contract. VRRF's reliability and efficiency make it a valuable tool for any blockchain application requiring dependable random number generation.
 
+> ❗**IMPORTANT**
 > For this submission, provide the transaction of the invokation of the `roll` method in the Dice deployed on Viction.
