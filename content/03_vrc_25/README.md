@@ -1,12 +1,12 @@
 ## VRC25
 
-The VRC25 standard introduces a game-changing feature: gasless transactions. This means users no longer need native tokens for transaction fees; instead, they can use VRC25 tokens, simplifying the process and making it more user-friendly, especially for newcomers to the blockchain. A key highlight is that VRC25 allows smart contracts to sponsor transaction fees, enhancing their functionality and demonstrating Viction's focus on user-centric solutions. While retaining the familiar ERC20 structure for compatibility, VRC25 improves the user experience by streamlining token transfers and fee management, making blockchain more accessible and https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/vic for everyone.
-
-## Comparison between VRC25/ERC20 
+In this section, let's introduce the VRC25, extension of token standard  designed to make Viction transactions simpler and more accessible by enabling gasless transfers. This means users no longer need native tokens for transaction fees; instead, they can use VRC25 tokens, simplifying the process and making it more user-friendly, especially for newcomers to the blockchain. A key highlight is that VRC25 allows smart contracts to sponsor transaction fees, enhancing their functionality and demonstrating Viction's focus on user-centric solutions. While retaining the familiar ERC20 structure for compatibility, VRC25 improves the user experience by streamlining token transfers and fee management, making blockchain more accessible.
 
 *For the official overview of the VRC25 specification, take a look at Viction's VRC25 Documentation: [VRC25 Specification](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc25-specification).*
 
-Let's take a look at the specification by examining the `contracts/interfaces/IVRC25.sol` file:
+## Comparison between VRC25/ERC20 
+
+Before going to a pratical application VRC25, let's break down VRC25 and see advantages and disadvantage familiar popular Ethereum standard, **ERC20**. At first glance, the IVRC25 interface in Solidity may look a lot like IERC20, which makes sense, as VRC25 was designed for compatibility and ease of adoption. Take a look at the VRC25 code below:
 
 ```solidity
 interface IVRC25 {

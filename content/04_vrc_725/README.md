@@ -2,6 +2,8 @@
 
 VRC725 is the official standard for Non-Fungible Tokens (NFTs) in the Viction ecosystem, designed to facilitate a wide range of digital and physical asset management applications. Building on the foundation of the widely recognized ERC721 standard, VRC725 introduces enhanced features such as gas-free operations and extended metadata support. This standard provides a streamlined and efficient approach to creating, tracking, and transferring unique tokens, making it the simplest form of NFTs on Viction. By incorporating mechanisms for gasless transactions and maintaining robust security measures, VRC725 ensures a seamless user experience while supporting diverse use cases from virtual collectibles to tangible property ownership.
 
+(https://github.com/BuildOnViction/vrc725/blob/main/contracts/tests/NFTMock.sol)
+
 ## Comparison between VRC725/ERC721 
 
 When examining the relationship between VRC725 and ERC721, it's essential to understand that VRC725 inherits from ERC721. This inheritance means that VRC725 tokens are fundamentally ERC721 tokens, adhering to the [EIP 721 standard](https://eips.ethereum.org/EIPS/eip-721), which ensures compatibility with other Ethereum Virtual Machine (EVM) chains—a significant advantage. However, what truly sets VRC725 apart are the additional features and extensions it incorporates, particularly those defined in the IVRC725 interface.
