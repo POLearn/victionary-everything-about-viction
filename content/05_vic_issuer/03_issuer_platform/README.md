@@ -1,15 +1,32 @@
-If you go back to the VRC25 Token and load the VRC25 token. Lets go Address Y from before, or a different address that has some tokens minted. We can test the gasless, by burning some of the token.
+## Quest - Gasless Burn
 
-Once that been completed, we can take a look at the transaction hash. An gas less burn can used for this resource can be found here: [0xbbd4b30b530093b1e6b1cd169680f389624b0aaf5092cd9b1bd93d106238608d](https://testnet.vicscan.xyz/tx/0xbf8187748ee442c4c2163e6a0e927571145762b19ae96b6d3848cf066f8fb481). From the image transaction in the explorer we can see, the transaction type is **gas sponsored**.
+In this final segment, we’ll experience the Zero Gas Protocol through a gasless minting transaction. By now, you should have minted `100000000000000000000` tokens of your VRC25 token to **Address Y**. Let’s replicate this process, but with a this time, the transaction should incur no gas fees, thanks to the VicIssuer integration.
 
-![Gas Sponsor](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/vic/main/exploring-viction-ecosystem/deep-dive-viction-issuer/assets/gas-sponsor.png)
+Load your VRC25 token into your wallet or IDE, then use **Address Y** to mint `100000000000000000000` tokens again. Unlike before, this action no longer requires gas fees, thanks to the VicIssuer integration, which enables gasless minting, burning, and transferring of tokens.
 
-If you take a look in the address in the explorer or your wallet. The address will still have there entire amount of VIC.
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_mint.png)
 
-![After](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/vic/main/exploring-viction-ecosystem/deep-dive-viction-issuer/assets/after.png)
+After completing the minting, retrieve the transaction hash and review the details in the blockchain explorer. Here's an example of a gasless transaction:  
+[Transaction Example](https://testnet.vicscan.xyz/tx/0xd684697e21af4218d74beb94862746672b30d9e11bc2a9c6ee6eb99d7148a367).  
 
-## Conclusion
+In the explorer, note the transaction type: **Gas Sponsored**.
 
-The VICIssuer platform simplifies the creation and management of VRC25 tokens, making it accessible to users of all technical backgrounds. By leveraging innovative features like gasless transactions and fee sponsorship, VICIssuer enhances user experience and streamlines blockchain interactions. While this guide provides an overview of the key functionalities, the real magic happens under the hood, offering a transparent way to understand how contracts can use sponsored gas to improve user experience. Explore these features further by visiting the [VICIssuer Testnet](https://issuer-testnet.viction.xyz/).
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_gas_sponsor.png)
 
-For a practical example, check out the Gas Zero token used in this guide at the following address: 0xc5632d3194f5337e3b31562b560d3db599769127. You can also verify the successful application of gasless integration on the issuer page.
+After the transaction, check the wallet balance or view the address on the explorer. The VIC balance should remain untouched, confirming that no gas fees were deducted for this action.
+
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_gas_dashboard.png)
+
+> Make sure to submit that transaction to complete the course and mint your POL POAP!
+
+## VicIssuer Platform
+
+This section highlighted the use of the VICIssuer Dashboard for managing token applications and enabling gasless transactions. Beyond its dashboard capabilities, VICIssuer serves as a powerful all-in-one Token Issuance Platform, designed to make token creation and management accessible to everyone. 
+
+By simplifying the technical aspects of token deployment, VICIssuer opens the doors to streamlined tokenization for businesses and individuals alike. The platform automates complex processes, ensuring that even users with no prior blockchain experience can issue and manage tokens with ease. Whether you're a company looking to integrate blockchain into your operations or an individual innovator exploring new opportunities, VICIssuer provides the tools and support needed to create tokens, enhance utility, and build engaging communities without unnecessary technical hurdles.
+
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_platform.png)
+
+## Complete the Quest and Claim Your Reward
+
+To finalize the course, ensure the transaction is submitted and verified. Upon completion, you’ll earn your POL POAP - a token of your achievement.

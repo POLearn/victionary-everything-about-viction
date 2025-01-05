@@ -1,67 +1,70 @@
+# Interacting with VRC25 Using Viem: A Hands-on Guide
 
-## Interacting with VRC25 Using Viem
+In this section, we'll dive into the practical aspects of interacting with VRC25 contracts on the Viction blockchain. We'll utilize Viem, a powerful JavaScript library, to connect to the blockchain and seamlessly interact with smart contracts. 
 
-Welcome! In this guide, we’ll walk you through how to connect and interact with a VRC25 token smart contract using Viem. Viem is a powerful JavaScript library that makes it easy to communicate with Ethereum-compatible blockchains, providing a user-friendly way to work with smart contracts directly from your web application.
+## Installing Viem
 
-To get started with Viem, you’ll first need to install it in your project. Viem is available as an npm package, making it simple to add to any JavaScript or TypeScript project.
+Before we begin, let's ensure we have the necessary tools. Viem is readily available as an npm package. To install it within your project, simply execute the following command in your terminal:
 
 ```bash
 npm install viem
 ```
 
-### Setting Up a Client to Interact and Connect to Viction
+## Connecting to Viction
 
-The next step is to set up a client that will allow you to connect to a Viction. This setup allows developers or users to send transactions, call smart contract functions, and accessing chain data.
-
-Here’s how it looks in code:
+Now, let's establish a connection to the Viction network. We'll utilize Viem's `createPublicClient` function to create a client instance:
 
 ```typescript
 import { createPublicClient, http } from 'viem';
-import { viction, victionTestnet } from 'viem/chains';
+import { victionTestnet } from 'viem/chains'; // Use 'viction' for mainnet
 
 const client = createPublicClient({
-  chain: victionTestnet, // Change to 'viction' for mainnet
+  chain: victionTestnet, 
   transport: http()
 });
 ```
+This client acts as your gateway to the Viction blockchain, enabling you to query chain data, send transactions, and interact with smart contracts.
 
-This client is now ready for you to interact with smart contracts, send transactions, and retrieve blockchain data. You can now begin querying the chain, making calls to the VRC25 contract, or working with other smart contract functions.
+## eading Data from a VRC25 Contract
 
-### Reading Data from a VRC25 Contract
-
-Now that your client is connected, let’s dive into reading data from a VRC25 contract. In this section, we'll show you how to read the balance of a specific address by calling the balance function on a deployed VRC25 contract. Viem makes it simple to interact with contracts by providing a readContract method that we can configure to read any public data on the blockchain.
+Let's demonstrate how to read data from a VRC25 contract using Viem. We'll focus on a common use case: retrieving the token balance of a specific address. 
 
 ```typescript
-import { client } from './client'
-import { vrc25Abi } from './abi'
-import { contract } from './contract'
+import { client } from './client' 
+import { vrc25Abi } from './abi' 
+import { contract } from './contract' 
 
 const data = await publicClient.readContract({
-    address: contract,
-    abi: vrc25Abi,
-    functionName: 'balance',
-    args: ['0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045']
-})
+  address: contract, 
+  abi: vrc25Abi,
+  functionName: 'balanceOf',
+  args: ['0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045'] 
+});
 ```
 
-### Setting up wallet client
+In this code snippet:
 
-To start interacting with a VRC25 contract in viem, we cab use the `createWalletClient`. This setup enables secure access to the wallet within a web application using a custom transport such as Metamask, allowing for sending transactions or signing messages from the browser.
+- `publicClient.readContract()` is a powerful function that allows us to interact with contract functions that don't modify the blockchain's state.
+- We specify the contract address, its ABI (Application Binary Interface), the function name (`balanceOf`), and the address for which we want to retrieve the balance.
+
+## Interacting with the Token
+
+To perform actions that modify the blockchain state (e.g., minting tokens), we need a wallet. Let's create a `walletClient` using Viem:
 
 ```typescript
 import { createWalletClient, custom, http } from 'viem'
 import { privateKeyToAccount } from 'viem/accounts'
-import { viction, victionTestnet } from 'viem/chains'
- 
+import { viction } from 'viem/chains'
+
 export const walletClient = createWalletClient({
-  chain: mainnet,
-  transport: custom(window.ethereum)
-})
+  chain: viction, 
+  transport: custom(window.ethereum) 
+});
 ```
 
-### Interacting with a VRC25 Contract
+This `walletClient` allows us to send transactions and interact with the blockchain securely.
 
-The `writeContract` function in Viem allows us to send transactions to a smart contract, enabling us to perform state-changing operations, like minting new tokens on the VRC25 contract. In this example, we’re using `walletClient.writeContract()` to call the `mint` function. If you run this code, since we connect via Metamask with as our transpot, the transaction confirmation should be made via the Metamask browser and is processed on-chain, and the newly minted tokens are added to the specified address. This approach provides a simple, reusable way to interact with contract functions that require transactions.
+Now, let's use the `writeContract` function to mint new tokens:
 
 ```typescript
 import { walletClient } from './config'
@@ -69,11 +72,14 @@ import { vrc25Abi } from './abi'
 import { contract } from './contract'
 
 await walletClient.writeContract({
-    address: contract,
-    abi: vrc25Abi,
-    functionName: 'mint',
-    args: ["0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045", 69420],
-})
+  address: contract,
+  abi: vrc25Abi,
+  functionName: 'mint',
+  args: ["0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045", 69420],
+});
 ```
 
-With all this, integration with Viem and Viction can integrated in React-based or web base DApp is a powerful way to interact with Viction network. It allows developers every simple setup and low build size whilst efficienct for perform actions like read and writing smart contracts. With just a few lines of code, you can connect your app to the blockchain and use the contract’s ABIs to interact with it. Viem makes it simple to build a Web3 DApp that’s interactive and responsive. This setup helps create smooth user experiences, whether you’re working with tokens or any other smart contract functionality, all within a React app!
+This code sends a transaction to the VRC25 contract, instructing it to mint 69420 tokens and send them to the specified address. 
+
+Viem provides a user-friendly and efficient way to interact with Viction and its smart contracts. By following these steps, you can seamlessly connect to the blockchain, read data, and execute transactions with ease. This empowers you to build innovative applications on the Viction network, all while benefiting from the streamlined transaction experience offered by the VRC25 standard.
+

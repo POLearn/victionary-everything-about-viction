@@ -4,7 +4,7 @@
         "name": "victionary-everything-about-viction",
         "chain": "89",
         "title": "Victionary - Everything About Viction",
-        "description": "Comphresion detail and learn about Viction and there ecosystem",
+        "description": "A comprehensive guide to understanding Viction and its ecosystem, offering insights into its features, functionalities, and tokenization process.",
         "image": "https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/assets/cover.png"
     },
     "quests": [
@@ -14,7 +14,7 @@
             "bytecode": "0x8efa2f00aa36cb68760cc814ad72249396b47b4ef5df11dbac8f0785bee9a5c6"
         },
         {
-            "path": "01-deploy-your-first-token/02_roll_dice_on_onchain",
+            "path": "02_vrrf/02_roll_dice_on_onchain",
             "type": "transaction",
             "abi": [
                 {
@@ -33,12 +33,12 @@
             ]
         },
         {
-            "path": "content/03_vrc_25/02_deploying_a_vrc_25_token",
+            "path": "03_vrc_25/02_deploying_a_vrc_25_token",
             "type": "deployment",
             "bytecode": "0x70b152e863b57d3c92ddbe556e0228a91ecc066d3e222fdb0387b214612e8b3e"
         },
         {
-            "path": "content/03_vrc_25/03_setting_up_for_gasless_tx",
+            "path": "03_vrc_25/03_setting_up_for_gasless_tx",
             "type": "transaction",
             "abi": [
                 {
@@ -68,12 +68,12 @@
             ]
         },
         {
-            "path": "content/04_vrc_725/02_deploying_vrc_725",
+            "path": "04_vrc_725/02_deploying_vrc_725",
             "type": "deployment",
             "bytecode": "0x686e6b19a12520a8312df641cd08a945aa7d7c01504ad80139545957dcac8da9"
         },
         {
-            "path": "content/05_vic_issuer/01_applying_vrc_token_with_issuer",
+            "path": "05_vic_issuer/01_applying_vrc_token_with_issuer",
             "type": "transaction",
             "contract": "0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee",
             "abi": [
@@ -94,18 +94,23 @@
             ]
         },
         {
-            "path": "content/05_vic_issuer/03_issuer_platform",
+            "path": "05_vic_issuer/03_issuer_platform",
             "type": "transaction",
             "abi": [
                 {
                     "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "recipient",
+                            "type": "address"
+                        },
                         {
                             "internalType": "uint256",
                             "name": "amount",
                             "type": "uint256"
                         }
                     ],
-                    "name": "burn",
+                    "name": "mint",
                     "outputs": [
                         {
                             "internalType": "bool",

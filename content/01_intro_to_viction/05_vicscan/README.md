@@ -1,5 +1,7 @@
 # Vicscan
 
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vicscan.png)
+
 Vicscan is a powerful blockchain explorer that offers a user-friendly interface to navigate the Viction ecosystem. With Vicscan, you can easily access a wealth of information, including:
 
 - **Blocks**: Discover details about every block in the Viction blockchain, including their height, time, and associated transactions.

@@ -16,9 +16,7 @@ Fees serve as an incentive for validators (those who help secure the network) to
 ## Why Are Fees Necessary?
 
 1. **Security**: Fees prevent bad actors from overloading the network with unnecessary or spam transactions. By attaching a small cost to every action, only legitimate and valuable transactions are typically submitted.
-
 2. **Network Efficiency**: Fees prioritize transactions. Transactions with higher fees tend to get processed faster, helping maintain the smooth operation of the network.
-
 3. **Incentives for Validators**: Validators (nodes that confirm transactions) are rewarded with these fees for their work in processing and validating transactions. This keeps the decentralized network secure and running efficiently.
 
 ## How Are Fees Calculated on Viction?

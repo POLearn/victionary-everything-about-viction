@@ -8,17 +8,14 @@ The Viction Faucet is a service that provides free VIC tokens on the Viction tes
 
 To access the Viction Faucet, visit the following URL: [Viction Faucet](https://faucet-testnet.viction.xyz/).
 
-### Step 2: Connect Your Wallet
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/faucet_page.png)
 
-1. Click on the **Connect Wallet** button.
-2. Choose your preferred wallet provider (e.g., MetaMask).
-3. Follow the prompts to connect your wallet to the Viction testnet.
+### Step 2: Request VIC Tokens
 
-### Step 3: Request VIC Tokens
+Once your address is input, locate the **Request VIC** button on the faucet page.
 
-1. Once your address is input, locate the **Request VIC** section on the faucet page.
-3. Click the **Request** button.
-
-### Step 4: Check Your Wallet Balance
+### Step 3: Check Your Wallet Balance
 
 Once the transaction is confirmed, the requested VIC tokens will be credited to your wallet. You can check your balance in your wallet interface.
+
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/faucet_success.png)

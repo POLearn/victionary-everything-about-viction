@@ -1,42 +1,57 @@
-## VRC25
+## Unveiling VRC25
 
-In this section, let's introduce the VRC25, extension of token standard  designed to make Viction transactions simpler and more accessible by enabling gasless transfers. This means users no longer need native tokens for transaction fees; instead, they can use VRC25 tokens, simplifying the process and making it more user-friendly, especially for newcomers to the blockchain. A key highlight is that VRC25 allows smart contracts to sponsor transaction fees, enhancing their functionality and demonstrating Viction's focus on user-centric solutions. While retaining the familiar ERC20 structure for compatibility, VRC25 improves the user experience by streamlining token transfers and fee management, making blockchain more accessible.
+In this section, we'll delve into VRC25, a token standard designed to streamline transactions on the Viction blockchain. VRC25 stands out as an innovative extension of existing token standards.
 
-*For the official overview of the VRC25 specification, take a look at Viction's VRC25 Documentation: [VRC25 Specification](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc25-specification).*
+* **Gasless Transfers:** Forget the need for native tokens to cover transaction fees! VRC25 empowers smart contracts to sponsor these fees, eliminating a barrier for new blockchain users.
+* **Enhanced User Experience:** By removing the burden of managing gas fees, VRC25 simplifies the transaction process, making it more user-friendly and encouraging wider adoption.
+* **Focus on User-Centricity:** Viction's commitment to user experience shines through with VRC25. This standard prioritizes ease of use, paving the way for a more welcoming blockchain environment.
 
-## Comparison between VRC25/ERC20 
+## Learning Objectives:
 
-Before going to a pratical application VRC25, let's break down VRC25 and see advantages and disadvantage familiar popular Ethereum standard, **ERC20**. At first glance, the IVRC25 interface in Solidity may look a lot like IERC20, which makes sense, as VRC25 was designed for compatibility and ease of adoption. Take a look at the VRC25 code below:
+* Understand the core principles of the VRC25 token standard.
+* Deploy the VRC25 Token on the Viction Testnet.
+* Implement the token into your dapp using `viem`.
+* Setup for gasless token interaction on Viction.
+
+## VRC25 vs. ERC20: A Side-by-Side Look
+
+Before diving into practical VRC25 applications, let's compare it to the widely used ERC20 standard. At first glance, VRC25's `IVRC25` interface in Solidity might seem familiar to ERC20 users. This is intentional! VRC25 prioritizes compatibility and ease of adoption.
+
+Here's a breakdown of the `IVRC25` code:
 
 ```solidity
 interface IVRC25 {
-    event Transfer(address indexed from, address indexed to, uint256 value);
-    event Approval(address indexed owner, address indexed spender, uint256 value);
-    event Fee(address indexed from, address indexed to, address indexed issuer, uint256 value);
+  event Transfer(address indexed from, address indexed to, uint256 value);
+  event Approval(address indexed owner, address indexed spender, uint256 value);
+  event Fee(address indexed from, address indexed to, address indexed issuer, uint256 value);
 
-    function decimals() external view returns (uint8);
-    function totalSupply() external view returns (uint256);
-    function balanceOf(address owner) external view returns (uint256);
-    function issuer() external view returns (address);
-    function allowance(address owner, address spender) external view returns (uint256);
-    function estimateFee(uint256 value) external view returns (uint256);
-    function transfer(address recipient, uint256 value) external returns (bool);
-    function approve(address spender, uint256 value) external returns (bool);
-    function transferFrom(address from, address to, uint256 value) external returns (bool);
+  function decimals() external view returns (uint8);
+  function totalSupply() external view returns (uint256);
+  function balanceOf(address owner) external view returns (uint256);
+  function issuer() external view returns (address);
+  function allowance(address owner, address spender) external view returns (uint256);
+  function estimateFee(uint256 value) external view returns (uint256);
+  function transfer(address recipient, uint256 value) external returns (bool);
+  function approve(address spender, uint256 value) external returns (bool);
+  function transferFrom(address from, address to, uint256 value) external returns (bool);
 }
 ```
 
-When comparing this to a simplified `ERC20.sol` interface, you'll notice that the methods are largely similar:
+Now, let's take a look at a simplified `IERC20.sol` interface for comparison:
 
 ```solidity
 interface IERC20 { 
-    function totalSupply() external view returns (uint256); 
-    function balanceOf(address account) external view returns (uint256); 
-    function transfer(address recipient, uint256 amount) external returns (bool);
-    function allowance(address owner, address spender) external view returns (uint256); 
-    function approve(address spender, uint256 amount) external returns (bool);
-    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool); 
+  function totalSupply() external view returns (uint256); 
+  function balanceOf(address account) external view returns (uint256); 
+  function transfer(address recipient, uint256 amount) external returns (bool);
+  function allowance(address owner, address spender) external view returns (uint256); 
+  function approve(address spender, uint256 amount) external returns (bool);
+  function transferFrom(address sender, address recipient, uint256 amount) external returns (bool); 
 }
 ```
 
-The `IVRC25` interface presents a structure that's instantly recognizable to anyone familiar with ERC20. It includes functions like `totalSupply`, `balanceOf`, `transfer`, `allowance`, `approve`, and `transferFrom`, preserving the core capabilities that guarantee compatibility and simplicity of integration. These functions enable fundamental token operations such as checking balances, transferring tokens, and managing allowances, ensuring that all essential functionalities for token management are well-supported.
+As you can see, the structures are remarkably similar. Both interfaces include functions like `totalSupply`, `balanceOf`, `transfer`, `allowance`, `approve`, and `transferFrom`. This similarity ensures seamless compatibility and simplifies integration for developers familiar with ERC20. VRC25 retains these core functionalities while introducing the revolutionary concept of gasless transactions, making it a user-centric upgrade to the existing standard.
+
+In the next section, we'll delve into practical applications of VRC25 and how it empowers developers to create a smoother user experience within their Viction smart contracts. Stay tuned!
+
+*For the official overview of the VRC25 specification, take a look at Viction's VRC25 Documentation: [VRC25 Specification](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc25-specification).*

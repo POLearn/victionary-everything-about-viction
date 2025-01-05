@@ -1,24 +1,42 @@
-### Rolling the on chain Dice
+# Ready to Roll?
 
-If you haven't deployed a Dice contract in our previouslt, you can want to use an existing contract. Just load `0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D` into an IDE, or use [Solide IDE](https://solide0x.tech/address/89/0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D). Then click on `roll` method and it should execute with a confirmed transacton. Note, that the result will change upon after a few seconds. According to the Viction documentation it is good to note that *VRRF relies on the order of calling transaction, protocols who make use of VRRF must wait for a short period of time (say 8-10 seconds) before displaying random result to end-users to avoid issues related to block re-org.*
+If you're new to deploying smart contracts, fret not! We can leverage an existing Dice contract. Here's what you'll need to do:
 
-### Debugging the `roll()`
+## Load the Contract
 
-To retrieve and debug the roll value, the contract emits a `RollEvent` event that can be decoded to get the desired value. By navigating to the Dice contract on Vicscan and checking the *Event* tab, you can find the emitted event. Regardless of whether the contract is verified or unverified, you can decode the provided data. For example, consider the following data:
+Head over to [Solide IDE](https://solide0x.tech/address/89/0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D) and interact with the contract at this address: `0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D`.
+
+## Roll the Dice!
+
+Click on the `roll` function within the IDE. This will initiate a transaction simulating a dice roll. Confirmation might take a few seconds due to VRRF's workings.
+
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_roll.png)
+
+*Note, that the result will change upon after a few seconds. According to the Viction documentation it is good to note that *VRRF relies on the order of calling transaction, protocols who make use of VRRF must wait for a short period of time (say 8-10 seconds) before displaying random result to end-users to avoid issues related to block re-org.*
+
+## Understanding the Roll Event
+
+The contract emits a `RollEvent` whenever a dice roll is executed. Let's navigate to the Dice contract on Vicscan and explore the *Event* tab to find this emitted event. This event holds the key to decoding the roll value:
 
 ```
-0x000000000000000000000000000000000000000000000000000000000074a7b9fccbcb761acbe15e37f7956d80da55f601cf9444bc439ddadba7b93b32648a190000000000000000000000000000000000000000000000000000000000000002
+0x0000000000000000000000000000000000000000000000000000000000fa8674b6c634d1fa355a3b605f762247847be8da437e46c55627c8ed747367298250e40000000000000000000000000000000000000000000000000000000000000001
 ```
 
-This data decodes to a roll value of 2. Additionally, you can view the raw value of the VRRF emitted with the key `n`. This value is a `bytes32` type (`114342912035737238189353812130102868447094573821621668253466625880326790220313`), which can be translated to a `uint256` as shown in the Dice Contract.
+By decoding this data, we discover the roll value to be **2**. Additionally, the event provides a raw VRRF value denoted by the key `n`. This `bytes32` value can be converted to a standard number (`uint256`) for on-chain operations, as demonstrated in the Dice contract itself. (You can find a screenshot of the Roll Event Log [here](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/build-with-viction-vrrf/assets/logs.png) for reference).
 
-![Roll Event Log](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/build-with-viction-vrrf/assets/logs.png)
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_log.png)
 
-## Conclusion
+## The Power of VRRF
 
-VRRF (Verifiable Random Function) offers a robust solution for generating verifiable random numbers on the Viction. Its seamless integration and on-chain processing capabilities make it an great for applications such as games, distributing tasks, or minting NFTs, ensuring reliable and unbiased randomness.
+VRRF shines as a reliable and verifiable solution for generating random numbers on the Viction blockchain. Here's why it's so valuable:
 
-By leveraging VRRF, smart contracts can obtain a pseudo-random `bytes32` value, which can be easily converted to a `uint256`. This conversion is perfect for on-chain randomness, providing a cost-effective and secure method within a smart contract. VRRF's reliability and efficiency make it a valuable tool for any blockchain application requiring dependable random number generation.
+* **Verifiable Randomness:**  Anyone can confirm that the generated number is truly random and hasn't been tampered with, fostering trust in blockchain applications.
+* **Seamless Integration:** VRRF integrates effortlessly with smart contracts, enabling efficient on-chain processing of random values.
+* **Cost-Effective:** VRRF provides a secure and cost-effective way to generate random numbers within smart contracts.
 
-> ❗**IMPORTANT**
+## VRRF Applications: Beyond Dice Games
+
+While dice games highlight VRRF's fun potential, its use cases go much further. VRRF enables fair task distribution, ensuring rewards or assignments are allocated transparently and without bias. It also powers unpredictable NFT minting, adding an exciting layer of randomness and surprise to the creation of unique collectibles.
+
+> ❗**Don't forget**
 > For this submission, provide the transaction of the invokation of the `roll` method in the Dice deployed on Viction.

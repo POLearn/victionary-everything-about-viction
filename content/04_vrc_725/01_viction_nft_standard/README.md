@@ -1,4 +1,6 @@
-What make VRC725 unique to Viction is its extension to ERV721 to allow developers and protocols to take advantage of Viction Zero Gas.
+# Exploring the IVRC725 Interface
+
+The `IVRC725` interface defines the core functionalities of VRC725 tokens. Let's delve into two key functions:
 
 ```solidity
 interface IVRC725 is IERC721, IERC4494, IERC721Metadata {
@@ -8,7 +10,9 @@ interface IVRC725 is IERC721, IERC4494, IERC721Metadata {
 }
 ```
 
-## permitForAll
+The `permitForAll` function allows users to grant gasless approvals for NFT transfers via off-chain signatures, ensuring cost-effective, user-friendly interactions while incorporating a secure nonce mechanism to prevent replay attacks. The `nonceByAddress` function tracks the nonce for each owner, further enhancing transaction security by preventing the reuse of old signatures.
+
+## `permitForAll`
 
 ```solidity
 function permitForAll(address owner, address spender, uint256 deadline, bytes memory signature) external {
@@ -31,7 +35,7 @@ The main implementation of IVRC725 `permitForAll` is using `ECDSA.tryRecover` to
 
 Additionally, the **nonce** is manually incremented here to prevent replay attacks by ensuring each permit request is unique. Since the owner's address is included in the digest, each time the method is called, the nonce increments, making old signatures invalid. This guarantees that each signature can only be used once, enhancing the security of the NFT.
 
-## nonceByAddress
+## `nonceByAddress`
 
 ```solidity
 function nonceByAddress(address owner) external view returns(uint256) {

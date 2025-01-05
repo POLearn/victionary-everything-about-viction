@@ -34,17 +34,25 @@ contract Dice {
 }
 ```
 
-The `roll` function will simulates a dice roll within the smart contract. When executed, it captures the current block number and creates a salt from the hash of the previous block, enhancing randomness. It then calls the VRRF that is defined to obtain a pseudo-random number, which is converted to a value between 1 and 6 by taking the modulus and adding 1.
+The following code serves a contract that represent a functioning dice,
 
-Similarly `rollWithSalt` function allows users to roll the dice using a custom salt, enabling controlled randomness. This is useful for applications requiring predictable outcomes when the same salt is used.
+* **Core Functionality (`roll()` function):** This function simulates a dice roll. It captures the current block number and creates a special value called "salt" from the previous block's hash, adding an extra layer of randomness. VRRF is then called to generate a pseudo-random number, which is converted into a value between 1 and 6, representing the dice roll outcome.
+* **Customizable Randomness (`rollWithSalt()` function):** This function provides more control for specific scenarios. Users can provide their own "salt" value, influencing the random outcome. This can be useful for testing purposes where predictable results are desired.
 
-### Deploying on Viction Testnet
+### Quest - Deploying the Dice Contract on Viction Testnet 🎲
 
-To get started, compile the Dice smart contract using Solidity version 0.8.19. If you’d like to see a reference, you can view an example deployment on the Viction Testnet.
+Start by loading the [Dice contract](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/Dice.sol) and loading it into your preferred IDE. 
 
-When deploying on the Viction network, make sure to specify the network address. In this guide, we’ll deploy to Viction Testnet (chain ID 89). You can find more setup details here. In the contract’s constructor, use the Testnet VRRF address (0xDb14c007634F6589Fb542F64199821c3308A9d92) to link the VRRF to your Dice contract.
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_contract.png)
 
-Congratulations! You've deployed on the Viction Testnet. Switching networks in MetaMask can allow you to test on different testnets or even deploy to the mainnet. Just ensure you have enough VIC tokens to cover the deployment costs.
+Your first task is to modify the contract by adding the `IVRRF` interface at the top. This interface allows the contract to request randomness securely from Viction’s VRRF service. Next, you’ll implement the `roll()` function, which will interact with VRRF to produce random values—an essential feature for the Dice contract. If you need guidance, check out the [Viction Testnet example](https://testnet.vicscan.xyz/address/0x845B5EaF9D75215E08896a5c96B416640F6b1F55).  
 
-> ❗**IMPORTANT**
-> Make sure to complete the quest by providing the deployed transaction.
+![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_deploy.png)
+
+Once you’ve updated the code, compile the contract using **Solidity version 0.8.19**. Pay attention to any errors during compilation and resolve them. This step ensures your contract is ready for deployment on the Viction Testnet.  
+
+*If you’d like to see a reference, you can view an [example](https://testnet.vicscan.xyz/address/0x845B5EaF9D75215E08896a5c96B416640F6b1F55) deployment on the Viction Testnet.*
+
+Make sure you have enough **VIC tokens** in your wallet to cover the deployment fees. Once deployed, note the contract’s address and transaction hash. You can verify your deployment on the [Viction Testnet Explorer](https://testnet.vicscan.xyz/).  
+
+You’ve successfully deployed your Dice contract on Viction Testnet! To complete this quest, share your **transaction hash** as proof of deployment. Doing so will earn you a special **NFT POAP reward** for completing this course.  
