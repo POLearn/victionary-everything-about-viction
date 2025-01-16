@@ -11,7 +11,7 @@
         {
             "path": "02_vrrf/01_deploying_a_random_dice",
             "type": "deployment",
-            "bytecode": "0x8efa2f00aa36cb68760cc814ad72249396b47b4ef5df11dbac8f0785bee9a5c6"
+            "bytecode": "0x2b5fffe956bfe371b20415f9549604bd3236d60c8eecb9754438bb98f8973bac"
         },
         {
             "path": "02_vrrf/02_roll_dice_on_onchain",
