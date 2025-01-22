@@ -9,6 +9,12 @@
     },
     "quests": [
         {
+            "path": "01_intro_to_viction/06_viction_faucet",
+            "type": "value",
+            "from": "0x46277131E5F345833E3554281981a07fe5ba165e",
+            "value": "15000000000000000000"
+        },
+        {
             "path": "02_vrrf/01_deploying_a_random_dice",
             "type": "deployment",
             "bytecode": "0x2b5fffe956bfe371b20415f9549604bd3236d60c8eecb9754438bb98f8973bac"
