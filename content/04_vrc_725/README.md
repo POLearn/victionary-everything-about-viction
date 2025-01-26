@@ -35,4 +35,4 @@ interface ERC721 {
 }
 ```
 
-*For the official overview of the VRC25 specification, take a look at Viction's VRC25 Documentation: [VRC25 Specification](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc725-specification).*
+*For the official overview of the VRC725 specification, take a look at Viction's VRC725 Documentation: [VRC25 Specification](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc725-specification).*
