@@ -1,63 +1,63 @@
 # Viction Dice Game Quest
 
-In this exciting topic, you'll embark on a journey to understand and leverage Viction's Verifiable Relatively Random Function (VRRF) in a smart contract on the Viction blockchain. We'll build a Dice smart contract that allows users to roll a virtual dice and receive a fair and verifiable random outcome between 1 and 6.
+Trong chủ đề thú vị này, bạn sẽ bắt đầu một hành trình để hiểu và tận dụng Hàm Ngẫu Nhiên Có Thể Xác Minh (VRRF) của Viction trong một hợp đồng thông minh trên blockchain Viction. Chúng ta sẽ xây dựng một hợp đồng thông minh Dice cho phép người dùng tung xúc xắc ảo và nhận kết quả ngẫu nhiên công bằng và có thể xác minh từ 1 đến 6.
 
-## Learning Objectives:
+## Mục Tiêu Học Tập:
 
-- Gain a solid understanding of VRF and its role in ensuring randomness on-chain.
-- Explore the Dice smart contract code and its functionalities.
-- Deploy the Dice contract on the Viction Testnet.
-- Interact with the deployed contract to experience a verifiable dice roll.
+- Nắm vững khái niệm VRF và vai trò của nó trong việc đảm bảo tính ngẫu nhiên trên blockchain.
+- Khám phá mã hợp đồng thông minh Dice và các chức năng của nó.
+- Triển khai hợp đồng Dice trên Viction Testnet.
+- Tương tác với hợp đồng đã triển khai để trải nghiệm một lần tung xúc xắc có thể xác minh.
 
-## What is VRRF?
+## VRRF là gì?
 
-Imagine a scenario where you're playing a dice game on a blockchain platform. How can you be sure the dice roll is truly random and hasn't been tampered with? Enter VRRF, a hero in the blockchain world, designed specifically for this purpose.
+Hãy tưởng tượng một tình huống bạn đang chơi một trò chơi xúc xắc trên một nền tảng blockchain. Làm thế nào để bạn chắc chắn rằng lần tung xúc xắc thực sự ngẫu nhiên và không bị gian lận? Đó chính là VRRF, một anh hùng trong thế giới blockchain, được thiết kế đặc biệt cho mục đích này.
 
-VRRF stands for Verifiable Relatively Random Function. It's a special type of function that generates pseudo-random numbers – numbers that appear random but are actually derived from a mathematical formula. The key here is that VRRF offers two crucial features:
+VRRF là viết tắt của Hàm Ngẫu Nhiên Có Thể Xác Minh. Đây là một loại hàm đặc biệt tạo ra các số ngẫu nhiên giả – các số có vẻ ngẫu nhiên nhưng thực ra được lấy từ một công thức toán học. Điểm mấu chốt ở đây là VRRF cung cấp hai tính năng quan trọng:
 
-1. **Verifiable:**  Anyone can verify that the random number was generated fairly and hasn't been manipulated. This transparency is essential for building trust in blockchain applications.
-2. **Relatively Random:** While not mathematically perfect, VRRF produces unpredictable results that are difficult to guess beforehand. This ensures fairness in games, auctions, and other applications that rely on randomness.
+1. **Có Thể Xác Minh:** Bất kỳ ai cũng có thể xác minh rằng số ngẫu nhiên được tạo ra một cách công bằng và không bị thao túng. Sự minh bạch này rất quan trọng để xây dựng sự tin tưởng trong các ứng dụng blockchain.
+2. **Ngẫu Nhiên Tương Đối:** Mặc dù không hoàn hảo về mặt toán học, VRRF tạo ra những kết quả không thể đoán trước và khó có thể đoán trước. Điều này đảm bảo sự công bằng trong các trò chơi, đấu giá và các ứng dụng khác dựa vào tính ngẫu nhiên.
 
-## How Does VRRF Work?
+## VRRF Hoạt Động Như Thế Nào?
 
-VRRF combines several clever techniques to achieve its goals:
+VRRF kết hợp nhiều kỹ thuật thông minh để đạt được mục tiêu của mình:
 
-* **Deterministic Outputs:**  For the same inputs, VRRF always produces the same output. This might seem counterintuitive for randomness, but it's the key to verification.
-* **Unpredictability:** VRRF uses a combination of factors to generate the random number, including previous results, on-chain parameters, and a user-provided "salt" value. This salt acts like a secret ingredient, making it nearly impossible to predict the outcome.
-* **Manipulation Resistance:** VRRF is designed to be resistant to manipulation attempts. Even if someone tries to tamper with the process, it can be detected and prevented.
-* **On-chain Processing:** VRRF operates entirely within a single blockchain transaction, ensuring a fast and secure process.
+* **Đầu Ra Quyết Định:** Với cùng một đầu vào, VRRF luôn tạo ra cùng một đầu ra. Điều này có vẻ mâu thuẫn với tính ngẫu nhiên, nhưng đây là chìa khóa để xác minh.
+* **Không Thể Dự Đoán:** VRRF sử dụng sự kết hợp của nhiều yếu tố để tạo ra số ngẫu nhiên, bao gồm kết quả trước đó, các tham số trên chuỗi và một giá trị "muối" do người dùng cung cấp. Giá trị muối này giống như một nguyên liệu bí mật, khiến việc dự đoán kết quả gần như là không thể.
+* **Kháng Thao Túng:** VRRF được thiết kế để chống lại các nỗ lực thao túng. Ngay cả khi ai đó cố gắng can thiệp vào quá trình, việc này có thể được phát hiện và ngăn chặn.
+* **Xử Lý Trên Chuỗi:** VRRF hoạt động hoàn toàn trong một giao dịch blockchain duy nhất, đảm bảo quá trình nhanh chóng và bảo mật.
 
-## VRRF Interface
+## Giao Diện VRRF
 
-To leverage VRRF's power in your smart contracts, you'll interact with an interface called `IVRRF`. This interface provides a single function:
+Để tận dụng sức mạnh của VRRF trong hợp đồng thông minh của bạn, bạn sẽ tương tác với một giao diện gọi là `IVRRF`. Giao diện này cung cấp một hàm duy nhất:
 
 ```solidity
 interface IVRRF {
   /**
-   * @notice Get pseudo-random number base on provided seed
-   * @param salt Random data as an additional input to harden the random
+   * @notice Lấy số ngẫu nhiên giả dựa trên hạt giống đã cung cấp
+   * @param salt Dữ liệu ngẫu nhiên như một đầu vào bổ sung để làm cứng tính ngẫu nhiên
    */
   function random(bytes32 salt) external returns(bytes32);
 }
 ```
 
-This `random` function takes a `bytes32 salt` value as input. Remember the salt? It's your chance to add a layer of customization to the randomness. You can provide a unique salt for each random number generation, further enhancing unpredictability.
+Hàm `random` này nhận một giá trị `bytes32 salt` làm đầu vào. Nhớ không? Đây là cơ hội của bạn để thêm một lớp tùy chỉnh vào tính ngẫu nhiên. Bạn có thể cung cấp một muối duy nhất cho mỗi lần tạo số ngẫu nhiên, làm tăng tính không thể đoán trước.
 
-The function then returns a `bytes32` number, which you can use in various applications like:
+Hàm này sẽ trả về một số `bytes32`, bạn có thể sử dụng trong nhiều ứng dụng như:
 
-* **Dice Games:** Roll a fair dice in your blockchain-based game.
-* **NFT Generation:** Create unique and unpredictable traits for your non-fungible tokens.
-* **Random Selection:** Select participants for a lottery or raffle in a transparent and verifiable manner.
+* **Trò Chơi Xúc Xắc:** Tung một xúc xắc công bằng trong trò chơi blockchain của bạn.
+* **Tạo NFT:** Tạo những đặc điểm độc đáo và không thể đoán trước cho các token không thể thay thế của bạn.
+* **Chọn Ngẫu Nhiên:** Chọn người tham gia cho một cuộc xổ số hoặc rút thăm một cách minh bạch và có thể xác minh.
 
-By integrating VRRF, you can ensure that your blockchain applications are not only engaging but also fair and trustworthy for all users.
+Bằng cách tích hợp VRRF, bạn có thể đảm bảo rằng các ứng dụng blockchain của mình không chỉ thú vị mà còn công bằng và đáng tin cậy đối với tất cả người dùng.
 
-## VRRF Contracts
+## Các Hợp Đồng VRRF
 
-To utilize VRRF on Viction, you'll need to interact with the deployed `IVRRF` contract on the specific network (Mainnet or Testnet) you're working with. Here's a table with the VRRF contract addresses for your reference:
+Để sử dụng VRRF trên Viction, bạn sẽ cần tương tác với hợp đồng `IVRRF` đã triển khai trên mạng lưới cụ thể (Mainnet hoặc Testnet) mà bạn đang làm việc. Dưới đây là bảng với các địa chỉ hợp đồng VRRF để bạn tham khảo:
 
-| Network | Address |
+| Mạng Lưới | Địa Chỉ |
 |---|---|
 | Mainnet | 0x53eDcf19e4fb242c9957CB449d2d4106fD760A7F |
 | Testnet | 0xDb14c007634F6589Fb542F64199821c3308A9d92 |
 
-In the next section, we'll explore how to set up your smart contract to interact with VRRF and unlock the potential of fair and verifiable randomness on the Viction blockchain!
+Trong phần tiếp theo, chúng ta sẽ khám phá cách thiết lập hợp đồng thông minh của bạn để tương tác với VRRF và mở khóa tiềm năng của tính ngẫu nhiên công bằng và có thể xác minh trên blockchain Viction!

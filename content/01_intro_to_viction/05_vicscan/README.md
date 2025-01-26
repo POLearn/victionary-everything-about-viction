@@ -2,42 +2,42 @@
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vicscan.png)
 
-Vicscan is a powerful blockchain explorer that offers a user-friendly interface to navigate the Viction ecosystem. With Vicscan, you can easily access a wealth of information, including:
+Vicscan là một công cụ khám phá blockchain mạnh mẽ cung cấp giao diện người dùng thân thiện để điều hướng hệ sinh thái Viction. Với Vicscan, bạn có thể dễ dàng truy cập vào một lượng thông tin phong phú, bao gồm:
 
-- **Blocks**: Discover details about every block in the Viction blockchain, including their height, time, and associated transactions.
-- **Transactions**: View all transactions on the network, complete with their status, amounts, and the wallets involved.
-- **Finality**: Understand the finality of transactions on the blockchain, giving you insights into how quickly transactions are confirmed.
-- **Smart Contracts**: Explore the smart contracts deployed on Viction, including their functions and interaction details.
-- **DApps**: Get to know the decentralized applications (DApps) built on Viction, and see how they’re shaping the blockchain landscape.
-- **Tokens**: Track token information, including total supply, holders, and transfer details.
+- **Blocks**: Khám phá chi tiết về mỗi khối trong blockchain Viction, bao gồm chiều cao, thời gian và các giao dịch liên quan.
+- **Transactions**: Xem tất cả các giao dịch trên mạng, bao gồm trạng thái, số tiền và ví tham gia.
+- **Finality**: Hiểu rõ về tính hoàn tất của các giao dịch trên blockchain, cung cấp cho bạn cái nhìn về tốc độ xác nhận của các giao dịch.
+- **Smart Contracts**: Khám phá các hợp đồng thông minh đã được triển khai trên Viction, bao gồm các chức năng và chi tiết tương tác.
+- **DApps**: Làm quen với các ứng dụng phi tập trung (DApps) được xây dựng trên Viction và xem chúng đang hình thành bức tranh của blockchain như thế nào.
+- **Tokens**: Theo dõi thông tin về token, bao gồm tổng cung, chủ sở hữu và chi tiết chuyển nhượng.
 
-## Why Use Vicscan?
+## Tại sao nên sử dụng Vicscan?
 
-Vicscan isn't just about raw data; it provides **insights** and **visualizations** that help you grasp the performance of the Viction network at a glance. Here are some features that make Vicscan stand out:
+Vicscan không chỉ là dữ liệu thô; nó cung cấp **cái nhìn** và **hình ảnh trực quan** giúp bạn nắm bắt hiệu suất của mạng Viction một cách nhanh chóng. Dưới đây là một số tính năng làm cho Vicscan nổi bật:
 
-### Technical Visualizations
+### Hình ảnh kỹ thuật
 
-Vicscan offers graphical representations of blockchain data, making complex information easier to understand. You can visualize:
+Vicscan cung cấp các biểu diễn đồ họa về dữ liệu blockchain, giúp bạn dễ dàng hiểu thông tin phức tạp. Bạn có thể hình dung:
 
-- Network activity over time
-- The distribution of token holders
-- Transaction volumes and trends
+- Hoạt động của mạng qua thời gian
+- Sự phân bố của các chủ sở hữu token
+- Khối lượng giao dịch và xu hướng
 
-These visual tools can help you make informed decisions whether you’re an investor, developer, or simply curious about the blockchain.
+Những công cụ hình ảnh này có thể giúp bạn đưa ra quyết định thông minh cho dù bạn là nhà đầu tư, nhà phát triển, hay chỉ đơn giản là người tò mò về blockchain.
 
-### Useful Statistics
+### Thống kê hữu ích
 
-With Vicscan, you get access to valuable statistics that highlight Viction’s performance:
+Với Vicscan, bạn có thể truy cập vào các thống kê giá trị để làm nổi bật hiệu suất của Viction:
 
-- **Network Health**: Monitor the overall health and stability of the Viction blockchain.
-- **Token Holder Metrics**: Analyze how tokens are distributed among holders, giving you insights into the community’s engagement.
-- **Transaction Analytics**: See real-time data on transactions to understand the network's activity levels.
+- **Sức khỏe mạng**: Theo dõi tình trạng tổng thể và sự ổn định của blockchain Viction.
+- **Chỉ số chủ sở hữu token**: Phân tích cách thức các token được phân bổ giữa các chủ sở hữu, giúp bạn hiểu về sự tham gia của cộng đồng.
+- **Phân tích giao dịch**: Xem dữ liệu thời gian thực về giao dịch để hiểu các mức độ hoạt động của mạng.
 
-## Getting Started with Vicscan
+## Bắt đầu với Vicscan
 
-Using Vicscan is straightforward! Here’s how you can get started:
+Việc sử dụng Vicscan rất đơn giản! Dưới đây là cách bạn có thể bắt đầu:
 
-1. **Visit the Vicscan Website**: Go to [Vicscan](https://vicscan.viction.xyz).
-2. **Explore the Dashboard**: Familiarize yourself with the layout. The main dashboard provides quick access to blocks, transactions, smart contracts, and more.
-3. **Search Functionality**: Use the search bar to find specific transactions, addresses, or blocks. Just type in what you’re looking for!
-4. **Dive Deeper**: Click on any block, transaction, or contract to see more details. Each page is packed with information to help you understand what’s happening under the hood.
+1. **Truy cập vào Website Vicscan**: Truy cập [Vicscan](https://vicscan.viction.xyz).
+2. **Khám phá Bảng điều khiển**: Làm quen với giao diện. Bảng điều khiển chính cung cấp quyền truy cập nhanh vào các khối, giao dịch, hợp đồng thông minh và nhiều tính năng khác.
+3. **Chức năng tìm kiếm**: Sử dụng thanh tìm kiếm để tìm các giao dịch, địa chỉ hoặc khối cụ thể. Chỉ cần nhập những gì bạn đang tìm kiếm!
+4. **Khám phá chi tiết**: Nhấn vào bất kỳ khối, giao dịch hoặc hợp đồng nào để xem thêm chi tiết. Mỗi trang đều chứa thông tin giúp bạn hiểu rõ những gì đang diễn ra bên trong.

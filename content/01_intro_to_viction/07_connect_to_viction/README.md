@@ -1,17 +1,17 @@
-# Connecting to Viction Networks
+# Kết Nối Với Các Mạng Viction
 
-To interact with the Viction blockchain, you can connect to either the **Mainnet** or the **Testnet**. Each network has distinct specifications, but they share the same structure, allowing for a smooth transition between development and production environments. Here's a combined overview:
+Để tương tác với blockchain Viction, bạn có thể kết nối với **Mainnet** hoặc **Testnet**. Mỗi mạng có các thông số kỹ thuật riêng biệt, nhưng chúng chia sẻ cùng một cấu trúc, cho phép chuyển đổi mượt mà giữa môi trường phát triển và sản xuất. Dưới đây là cái nhìn tổng quan kết hợp:
 
-| **Specification**       | **Viction Mainnet**                                | **Viction Testnet**                                    |
+| **Thông Số Kỹ Thuật**   | **Viction Mainnet**                                | **Viction Testnet**                                    |
 |-------------------------|----------------------------------------------------|--------------------------------------------------------|
 | **Chain ID**             | 88                                                | 89                                                     |
 | **RPC Endpoint**         | [https://rpc.viction.xyz](https://rpc.viction.xyz) | [https://rpc-testnet.viction.xyz](https://rpc-testnet.viction.xyz) |
-| **Currency Symbol**    | `VIC`                           | `VIC`                             |
-| **Block Explorer URL** | `https://explorer.viction.org` | `https://testnet-explorer.viction.org` |
-| **WebSocket Endpoint**   | [wss://ws.viction.xyz](wss://ws.viction.xyz)       | [wss://ws-testnet.viction.xyz](wss://ws-testnet.viction.xyz)       |
-| **Consensus**            | POSV (Proof of Stake Voting)                       | POSV (Proof of Stake Voting)                           |
-| **Transaction Fee**      | Gas price 0.25 Gwei                                | -                                                      |
+| **Biểu Tượng Tiền Tệ**   | `VIC`                                              | `VIC`                                                  |
+| **URL Trình Duyệt Khối** | `https://explorer.viction.org`                     | `https://testnet-explorer.viction.org`                  |
+| **WebSocket Endpoint**   | [wss://ws.viction.xyz](wss://ws.viction.xyz)       | [wss://ws-testnet.viction.xyz](wss://ws-testnet.viction.xyz) |
+| **Cơ Chế Đồng Thuận**    | POSV (Proof of Stake Voting)                       | POSV (Proof of Stake Voting)                           |
+| **Phí Giao Dịch**        | Giá gas 0.25 Gwei                                  | -                                                      |
 
-## Further Information
+## Thông Tin Thêm
 
-For more details on network configurations and how to connect, visit the official Viction documentation: [Viction Network Information](https://docs.viction.xyz/general/network-information).
+Để biết thêm chi tiết về cấu hình mạng và cách kết nối, hãy truy cập tài liệu chính thức của Viction: [Thông Tin Mạng Viction](https://docs.viction.xyz/general/network-information).

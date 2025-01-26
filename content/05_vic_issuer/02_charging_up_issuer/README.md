@@ -1,8 +1,8 @@
-# Charging Gasless Transactions
+# Tính Phí Giao Dịch Không Tốn Gas
 
-This section is important for maintaining the capacity for gasless transactions, which is a critical aspect of creating a smooth and user-friendly experience with your VRC25 token. The **VicIssuer** contract includes a method called `charge`, which enables you to add funds to your token's capacity. By doing so, you ensure that the token can consistently support transaction fees, keeping the user experience seamless.
+Phần này rất quan trọng để duy trì khả năng cho phép giao dịch không tốn gas, điều này là yếu tố quan trọng trong việc tạo ra một trải nghiệm mượt mà và dễ sử dụng với token VRC25 của bạn. Hợp đồng **VicIssuer** bao gồm một phương thức gọi là `charge`, cho phép bạn thêm tiền vào khả năng của token. Bằng cách làm như vậy, bạn đảm bảo rằng token có thể liên tục hỗ trợ phí giao dịch, giữ cho trải nghiệm người dùng luôn mượt mà.
 
-The `charge` method is straightforward and efficient. It accepts an address representing the token you want to recharge and the value (in $VIC or equivalent) you wish to deposit. This value is added to the token's state, increasing its capacity to sponsor gasless transactions. Here's the method definition:
+Phương thức `charge` rất đơn giản và hiệu quả. Nó nhận một địa chỉ đại diện cho token mà bạn muốn nạp lại và giá trị (bằng $VIC hoặc tương đương) mà bạn muốn gửi vào. Giá trị này sẽ được thêm vào trạng thái của token, tăng khả năng của token trong việc tài trợ cho các giao dịch không tốn gas. Đây là định nghĩa của phương thức:
 
 ```solidity
 function charge(address token) public payable {
@@ -11,4 +11,4 @@ function charge(address token) public payable {
 }
 ```
 
-Once executed, the function updates the `tokensState` mapping and emits a `Charge` event, allowing for transparency and easy tracking of recharge transactions.
+Sau khi được thực thi, phương thức này cập nhật bản đồ `tokensState` và phát ra một sự kiện `Charge`, cho phép sự minh bạch và theo dõi dễ dàng các giao dịch nạp lại.

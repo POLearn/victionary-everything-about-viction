@@ -1,10 +1,10 @@
-## Dice Game
+## Trò Chơi Xí Ngầu
 
-Let’s look at a practical example of using Viction's VRRF in a smart contract. In this scenario, we'll create a Dice smart contract that allows users to roll a virtual dice and receive a random outcome between 1 and 6 on chain. This application hopes to demonstrates how VRRF ensures that each roll is fair and verifiable, providing a manipulation-resistant source of randomness on-chain. By integrating VRRF into the smart contract, we can guarantee that every player experiences a truly random dice roll.
+Hãy cùng xem một ví dụ thực tế về việc sử dụng VRRF của Viction trong hợp đồng thông minh. Trong kịch bản này, chúng ta sẽ tạo một hợp đồng thông minh Xí Ngầu cho phép người dùng lắc một viên xí ngầu ảo và nhận kết quả ngẫu nhiên từ 1 đến 6 trên chuỗi. Ứng dụng này nhằm minh họa cách VRRF đảm bảo mỗi lần lắc là công bằng và có thể xác minh, cung cấp một nguồn ngẫu nhiên chống giả mạo trên chuỗi. Bằng cách tích hợp VRRF vào hợp đồng thông minh, chúng ta có thể đảm bảo rằng mỗi người chơi đều có trải nghiệm lắc xí ngầu thực sự ngẫu nhiên.
 
-### Code 
+### Mã Nguồn
 
-The source code can be loaded in our IDE with this [Github source](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/Dice.sol)
+Mã nguồn có thể được tải vào IDE của chúng ta qua [Nguồn Github](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/Dice.sol)
 
 ```solidity
 contract Dice {
@@ -34,25 +34,25 @@ contract Dice {
 }
 ```
 
-The following code serves a contract that represent a functioning dice,
+Mã nguồn trên đại diện cho hợp đồng xí ngầu hoạt động,
 
-* **Core Functionality (`roll()` function):** This function simulates a dice roll. It captures the current block number and creates a special value called "salt" from the previous block's hash, adding an extra layer of randomness. VRRF is then called to generate a pseudo-random number, which is converted into a value between 1 and 6, representing the dice roll outcome.
-* **Customizable Randomness (`rollWithSalt()` function):** This function provides more control for specific scenarios. Users can provide their own "salt" value, influencing the random outcome. This can be useful for testing purposes where predictable results are desired.
+* **Chức Năng Cơ Bản (`roll()` function):** Chức năng này mô phỏng một lần lắc xí ngầu. Nó ghi lại số khối hiện tại và tạo ra một giá trị đặc biệt gọi là "salt" từ hàm băm của khối trước, thêm một lớp ngẫu nhiên nữa. Sau đó, VRRF được gọi để tạo ra một số ngẫu nhiên giả, và số này được chuyển đổi thành giá trị từ 1 đến 6, đại diện cho kết quả của lần lắc xí ngầu.
+* **Ngẫu Nhiên Tùy Chỉnh (`rollWithSalt()` function):** Chức năng này cung cấp sự kiểm soát nhiều hơn cho các tình huống cụ thể. Người dùng có thể cung cấp giá trị "salt" của riêng mình, ảnh hưởng đến kết quả ngẫu nhiên. Điều này có thể hữu ích trong các trường hợp thử nghiệm, nơi kết quả có thể được mong đợi.
 
-### Quest - Deploying the Dice Contract on Viction Testnet 🎲
+### Nhiệm Vụ - Triển Khai Hợp Đồng Xí Ngầu Trên Viction Testnet 🎲
 
-Start by loading the [Dice contract](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/Dice.sol) and loading it into your preferred IDE. 
+Bắt đầu bằng cách tải hợp đồng [Dice](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/Dice.sol) và tải nó vào IDE bạn chọn. 
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_contract.png)
 
-Your first task is to modify the contract by adding the `IVRRF` interface at the top. This interface allows the contract to request randomness securely from Viction’s VRRF service. Next, you’ll implement the `roll()` function, which will interact with VRRF to produce random values—an essential feature for the Dice contract. If you need guidance, check out the [Viction Testnet example](https://testnet.vicscan.xyz/address/0x845B5EaF9D75215E08896a5c96B416640F6b1F55).  
+Nhiệm vụ đầu tiên của bạn là chỉnh sửa hợp đồng bằng cách thêm giao diện `IVRRF` ở đầu. Giao diện này cho phép hợp đồng yêu cầu sự ngẫu nhiên một cách an toàn từ dịch vụ VRRF của Viction. Tiếp theo, bạn sẽ triển khai chức năng `roll()`, chức năng này sẽ tương tác với VRRF để tạo ra các giá trị ngẫu nhiên—một tính năng thiết yếu cho hợp đồng Xí Ngầu. Nếu bạn cần hướng dẫn, hãy tham khảo [ví dụ trên Viction Testnet](https://testnet.vicscan.xyz/address/0x845B5EaF9D75215E08896a5c96B416640F6b1F55).  
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_deploy.png)
 
-Once you’ve updated the code, compile the contract using **Solidity version 0.8.19**. Pay attention to any errors during compilation and resolve them. This step ensures your contract is ready for deployment on the Viction Testnet.  
+Sau khi cập nhật mã, biên dịch hợp đồng sử dụng **Phiên bản Solidity 0.8.19**. Lưu ý các lỗi trong quá trình biên dịch và giải quyết chúng. Bước này đảm bảo rằng hợp đồng của bạn sẵn sàng để triển khai trên Viction Testnet.  
 
-*If you’d like to see a reference, you can view an [example](https://testnet.vicscan.xyz/address/0x845B5EaF9D75215E08896a5c96B416640F6b1F55) deployment on the Viction Testnet.*
+*Nếu bạn muốn xem tham khảo, bạn có thể tham khảo [ví dụ triển khai](https://testnet.vicscan.xyz/address/0x845B5EaF9D75215E08896a5c96B416640F6b1F55) trên Viction Testnet.*  
 
-Make sure you have enough **VIC tokens** in your wallet to cover the deployment fees. Once deployed, note the contract’s address and transaction hash. You can verify your deployment on the [Viction Testnet Explorer](https://testnet.vicscan.xyz/).  
+Hãy chắc chắn rằng bạn có đủ **VIC tokens** trong ví của mình để trang trải phí triển khai. Sau khi triển khai, ghi lại địa chỉ hợp đồng và mã giao dịch. Bạn có thể xác minh triển khai của mình trên [Viction Testnet Explorer](https://testnet.vicscan.xyz/).  
 
-You’ve successfully deployed your Dice contract on Viction Testnet! To complete this quest, share your **transaction hash** as proof of deployment. Doing so will earn you a special **NFT POAP reward** for completing this course.  
+Bạn đã triển khai thành công hợp đồng Xí Ngầu trên Viction Testnet! Để hoàn thành nhiệm vụ này, hãy chia sẻ **mã giao dịch** của bạn như là bằng chứng triển khai. Việc này sẽ giúp bạn nhận được phần thưởng đặc biệt **NFT POAP** cho việc hoàn thành khóa học này.

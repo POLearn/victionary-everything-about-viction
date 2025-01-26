@@ -1,33 +1,34 @@
-# Interacting with VRC25 Using Viem: A Hands-on Guide
+# Tương Tác Với VRC25 Sử Dụng Viem: Hướng Dẫn Thực Hành
 
-In this section, we'll dive into the practical aspects of interacting with VRC25 contracts on the Viction blockchain. We'll utilize Viem, a powerful JavaScript library, to connect to the blockchain and seamlessly interact with smart contracts. 
+Trong phần này, chúng ta sẽ đi sâu vào các khía cạnh thực tế của việc tương tác với hợp đồng VRC25 trên blockchain Viction. Chúng ta sẽ sử dụng Viem, một thư viện JavaScript mạnh mẽ, để kết nối với blockchain và tương tác liền mạch với các hợp đồng thông minh.
 
-## Installing Viem
+## Cài Đặt Viem
 
-Before we begin, let's ensure we have the necessary tools. Viem is readily available as an npm package. To install it within your project, simply execute the following command in your terminal:
+Trước khi bắt đầu, hãy đảm bảo chúng ta có đầy đủ công cụ cần thiết. Viem có sẵn dưới dạng gói npm. Để cài đặt nó vào dự án của bạn, chỉ cần thực thi lệnh sau trong terminal:
 
 ```bash
 npm install viem
 ```
 
-## Connecting to Viction
+## Kết Nối Với Viction
 
-Now, let's establish a connection to the Viction network. We'll utilize Viem's `createPublicClient` function to create a client instance:
+Bây giờ, chúng ta hãy thiết lập kết nối với mạng Viction. Chúng ta sẽ sử dụng hàm `createPublicClient` của Viem để tạo một đối tượng client:
 
 ```typescript
 import { createPublicClient, http } from 'viem';
-import { victionTestnet } from 'viem/chains'; // Use 'viction' for mainnet
+import { victionTestnet } from 'viem/chains'; // Sử dụng 'viction' cho mạng chính
 
 const client = createPublicClient({
   chain: victionTestnet, 
   transport: http()
 });
 ```
-This client acts as your gateway to the Viction blockchain, enabling you to query chain data, send transactions, and interact with smart contracts.
 
-## eading Data from a VRC25 Contract
+Đối tượng client này đóng vai trò như cổng kết nối tới blockchain Viction, cho phép bạn truy vấn dữ liệu chuỗi, gửi giao dịch và tương tác với hợp đồng thông minh.
 
-Let's demonstrate how to read data from a VRC25 contract using Viem. We'll focus on a common use case: retrieving the token balance of a specific address. 
+## Đọc Dữ Liệu Từ Hợp Đồng VRC25
+
+Hãy cùng xem cách đọc dữ liệu từ hợp đồng VRC25 sử dụng Viem. Chúng ta sẽ tập trung vào một trường hợp sử dụng phổ biến: truy xuất số dư token của một địa chỉ cụ thể.
 
 ```typescript
 import { client } from './client' 
@@ -42,14 +43,14 @@ const data = await publicClient.readContract({
 });
 ```
 
-In this code snippet:
+Trong đoạn mã này:
 
-- `publicClient.readContract()` is a powerful function that allows us to interact with contract functions that don't modify the blockchain's state.
-- We specify the contract address, its ABI (Application Binary Interface), the function name (`balanceOf`), and the address for which we want to retrieve the balance.
+- `publicClient.readContract()` là một hàm mạnh mẽ cho phép chúng ta tương tác với các chức năng hợp đồng mà không làm thay đổi trạng thái của blockchain.
+- Chúng ta chỉ định địa chỉ hợp đồng, ABI (Giao Diện Nhị Phân Ứng Dụng), tên chức năng (`balanceOf`), và địa chỉ mà chúng ta muốn lấy số dư.
 
-## Interacting with the Token
+## Tương Tác Với Token
 
-To perform actions that modify the blockchain state (e.g., minting tokens), we need a wallet. Let's create a `walletClient` using Viem:
+Để thực hiện các hành động thay đổi trạng thái của blockchain (ví dụ: đúc token), chúng ta cần một ví điện tử. Hãy tạo một `walletClient` sử dụng Viem:
 
 ```typescript
 import { createWalletClient, custom, http } from 'viem'
@@ -62,9 +63,9 @@ export const walletClient = createWalletClient({
 });
 ```
 
-This `walletClient` allows us to send transactions and interact with the blockchain securely.
+`walletClient` này cho phép chúng ta gửi giao dịch và tương tác với blockchain một cách an toàn.
 
-Now, let's use the `writeContract` function to mint new tokens:
+Bây giờ, hãy sử dụng hàm `writeContract` để đúc các token mới:
 
 ```typescript
 import { walletClient } from './config'
@@ -79,7 +80,6 @@ await walletClient.writeContract({
 });
 ```
 
-This code sends a transaction to the VRC25 contract, instructing it to mint 69420 tokens and send them to the specified address. 
+Đoạn mã này gửi một giao dịch tới hợp đồng VRC25, yêu cầu đúc 69420 token và gửi chúng đến địa chỉ đã chỉ định.
 
-Viem provides a user-friendly and efficient way to interact with Viction and its smart contracts. By following these steps, you can seamlessly connect to the blockchain, read data, and execute transactions with ease. This empowers you to build innovative applications on the Viction network, all while benefiting from the streamlined transaction experience offered by the VRC25 standard.
-
+Viem cung cấp một cách dễ sử dụng và hiệu quả để tương tác với Viction và các hợp đồng thông minh của nó. Bằng cách làm theo các bước này, bạn có thể kết nối liền mạch với blockchain, đọc dữ liệu và thực thi giao dịch một cách dễ dàng. Điều này giúp bạn xây dựng các ứng dụng sáng tạo trên mạng Viction, đồng thời tận hưởng trải nghiệm giao dịch mượt mà mà tiêu chuẩn VRC25 mang lại.

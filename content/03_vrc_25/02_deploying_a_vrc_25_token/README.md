@@ -1,35 +1,36 @@
-## Example Smart Contract: SampleVRC25
+## Hợp Đồng Thông Minh Ví Dụ: SampleVRC25
 
-To recap, VRC25 stands out as an innovative extension of the ERC20 token standard, designed to streamline transactions on the Viction network. Its key feature? Gasless transactions! By leveraging smart contract sponsorship of transaction fees, VRC25 removes a barrier for new blockchain users and fosters a smoother user experience.
+Tóm lại, VRC25 nổi bật như một mở rộng sáng tạo của tiêu chuẩn token ERC20, được thiết kế để đơn giản hóa các giao dịch trên mạng Viction. Tính năng chính của nó? Giao dịch không tốn gas! Bằng cách tận dụng việc hợp đồng thông minh tài trợ phí giao dịch, VRC25 loại bỏ một rào cản đối với người dùng blockchain mới và tạo ra một trải nghiệm người dùng mượt mà hơn.
 
-Let's deploy a practical example of the VRC25 token standard on the Viction blockchain. Entire source code can be found from the official Viction Repository: [https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/POLVRC25.sol](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/POLVRC25.sol)
+Hãy triển khai một ví dụ thực tế về tiêu chuẩn token VRC25 trên blockchain Viction. Toàn bộ mã nguồn có thể tìm thấy trong Kho Lưu Trữ Chính Thức của Viction: [https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/POLVRC25.sol](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/POLVRC25.sol)
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc25_contract.png)
 
-We can load the entire Solide IDE implementation with the `VRC25` and `VRC25Permit` implementation. If you want to take a look and understand the implementation you can view the implementation but this resource should provide sufficient information to understand the VRC25 token under the hood. By inheriting from both `VRC25` and `VRC25Permit`, the contract gains access to all the functionalities of the VRC25 standard, including token management and fee estimation. Additionally, the VRC25Permit extension empowers gasless transactions through off-chain signatures, significantly enhancing user convenience.
+Chúng ta có thể tải toàn bộ triển khai Solide IDE với các triển khai `VRC25` và `VRC25Permit`. Nếu bạn muốn xem và hiểu về triển khai, bạn có thể xem trực tiếp mã nguồn, nhưng tài nguyên này sẽ cung cấp đủ thông tin để hiểu về token VRC25. Bằng cách kế thừa cả `VRC25` và `VRC25Permit`, hợp đồng có quyền truy cập vào tất cả các tính năng của tiêu chuẩn VRC25, bao gồm quản lý token và ước tính phí. Thêm vào đó, phần mở rộng VRC25Permit giúp giao dịch không tốn gas thông qua chữ ký ngoài chuỗi, nâng cao đáng kể sự tiện lợi cho người dùng.
 
-## Customizing Your VRC25 Token
+## Tùy Chỉnh Token VRC25 Của Bạn
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc25_contstructor.png)
 
-Taking a look at `Line 10`, you can modify within the constructor to set a more suitable name and symbol for your VRC25 token. Here's an example:
+Khi xem `Dòng 10`, bạn có thể sửa đổi trong constructor để đặt tên và ký hiệu phù hợp hơn cho token VRC25 của mình. Dưới đây là một ví dụ:
 
 ```solidity
 constructor() public VRC25("Example Fungible Token", "EFT", 0)
 ```
-### Deployment Considerations
 
-- If you encounter an error message stating "Abstract contracts cannot have public constructors. Remove the 'public' keyword to fix this," you'll need to address this in the `VRC25Permit.sol` file.
-- Simply remove the `public` keyword from the constructor within `VRC25Permit.sol`. Here's the corrected code:
+### Cân Nhắc Triển Khai
+
+- Nếu bạn gặp phải thông báo lỗi "Hợp đồng trừu tượng không thể có constructor công khai. Xóa từ khóa 'public' để sửa lỗi này," bạn cần giải quyết vấn đề này trong tệp `VRC25Permit.sol`.
+- Đơn giản chỉ cần xóa từ khóa `public` khỏi constructor trong `VRC25Permit.sol`. Dưới đây là mã đã được sửa:
 
 ```solidity
 constructor() EIP712("VRC25", "1") { }
 ```
 
-## Quest - Deploy your own VRC25 Token 🪙
+## Nhiệm Vụ - Triển Khai Token VRC25 Của Bạn 🪙
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc25_deploy.png)
 
-To complete this submission, deploy the `POLVRC25.sol` contract from the provided template. Compile the contract using **Solidity version 0.8.19**. Again, if you encounter the error *"Abstract contracts cannot have public constructors"*, navigate to `VRC25Permit.sol` and remove the `public` keyword from the constructor as noted in *Deployment Considerations*
+Để hoàn thành bài nộp này, triển khai hợp đồng `POLVRC25.sol` từ mẫu có sẵn. Biên dịch hợp đồng sử dụng **phiên bản Solidity 0.8.19**. Lại một lần nữa, nếu bạn gặp phải lỗi *"Hợp đồng trừu tượng không thể có constructor công khai"*, hãy vào tệp `VRC25Permit.sol` và xóa từ khóa `public` khỏi constructor như đã lưu ý trong *Cân Nhắc Triển Khai*.
 
-Once fixed, proceed with your deployment and congratulations. You’ve successfully deployed your VRC25 token on Viction! To complete this quest, share your **transaction hash** as proof of deployment.
+Sau khi sửa xong, tiến hành triển khai và chúc mừng bạn. Bạn đã triển khai thành công token VRC25 của mình trên Viction! Để hoàn thành nhiệm vụ này, hãy chia sẻ **hash giao dịch** của bạn làm bằng chứng triển khai.

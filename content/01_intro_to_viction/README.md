@@ -1,31 +1,31 @@
-# Viction Overview
+# Tổng quan về Viction
 
-Viction is a scalable, Proof-of-Stake Voting (PoSV) powered public blockchain, designed to support decentralized applications and provide a seamless Web3 experience. This overview highlights Viction's architecture, unique consensus mechanism, and growing ecosystem.
+Viction là một blockchain công khai có thể mở rộng, sử dụng cơ chế đồng thuận Proof-of-Stake Voting (PoSV), được thiết kế để hỗ trợ các ứng dụng phi tập trung và mang lại trải nghiệm Web3 mượt mà. Bản tổng quan này trình bày kiến trúc của Viction, cơ chế đồng thuận độc đáo và hệ sinh thái ngày càng phát triển của nó.
 
-## Key Design Goals  
-Viction blockchain is built to:
+## Mục tiêu thiết kế chính  
+Blockchain Viction được xây dựng để:
 
-- Achieve fast finality and secure transaction validation.
-- Deliver high transaction throughput to support real-world applications.
-- Minimize the cost of blockchain operations through near-zero gas fees.
-- Lower entry barriers for both developers and end-users to easily interact with blockchain technology.
-- Provide a developer-friendly environment for seamless adoption across industries and use cases.
+- Đạt được tính cuối cùng nhanh chóng và xác nhận giao dịch an toàn.  
+- Cung cấp thông lượng giao dịch cao để hỗ trợ các ứng dụng thực tế.  
+- Giảm chi phí vận hành blockchain thông qua phí gas gần như bằng không.  
+- Hạ thấp rào cản gia nhập cho cả nhà phát triển và người dùng cuối để dễ dàng tương tác với công nghệ blockchain.  
+- Cung cấp môi trường thân thiện với nhà phát triển, tạo điều kiện thuận lợi cho việc áp dụng trên nhiều ngành và trường hợp sử dụng.  
 
-## Core Specifications  
-Viction blockchain offers:
+## Thông số kỹ thuật chính  
+Blockchain Viction cung cấp:
 
-- 2-second block generation and confirmation time.
-- Processing capability of 2,000 transactions per second (TPS).
-- Extremely low gas fees, often close to zero, for cost-efficient operations.
-- Full Ethereum Virtual Machine (EVM) compatibility, enabling Solidity-based smart contracts.
-- A governance model based on Proof-of-Stake Voting (PoSV), supported by a network of up to 150 Masternodes.
+- Thời gian tạo và xác nhận khối là 2 giây.  
+- Khả năng xử lý 2.000 giao dịch mỗi giây (TPS).  
+- Phí gas cực thấp, thường gần bằng không, cho các hoạt động tiết kiệm chi phí.  
+- Tương thích hoàn toàn với Ethereum Virtual Machine (EVM), hỗ trợ các hợp đồng thông minh dựa trên Solidity.  
+- Mô hình quản trị dựa trên Proof-of-Stake Voting (PoSV), được hỗ trợ bởi mạng lưới lên đến 150 Masternode.  
 
-Viction aims to simplify blockchain interactions and accelerate mass adoption through its efficient architecture and user-centric design.
+Viction hướng đến việc đơn giản hóa tương tác blockchain và thúc đẩy sự chấp nhận rộng rãi thông qua kiến trúc hiệu quả và thiết kế lấy người dùng làm trung tâm.
 
-## Viction Blockchain
+## Blockchain Viction
 
-The Viction blockchain is a powerful and scalable platform designed to support decentralized applications (dApps), Web3 projects, and the native VIC token. Since its launch in 2018, Viction has prioritized community-driven growth, providing developers with a fast, low-cost, and highly secure environment to build innovative blockchain solutions. Its key feature is the Proof-of-Stake Voting (PoSV) consensus mechanism, which allows for 2,000 transactions per second (TPS) with near-zero gas fees, while ensuring decentralization and security.
+Blockchain Viction là một nền tảng mạnh mẽ và có khả năng mở rộng, được thiết kế để hỗ trợ các ứng dụng phi tập trung (dApps), dự án Web3 và token VIC gốc. Kể từ khi ra mắt vào năm 2018, Viction đã ưu tiên tăng trưởng dựa vào cộng đồng, cung cấp cho các nhà phát triển một môi trường nhanh chóng, chi phí thấp và an toàn cao để xây dựng các giải pháp blockchain sáng tạo. Tính năng chính của nó là cơ chế đồng thuận Proof-of-Stake Voting (PoSV), cho phép 2.000 giao dịch mỗi giây (TPS) với phí gas gần như bằng không, đồng thời đảm bảo tính phi tập trung và bảo mật.
 
-Viction offers a fully Ethereum Virtual Machine (EVM) compatible network, enabling developers to seamlessly deploy and run smart contracts. Its design focuses on simplifying blockchain adoption by reducing complexity, making it an ideal choice for both experienced and new blockchain developers. The network's infrastructure supports high performance, privacy, and liquidity, offering everything developers need to create feature-rich dApps that meet modern users' demands.
+Viction cung cấp một mạng lưới hoàn toàn tương thích với Ethereum Virtual Machine (EVM), cho phép các nhà phát triển triển khai và vận hành các hợp đồng thông minh một cách liền mạch. Thiết kế của nó tập trung vào việc đơn giản hóa việc áp dụng blockchain bằng cách giảm độ phức tạp, khiến nó trở thành lựa chọn lý tưởng cho cả các nhà phát triển blockchain có kinh nghiệm và mới bắt đầu. Cơ sở hạ tầng của mạng hỗ trợ hiệu suất cao, quyền riêng tư và tính thanh khoản, cung cấp mọi thứ mà các nhà phát triển cần để tạo ra các dApps giàu tính năng đáp ứng nhu cầu của người dùng hiện đại.
 
-Viction's unique approach and powerful features make it an optimal solution for accelerating Web3 mass adoption, offering blockchain technology that is fast, efficient, and easy to integrate.
+Cách tiếp cận độc đáo và các tính năng mạnh mẽ của Viction khiến nó trở thành giải pháp tối ưu để thúc đẩy sự chấp nhận rộng rãi Web3, cung cấp công nghệ blockchain nhanh chóng, hiệu quả và dễ tích hợp.

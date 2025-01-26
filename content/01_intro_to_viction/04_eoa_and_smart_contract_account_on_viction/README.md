@@ -1,42 +1,42 @@
-# EOA and Smart Contract Accounts on Viction
+# Tài khoản EOA và Tài khoản Hợp đồng Thông minh trên Viction
 
-In the Viction blockchain ecosystem, there are two primary types of accounts: **Externally Owned Accounts (EOAs)** and **Smart Contract Accounts**. Understanding how they work is key to interacting with the network and building decentralized applications (dApps) efficiently.
+Trong hệ sinh thái blockchain của Viction, có hai loại tài khoản chính: **Tài khoản do bên ngoài sở hữu (Externally Owned Accounts - EOAs)** và **Tài khoản Hợp đồng Thông minh (Smart Contract Accounts)**. Hiểu cách chúng hoạt động là chìa khóa để tương tác với mạng lưới và xây dựng các ứng dụng phi tập trung (dApps) một cách hiệu quả.
 
-## Externally Owned Accounts (EOAs) 📒
+## Tài khoản do bên ngoài sở hữu (EOAs) 📒
 
-An **EOA** is a simple, user-controlled account that holds the native token **VIC** and can initiate transactions. EOAs are managed by private keys, meaning that only the person with access to the private key can sign and authorize transactions.
+**EOA** là một tài khoản đơn giản do người dùng kiểm soát, giữ token gốc **VIC** và có thể khởi tạo giao dịch. EOAs được quản lý bằng các khóa riêng, có nghĩa là chỉ những người có quyền truy cập vào khóa riêng mới có thể ký và ủy quyền các giao dịch.
 
-- **Key Features of EOAs**:
-  - **User-Controlled**: EOAs are controlled by users through private keys, typically managed by wallets like MetaMask or hardware wallets.
-  - **Initiating Transactions**: EOAs can send VIC, interact with smart contracts, and vote for Masternodes in Viction's PoSV consensus.
-  - **No Code**: EOAs are not programmable, meaning they cannot execute code on the blockchain; they only send transactions or interact with smart contracts.
+- **Các đặc điểm chính của EOAs**:
+  - **Do người dùng kiểm soát**: EOAs được kiểm soát bởi người dùng thông qua các khóa riêng, thường được quản lý bằng các ví như MetaMask hoặc ví phần cứng.
+  - **Khởi tạo giao dịch**: EOAs có thể gửi VIC, tương tác với các hợp đồng thông minh và bỏ phiếu cho các Masternodes trong cơ chế đồng thuận PoSV của Viction.
+  - **Không có mã lập trình**: EOAs không có khả năng lập trình, nghĩa là chúng không thể thực thi mã trên blockchain; chúng chỉ gửi giao dịch hoặc tương tác với các hợp đồng thông minh.
 
-EOAs are the simplest type of account on Viction and are crucial for users interacting with the network or dApps. Transactions from EOAs require the user to sign with their private key to confirm any actions, such as sending tokens or executing functions in a smart contract.
+EOAs là loại tài khoản đơn giản nhất trên Viction và rất quan trọng cho người dùng khi tương tác với mạng lưới hoặc dApps. Các giao dịch từ EOAs yêu cầu người dùng phải ký bằng khóa riêng của họ để xác nhận bất kỳ hành động nào, chẳng hạn như gửi token hoặc thực thi các chức năng trong một hợp đồng thông minh.
 
-## Smart Contract Accounts 📜
+## Tài khoản Hợp đồng Thông minh 📜
 
-A **Smart Contract Account**, on the other hand, is a programmable account controlled by code rather than a private key. Smart contracts on Viction are deployed to the blockchain by EOAs and are executed by the Viction Virtual Machine (VVM).
+**Tài khoản Hợp đồng Thông minh**, ngược lại, là một tài khoản có khả năng lập trình được kiểm soát bởi mã thay vì khóa riêng. Hợp đồng thông minh trên Viction được triển khai lên blockchain bởi các EOAs và được thực thi bởi Viction Virtual Machine (VVM).
 
-- **Key Features of Smart Contract Accounts**:
-  - **Programmable Logic**: Smart contracts can automate complex functions like DeFi protocols, NFTs, or dApp logic by executing code when certain conditions are met.
-  - **Interaction with EOAs**: Smart contracts can’t initiate transactions on their own; they respond to transactions initiated by EOAs.
-  - **Autonomous Execution**: Once deployed, smart contracts run autonomously according to their code, which means they are tamper-proof and cannot be altered unless specifically programmed.
+- **Các đặc điểm chính của Tài khoản Hợp đồng Thông minh**:
+  - **Logic lập trình**: Hợp đồng thông minh có thể tự động hóa các chức năng phức tạp như giao thức DeFi, NFT hoặc logic của dApps bằng cách thực thi mã khi các điều kiện nhất định được đáp ứng.
+  - **Tương tác với EOAs**: Hợp đồng thông minh không thể tự khởi tạo giao dịch; chúng phản hồi các giao dịch được khởi tạo bởi EOAs.
+  - **Thực thi tự động**: Một khi được triển khai, hợp đồng thông minh sẽ chạy tự động theo mã của nó, điều này có nghĩa là chúng không thể bị can thiệp và chỉ có thể thay đổi nếu được lập trình cụ thể.
 
-## Differences Between EOAs and Smart Contract Accounts
+## Sự khác biệt giữa EOAs và Tài khoản Hợp đồng Thông minh
 
-| Feature                | Externally Owned Accounts (EOA)              | Smart Contract Accounts                    |
-|------------------------|---------------------------------------------|-------------------------------------------|
-| **Controlled By**       | Private Key                                 | Smart Contract Code                       |
-| **Can Initiate Txns?**  | Yes                                         | No (can only react to incoming transactions) |
-| **Programmable?**       | No                                          | Yes, can execute complex operations       |
-| **Example Usage**       | Sending VIC, interacting with smart contracts | Automating DeFi protocols, handling NFTs  |
+| Tính năng              | Tài khoản do bên ngoài sở hữu (EOA)         | Tài khoản Hợp đồng Thông minh            |
+|------------------------|--------------------------------------------|------------------------------------------|
+| **Kiểm soát bởi**      | Khóa riêng                                  | Mã Hợp đồng Thông minh                   |
+| **Có thể khởi tạo giao dịch?** | Có                                        | Không (chỉ phản hồi giao dịch đến)        |
+| **Lập trình được?**     | Không                                      | Có, có thể thực thi các hoạt động phức tạp |
+| **Ứng dụng ví dụ**      | Gửi VIC, tương tác với hợp đồng thông minh  | Tự động hóa giao thức DeFi, xử lý NFT    |
 
-## How They Work Together on Viction
+## Cách chúng hoạt động cùng nhau trên Viction
 
-EOAs are essential for users to interact with the Viction network, while smart contracts enable developers to build dApps and decentralized services. For example:
-- A user with an EOA might initiate a transaction to a DeFi smart contract, triggering automated functions like staking or liquidity provision.
-- Smart contracts can then perform operations like transferring tokens or executing governance votes, all while relying on EOAs to initiate the interactions.
+EOAs rất cần thiết cho người dùng để tương tác với mạng lưới Viction, trong khi các hợp đồng thông minh cho phép nhà phát triển xây dựng dApps và các dịch vụ phi tập trung. Ví dụ:
+- Một người dùng có EOA có thể khởi tạo một giao dịch đến một hợp đồng thông minh DeFi, kích hoạt các chức năng tự động như staking hoặc cung cấp thanh khoản.
+- Các hợp đồng thông minh sau đó có thể thực hiện các hoạt động như chuyển token hoặc thực hiện các lượt bỏ phiếu quản trị, tất cả trong khi dựa vào EOAs để khởi tạo các tương tác.
 
-Together, **EOAs** and **Smart Contract Accounts** form the backbone of decentralized applications and blockchain interactions on Viction, enabling a flexible and scalable ecosystem for developers and users alike.
+Cùng nhau, **EOAs** và **Tài khoản Hợp đồng Thông minh** tạo nên nền tảng của các ứng dụng phi tập trung và các tương tác blockchain trên Viction, mang lại một hệ sinh thái linh hoạt và có thể mở rộng cho cả nhà phát triển và người dùng.
 
-Understanding the distinction between EOAs and smart contracts is key to navigating Viction’s platform, whether you're a developer building dApps or a user interacting with decentralized services.
+Hiểu rõ sự khác biệt giữa EOAs và hợp đồng thông minh là chìa khóa để điều hướng nền tảng Viction, dù bạn là nhà phát triển xây dựng dApps hay người dùng tương tác với các dịch vụ phi tập trung.

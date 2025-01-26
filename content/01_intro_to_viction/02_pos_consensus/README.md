@@ -1,25 +1,25 @@
-## Proof of Stake (PoS) Cont.
+## Bằng Chứng Cổ Phần (Proof of Stake - PoS) Tiếp Tục
 
-In the previous, we explored PoS as a consensus mechanism that blockchains use to validate transactions efficiently and securely. Unlike the energy-intensive Proof of Work (PoW) system, PoS allows participants to *stake* or lock up their cryptocurrency to earn rewards and help validate transactions. In PoS, validators are chosen to create new transaction blocks based on the amount of cryptocurrency they stake, with more staked funds increasing their selection chances. This model reduces energy consumption, enhances security through a risk of penalties for dishonesty, and enables more accessible participation since no costly mining equipment is required.
+Trong phần trước, chúng ta đã tìm hiểu về PoS như một cơ chế đồng thuận mà các blockchain sử dụng để xác thực giao dịch một cách hiệu quả và an toàn. Khác với hệ thống Bằng Chứng Công Việc (Proof of Work - PoW) tiêu tốn nhiều năng lượng, PoS cho phép người tham gia *stake* hoặc khóa tiền điện tử của mình để kiếm phần thưởng và giúp xác thực giao dịch. Trong PoS, các trình xác thực (validators) được chọn để tạo các khối giao dịch mới dựa trên số lượng tiền điện tử mà họ stake, với số tiền stake lớn hơn sẽ tăng khả năng được chọn. Mô hình này giảm tiêu thụ năng lượng, nâng cao bảo mật thông qua rủi ro bị phạt nếu không trung thực, và giúp việc tham gia trở nên dễ dàng hơn vì không yêu cầu thiết bị khai thác đắt đỏ.
 
-## Viction's Consensus Mechanism
+## Cơ Chế Đồng Thuận của Viction
 
-**Viction** uses a unique **_Proof-of-Stake Voting (PoSV)_** consensus mechanism that combines robust security features with high transaction efficiency. Taken from the [documentations](https://docs.viction.xyz/general/blockchain-platform-comparison/posv-consensus), Viction runs on the Proof-of-Stake Voting (PoSV) consensus, which is a PoS-based blockchain protocol with a fair voting mechanism, rigorous security guarantees, and uniform probability eventuality. The consensus has the following key novelties:
+**Viction** sử dụng một cơ chế đồng thuận độc đáo **_Proof-of-Stake Voting (PoSV)_**, kết hợp các tính năng bảo mật mạnh mẽ với hiệu suất giao dịch cao. Theo [tài liệu](https://docs.viction.xyz/general/blockchain-platform-comparison/posv-consensus), Viction hoạt động dựa trên cơ chế Proof-of-Stake Voting (PoSV), một giao thức blockchain dựa trên PoS với cơ chế bỏ phiếu công bằng, đảm bảo bảo mật nghiêm ngặt, và tính xác suất đồng đều. Cơ chế đồng thuận này có các điểm nổi bật sau:
 
-- Double Validation to strengthen security and reduce the risk of a blockchain fork
-- Randomization provides security, and prevents handshaking attacks
-- Fast confirmation time and efficient checkpoints for finality
+- Xác Thực Kép (Double Validation) để tăng cường bảo mật và giảm rủi ro phân nhánh blockchain
+- Ngẫu Nhiên hóa (Randomization) để đảm bảo an toàn và ngăn chặn các cuộc tấn công bắt tay
+- Thời gian xác nhận nhanh và các điểm kiểm tra hiệu quả để đạt được tính cuối cùng (finality)
 
-The consensus process is designed to ensure fairness and reliability while maintaining decentralization. Here’s how it works:
+Quá trình đồng thuận được thiết kế để đảm bảo tính công bằng và độ tin cậy trong khi duy trì sự phi tập trung. Đây là cách nó hoạt động:
 
-1. **🛠️ Masternode Participation**: Viction operates a network of **150 Masternodes**, where token holders can stake a minimum of **50,000 VIC** tokens to become **Masternode candidates**.
+1. **🛠️ Tham Gia Masternode**: Viction vận hành một mạng lưới gồm **150 Masternodes**, nơi các chủ sở hữu token có thể stake tối thiểu **50,000 VIC** để trở thành **ứng cử viên Masternode**.
 
-2. **🗳️ Voting and Selection**: Token holders actively participate in the governance process by voting for **Masternode candidates**. The candidates receiving the most votes are elected as **Masternodes**.
+2. **🗳️ Bỏ Phiếu và Lựa Chọn**: Các chủ sở hữu token tích cực tham gia vào quá trình quản trị bằng cách bỏ phiếu cho **các ứng cử viên Masternode**. Các ứng cử viên nhận được nhiều phiếu nhất sẽ được bầu làm **Masternodes**.
 
-3. **🔄 Block Creation and Double Validation**: Once elected, Masternodes take turns generating blocks in a **round-robin** manner. To enhance security, each block creation is verified by another randomly selected Masternode through a process called **_double validation_**.
+3. **🔄 Tạo Khối và Xác Thực Kép**: Khi được bầu, Masternodes lần lượt tạo khối theo hình thức **xoay vòng (round-robin)**. Để tăng cường bảo mật, mỗi khối được tạo sẽ được xác thực bởi một Masternode khác được chọn ngẫu nhiên thông qua quy trình gọi là **_xác thực kép (double validation)_**.
 
-4. **⚡ Rapid Finality**: This innovative consensus mechanism allows Viction to achieve impressive performance, processing up to **2,000 transactions per second (TPS)** with a **block confirmation time** of just **2 seconds**.
+4. **⚡ Tính Cuối Cùng Nhanh**: Cơ chế đồng thuận tiên tiến này cho phép Viction đạt được hiệu suất ấn tượng, xử lý lên đến **2,000 giao dịch mỗi giây (TPS)** với thời gian **xác nhận khối** chỉ **2 giây**.
 
-### Enhanced Security and Scalability
+### Tăng Cường Bảo Mật và Khả Năng Mở Rộng
 
-By leveraging double validation, Viction addresses common challenges faced by traditional proof-of-stake systems, such as potential collusion and nothing-at-stake attacks. This innovative approach ensures a high level of trust within the network, fostering a secure environment for users and developers alike. With Viction's ability to scale efficiently while maintaining security, the platform is well-equipped to support a wide array of applications, from finance to gaming and beyond. As more developers and projects join the Viction ecosystem, the network's potential for growth and innovation continues to expand, paving the way for the future of decentralized technology.
+Bằng cách sử dụng xác thực kép, Viction giải quyết các thách thức thường gặp ở các hệ thống PoS truyền thống, như sự thông đồng tiềm tàng và các cuộc tấn công nothing-at-stake. Cách tiếp cận đổi mới này đảm bảo mức độ tin cậy cao trong mạng lưới, tạo môi trường an toàn cho người dùng và nhà phát triển. Với khả năng mở rộng hiệu quả trong khi duy trì bảo mật, nền tảng này được trang bị tốt để hỗ trợ một loạt các ứng dụng, từ tài chính đến trò chơi và hơn thế nữa. Khi ngày càng có nhiều nhà phát triển và dự án tham gia vào hệ sinh thái Viction, tiềm năng phát triển và đổi mới của mạng lưới tiếp tục mở rộng, mở đường cho tương lai của công nghệ phi tập trung.

@@ -1,15 +1,15 @@
-# Minting Token for Gasless Transaciton 
+# Đúc Token Cho Giao Dịch Không Tốn Gas
 
-With your newly deployed VRC25, we can see the token in action, by minting to an Address called Address Y. With this funding, we can mint the sample VRC25 token to *Address Y*. While this initial interaction will incur gas fees, the minted tokens will enable Address Y to participate in token burning. In the Vic Issuer section of this course, we will apply Viction's Issuer functionality to allow Address Y to burn tokens without incurring gas fees (as well as minting), making the process https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/vic and cost-effective.
+Với VRC25 mới triển khai của bạn, chúng ta có thể thấy token hoạt động thực tế bằng cách đúc token vào một Địa Chỉ gọi là Địa Chỉ Y. Với khoản tiền này, chúng ta có thể đúc token mẫu VRC25 vào *Địa Chỉ Y*. Mặc dù tương tác ban đầu sẽ phát sinh phí gas, các token đã được đúc sẽ cho phép Địa Chỉ Y tham gia vào việc đốt token. Trong phần Issuer của Viction trong khóa học này, chúng ta sẽ áp dụng chức năng Issuer của Viction để cho phép Địa Chỉ Y đốt token mà không tốn phí gas (cũng như đúc token), làm cho quá trình trở nên https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/vic và tiết kiệm chi phí.
 
-## Fund Address Y
+## Cung Cấp Quỹ Cho Địa Chỉ Y
 
-Access the [Viction Testnet Faucet](https://faucet-testnet.viction.xyz/) to . Send these tokens to your desired recipient address, Address Y. This initial funding will be used for the first minting transaction, which might incur a gas fee depending on network conditions. However, subsequently minted tokens will benefit from gasless transactions.
+Truy cập [Viction Testnet Faucet](https://faucet-testnet.viction.xyz/) để gửi các token này đến địa chỉ nhận mà bạn mong muốn, Địa Chỉ Y. Khoản tiền cung cấp ban đầu này sẽ được sử dụng cho giao dịch đúc token đầu tiên, có thể phát sinh phí gas tùy theo điều kiện mạng. Tuy nhiên, các token được đúc sau đó sẽ được hưởng lợi từ giao dịch không tốn gas.
 
-## Quest - Mint
+## Nhiệm Vụ - Đúc Token
 
-In this quest, you'll mint `100000000000000000000` woth of the tokens to Address Y.
+Trong nhiệm vụ này, bạn sẽ đúc `100000000000000000000` token vào Địa Chỉ Y.
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc25_mint.png)
 
-The VRC25 standard introduces advanced token management features while conforming to the familiar ERC20 structure, ensuring compatibility and ease of integration. With unique methods like `issuer` and `estimateFee`, VRC25 enhances security, transparency, and user control, making it a robust solution for token operations on the Viction blockchain. The following guide will focus on another smart contract known as the `VicIssuer` which delves into the integration for enabling gasless operations.
+Tiêu chuẩn VRC25 giới thiệu các tính năng quản lý token tiên tiến trong khi tuân thủ cấu trúc ERC20 quen thuộc, đảm bảo khả năng tương thích và dễ dàng tích hợp. Với các phương thức độc đáo như `issuer` và `estimateFee`, VRC25 nâng cao tính bảo mật, minh bạch và kiểm soát người dùng, khiến nó trở thành một giải pháp mạnh mẽ cho các hoạt động token trên blockchain Viction. Hướng dẫn dưới đây sẽ tập trung vào một hợp đồng thông minh khác được gọi là `VicIssuer`, đi sâu vào việc tích hợp để cho phép các giao dịch không tốn gas.

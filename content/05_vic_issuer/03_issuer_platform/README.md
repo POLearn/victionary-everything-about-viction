@@ -1,32 +1,32 @@
-## Quest - Gasless Burn
+## Nhiệm Vụ - Đốt Token Không Tốn Gas
 
-In this final segment, we’ll experience the Zero Gas Protocol through a gasless minting transaction. By now, you should have minted `100000000000000000000` tokens of your VRC25 token to **Address Y**. Let’s replicate this process, but with a this time, the transaction should incur no gas fees, thanks to the VicIssuer integration.
+Trong phần cuối này, chúng ta sẽ trải nghiệm Giao Thức Không Tốn Gas thông qua một giao dịch minting không tốn gas. Đến bây giờ, bạn nên đã mint `100000000000000000000` token VRC25 của bạn tới **Địa Chỉ Y**. Hãy tái tạo quá trình này, nhưng lần này, giao dịch sẽ không tốn phí gas, nhờ vào việc tích hợp VicIssuer.
 
-Load your VRC25 token into your wallet or IDE, then use **Address Y** to mint `100000000000000000000` tokens again. Unlike before, this action no longer requires gas fees, thanks to the VicIssuer integration, which enables gasless minting, burning, and transferring of tokens.
+Tải token VRC25 của bạn vào ví hoặc IDE, sau đó sử dụng **Địa Chỉ Y** để mint lại `100000000000000000000` token. Không giống như trước, hành động này không còn yêu cầu phí gas, nhờ vào việc tích hợp VicIssuer, cho phép minting, burning và chuyển token không tốn gas.
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_mint.png)
 
-After completing the minting, retrieve the transaction hash and review the details in the blockchain explorer. Here's an example of a gasless transaction:  
-[Transaction Example](https://testnet.vicscan.xyz/tx/0xd684697e21af4218d74beb94862746672b30d9e11bc2a9c6ee6eb99d7148a367).  
+Sau khi hoàn tất việc mint, lấy mã giao dịch và kiểm tra chi tiết trong blockchain explorer. Đây là ví dụ về một giao dịch không tốn gas:  
+[Ví dụ Giao Dịch](https://testnet.vicscan.xyz/tx/0xd684697e21af4218d74beb94862746672b30d9e11bc2a9c6ee6eb99d7148a367).
 
-In the explorer, note the transaction type: **Gas Sponsored**.
+Trong explorer, lưu ý loại giao dịch: **Gas Sponsored**.
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_gas_sponsor.png)
 
-After the transaction, check the wallet balance or view the address on the explorer. The VIC balance should remain untouched, confirming that no gas fees were deducted for this action.
+Sau giao dịch, kiểm tra số dư ví hoặc xem địa chỉ trên explorer. Số dư VIC nên không thay đổi, xác nhận rằng không có phí gas nào bị trừ cho hành động này.
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_gas_dashboard.png)
 
-> Make sure to submit that transaction to complete the course and mint your POL POAP!
+> Hãy chắc chắn gửi giao dịch đó để hoàn thành khóa học và mint POAP POL của bạn!
 
-## VicIssuer Platform
+## Nền Tảng VicIssuer
 
-This section highlighted the use of the VICIssuer Dashboard for managing token applications and enabling gasless transactions. Beyond its dashboard capabilities, VICIssuer serves as a powerful all-in-one Token Issuance Platform, designed to make token creation and management accessible to everyone. 
+Phần này đã làm nổi bật việc sử dụng Bảng Điều Khiển VICIssuer để quản lý các ứng dụng token và cho phép giao dịch không tốn gas. Ngoài khả năng điều khiển bảng điều khiển của mình, VICIssuer còn là một nền tảng phát hành token mạnh mẽ tất cả trong một, được thiết kế để làm cho việc tạo và quản lý token trở nên dễ tiếp cận với mọi người.
 
-By simplifying the technical aspects of token deployment, VICIssuer opens the doors to streamlined tokenization for businesses and individuals alike. The platform automates complex processes, ensuring that even users with no prior blockchain experience can issue and manage tokens with ease. Whether you're a company looking to integrate blockchain into your operations or an individual innovator exploring new opportunities, VICIssuer provides the tools and support needed to create tokens, enhance utility, and build engaging communities without unnecessary technical hurdles.
+Bằng cách đơn giản hóa các khía cạnh kỹ thuật của việc triển khai token, VICIssuer mở ra cánh cửa cho việc token hóa dễ dàng cho các doanh nghiệp và cá nhân. Nền tảng này tự động hóa các quy trình phức tạp, đảm bảo rằng ngay cả những người dùng không có kinh nghiệm trước về blockchain cũng có thể phát hành và quản lý token một cách dễ dàng. Dù bạn là công ty muốn tích hợp blockchain vào hoạt động của mình hay là một nhà sáng tạo cá nhân đang khám phá các cơ hội mới, VICIssuer cung cấp công cụ và sự hỗ trợ cần thiết để tạo token, nâng cao tiện ích và xây dựng cộng đồng hấp dẫn mà không gặp phải các rào cản kỹ thuật không cần thiết.
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_platform.png)
 
-## Complete the Quest and Claim Your Reward
+## Hoàn Thành Nhiệm Vụ và Nhận Phần Thưởng
 
-To finalize the course, ensure the transaction is submitted and verified. Upon completion, you’ll earn your POL POAP - a token of your achievement.
+Để hoàn tất khóa học, đảm bảo giao dịch đã được gửi và xác minh. Sau khi hoàn thành, bạn sẽ nhận được POAP POL - một token ghi nhận thành tích của bạn.

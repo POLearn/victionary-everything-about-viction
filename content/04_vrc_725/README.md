@@ -1,21 +1,21 @@
-## Viction's NFT VRC725
+## NFT VRC725 của Viction
 
-In this section, it's all about NFT mainly VRC725, the official standard on Viction. Building on the foundation of the widely recognized ERC721 standard, VRC725 introduces enhanced features such as gas-free operations and extended metadata support. This standard provides a streamlined and efficient approach to creating, tracking, and transferring unique tokens, making it the simplest form of NFTs on Viction. By incorporating mechanisms for gasless transactions and maintaining robust security measures, VRC725 ensures a seamless user experience while supporting diverse use cases from virtual collectibles to tangible property ownership.
+Trong phần này, tất cả đều xoay quanh NFT, chủ yếu là VRC725, tiêu chuẩn chính thức trên Viction. Dựa trên nền tảng của tiêu chuẩn ERC721 được công nhận rộng rãi, VRC725 giới thiệu các tính năng nâng cao như giao dịch không mất gas và hỗ trợ metadata mở rộng. Tiêu chuẩn này cung cấp một phương pháp hợp lý và hiệu quả để tạo, theo dõi và chuyển nhượng các token độc đáo, biến nó thành dạng đơn giản nhất của NFT trên Viction. Bằng cách kết hợp cơ chế giao dịch không mất gas và duy trì các biện pháp bảo mật vững chắc, VRC725 đảm bảo trải nghiệm người dùng mượt mà trong khi hỗ trợ các trường hợp sử dụng đa dạng từ bộ sưu tập ảo đến sở hữu tài sản hữu hình.
 
-**Learning Objectives:**
+**Mục tiêu học tập:**
 
-* Grasp the core principles of the VRC725 NFT standard.
-* Deploy VRC725 NFT on Viction.
+* Nắm vững các nguyên lý cơ bản của tiêu chuẩn NFT VRC725.
+* Triển khai NFT VRC725 trên Viction.
 
-## Advantages of VRC725
+## Lợi ích của VRC725
 
-* **Gasless Transactions:** VRC725 eliminates the need for users to hold native tokens for transaction fees. Smart contracts sponsor these fees, significantly reducing barriers to entry and enhancing user experience.
-* **Extended Metadata Support:** VRC725 offers robust support for rich metadata. This allows creators to embed additional information within their NFTs, such as descriptions, licenses, or even multimedia content.
-* **Simplified NFT Management:** VRC725 streamlines the process of creating, transferring, and managing NFTs. This user-friendly approach makes VRC725 ideal for a wider range of applications, from digital collectibles to tokenized representations of real-world assets.
+* **Giao dịch không mất gas:** VRC725 loại bỏ nhu cầu người dùng phải giữ token gốc để trả phí giao dịch. Các hợp đồng thông minh sẽ tài trợ các khoản phí này, giảm đáng kể rào cản gia nhập và nâng cao trải nghiệm người dùng.
+* **Hỗ trợ Metadata mở rộng:** VRC725 cung cấp hỗ trợ mạnh mẽ cho metadata phong phú. Điều này cho phép người sáng tạo nhúng thêm thông tin vào NFT của họ, chẳng hạn như mô tả, giấy phép, hoặc thậm chí là nội dung đa phương tiện.
+* **Quản lý NFT đơn giản:** VRC725 đơn giản hóa quá trình tạo, chuyển nhượng và quản lý NFT. Cách tiếp cận thân thiện với người dùng này khiến VRC725 trở thành lựa chọn lý tưởng cho một loạt ứng dụng, từ bộ sưu tập kỹ thuật số đến đại diện token hóa của tài sản thế giới thực.
 
-## VRC725 vs. ERC721: A Side-by-Side Look
+## VRC725 vs. ERC721: So sánh trực tiếp
 
-When examining the relationship between VRC725 and ERC721, it's essential to understand that VRC725 inherits from ERC721. This inheritance means that VRC725 tokens are fundamentally ERC721 tokens, adhering to the [EIP 721 standard](https://eips.ethereum.org/EIPS/eip-721), which ensures compatibility with other Ethereum Virtual Machine (EVM) chains—a significant advantage. However, what truly sets VRC725 apart are the additional features and extensions it incorporates, particularly those defined in the IVRC725 interface.
+Khi xem xét mối quan hệ giữa VRC725 và ERC721, điều quan trọng là phải hiểu rằng VRC725 kế thừa từ ERC721. Việc kế thừa này có nghĩa là các token VRC725 về cơ bản là token ERC721, tuân thủ tiêu chuẩn [EIP 721](https://eips.ethereum.org/EIPS/eip-721), đảm bảo tính tương thích với các chuỗi Ethereum Virtual Machine (EVM) khác—a lợi thế đáng kể. Tuy nhiên, điều thực sự làm nổi bật VRC725 chính là các tính năng và mở rộng bổ sung mà nó tích hợp, đặc biệt là những gì được định nghĩa trong giao diện IVRC725.
 
 ```solidity
 interface ERC721 {
@@ -35,4 +35,4 @@ interface ERC721 {
 }
 ```
 
-*For the official overview of the VRC25 specification, take a look at Viction's VRC25 Documentation: [VRC25 Specification](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc725-specification).*
+*Để tìm hiểu tổng quan chính thức về đặc tả VRC25, hãy tham khảo Tài liệu VRC25 của Viction: [VRC25 Specification](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc725-specification).*

@@ -1,14 +1,15 @@
-# State Trie
+# Trie Trạng Thái (State Trie)
 
-Learning about Viction (or blockchain in general), then a concept that's important is **State Trie**. It is a fundamental data structure to efficiently store and manage the **state** of the blockchain. So, think of a blockchain as a database, that keeps a track off all accounts balances and transactions. It is part of the Viction protocol and plays a crucial role in maintaining the current state of all accounts and their respective balances, storage, and other data.
+Khi tìm hiểu về Viction (hoặc blockchain nói chung), một khái niệm quan trọng cần nắm là **Trie Trạng Thái**. Đây là một cấu trúc dữ liệu cơ bản giúp lưu trữ và quản lý **trạng thái** của blockchain một cách hiệu quả. Hãy tưởng tượng blockchain như một cơ sở dữ liệu, nơi ghi nhận tất cả số dư tài khoản và các giao dịch. Nó là một phần của giao thức Viction và đóng vai trò cốt lõi trong việc duy trì trạng thái hiện tại của tất cả tài khoản, số dư, dữ liệu lưu trữ và các thông tin khác.
 
-### What is a Trie?
-If we go basic to Computer Science or data structures. A [trie](https://en.wikipedia.org/wiki/Trie) is a type of *tree structure* that helps store and retrieve data efficiently. Tries are particularly useful when you need to look up information quickly, which is exactly what Ethereum needs to do when managing thousands of accounts and transactions.
+### Trie là gì?
+Quay lại khái niệm cơ bản trong Khoa học Máy tính hoặc cấu trúc dữ liệu, một [trie](https://en.wikipedia.org/wiki/Trie) là một loại *cấu trúc cây* giúp lưu trữ và truy xuất dữ liệu một cách hiệu quả. Trie đặc biệt hữu ích khi bạn cần tra cứu thông tin nhanh chóng, và đó chính xác là điều mà Ethereum cần khi phải quản lý hàng ngàn tài khoản và giao dịch.
 
-The state trie can be thought of as a mapping structure where:
-- Key: The account address.
-- Value: The account state, which includes details like nonce, balance, and more.
-An example could be the information for an account,
+Trie trạng thái có thể được xem như một cấu trúc ánh xạ mà:
+- **Key**: Địa chỉ tài khoản.
+- **Value**: Trạng thái tài khoản, bao gồm các chi tiết như nonce, số dư, và nhiều thông tin khác.
+
+Ví dụ về thông tin của một tài khoản:
 
 ```json
 {
@@ -19,4 +20,6 @@ An example could be the information for an account,
 }
 ```
 
-This object represents the account state associated with the specified address. However, since storing all this data in each block would be inefficient, only the root hash of the state trie is included in each block header. This root hash acts as a commitment to the data within the trie for that specific block. For example, in [Block 85453443](https://www.vicscan.xyz/block/85453443) on Viction, the block contains a state root that is a hash of the block information, ensuring that any modifications to account states during transaction processing are accurately reflected. This allows nodes to validate the integrity of the blockchain and efficiently verify account states through Merkle proofs, maintaining trust in the network's data while ensuring scalability.
+Đối tượng này đại diện cho trạng thái tài khoản được liên kết với địa chỉ cụ thể. Tuy nhiên, do việc lưu trữ tất cả dữ liệu này trong mỗi block sẽ không hiệu quả, chỉ **hash gốc** (root hash) của trie trạng thái được đưa vào phần tiêu đề của mỗi block. Hash gốc này đóng vai trò như một cam kết về dữ liệu bên trong trie cho block cụ thể đó. 
+
+Ví dụ, trong [Block 85453443](https://www.vicscan.xyz/block/85453443) trên Viction, block chứa một state root là một hash của thông tin block, đảm bảo rằng mọi thay đổi đối với trạng thái tài khoản trong quá trình xử lý giao dịch đều được phản ánh chính xác. Điều này cho phép các nút (nodes) xác minh tính toàn vẹn của blockchain và kiểm tra trạng thái tài khoản một cách hiệu quả thông qua **Merkle proofs**, duy trì sự tin cậy vào dữ liệu của mạng lưới đồng thời đảm bảo khả năng mở rộng.

@@ -1,42 +1,42 @@
-# Ready to Roll?
+# Sẵn Sàng Lăn Sò?
 
-If you're new to deploying smart contracts, fret not! We can leverage an existing Dice contract. Here's what you'll need to do:
+Nếu bạn là người mới trong việc triển khai hợp đồng thông minh, đừng lo lắng! Chúng ta có thể tận dụng hợp đồng Dice hiện có. Đây là những gì bạn cần làm:
 
-## Load the Contract
+## Tải Hợp Đồng
 
-Head over to [Solide IDE](https://solide0x.tech/address/89/0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D) and interact with the contract at this address: `0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D`.
+Truy cập vào [Solide IDE](https://solide0x.tech/address/89/0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D) và tương tác với hợp đồng tại địa chỉ này: `0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D`.
 
-## Roll the Dice!
+## Lăn Sò!
 
-Click on the `roll` function within the IDE. This will initiate a transaction simulating a dice roll. Confirmation might take a few seconds due to VRRF's workings.
+Nhấp vào chức năng `roll` trong IDE. Điều này sẽ khởi tạo một giao dịch mô phỏng việc lăn súc sắc. Việc xác nhận có thể mất vài giây do quá trình hoạt động của VRRF.
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_roll.png)
 
-*Note, that the result will change upon after a few seconds. According to the Viction documentation it is good to note that *VRRF relies on the order of calling transaction, protocols who make use of VRRF must wait for a short period of time (say 8-10 seconds) before displaying random result to end-users to avoid issues related to block re-org.*
+*Lưu ý rằng kết quả sẽ thay đổi sau vài giây. Theo tài liệu Viction, cần lưu ý rằng *VRRF phụ thuộc vào thứ tự gọi giao dịch, các giao thức sử dụng VRRF phải chờ một khoảng thời gian ngắn (khoảng 8-10 giây) trước khi hiển thị kết quả ngẫu nhiên cho người dùng cuối để tránh các vấn đề liên quan đến việc tái tổ chức khối.*
 
-## Understanding the Roll Event
+## Hiểu Về Sự Kiện Lăn Sò
 
-The contract emits a `RollEvent` whenever a dice roll is executed. Let's navigate to the Dice contract on Vicscan and explore the *Event* tab to find this emitted event. This event holds the key to decoding the roll value:
+Hợp đồng phát ra một `RollEvent` mỗi khi một lần lăn súc sắc được thực hiện. Hãy truy cập vào hợp đồng Dice trên Vicscan và khám phá tab *Event* để tìm sự kiện này. Sự kiện này chứa chìa khóa để giải mã giá trị lăn:
 
 ```
 0x0000000000000000000000000000000000000000000000000000000000fa8674b6c634d1fa355a3b605f762247847be8da437e46c55627c8ed747367298250e40000000000000000000000000000000000000000000000000000000000000001
 ```
 
-By decoding this data, we discover the roll value to be **2**. Additionally, the event provides a raw VRRF value denoted by the key `n`. This `bytes32` value can be converted to a standard number (`uint256`) for on-chain operations, as demonstrated in the Dice contract itself. (You can find a screenshot of the Roll Event Log [here](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/build-with-viction-vrrf/assets/logs.png) for reference).
+Bằng cách giải mã dữ liệu này, chúng ta khám phá ra giá trị lăn là **2**. Ngoài ra, sự kiện này cung cấp một giá trị VRRF thô được ký hiệu bằng khóa `n`. Giá trị `bytes32` này có thể được chuyển đổi thành một số chuẩn (`uint256`) cho các thao tác trên chuỗi, như được thể hiện trong hợp đồng Dice. (Bạn có thể tìm ảnh chụp màn hình của Log Sự Kiện Lăn [ở đây](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/build-with-viction-vrrf/assets/logs.png) để tham khảo).
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_log.png)
 
-## The Power of VRRF
+## Sức Mạnh của VRRF
 
-VRRF shines as a reliable and verifiable solution for generating random numbers on the Viction blockchain. Here's why it's so valuable:
+VRRF nổi bật như một giải pháp đáng tin cậy và có thể xác minh được để tạo ra số ngẫu nhiên trên blockchain Viction. Đây là lý do tại sao nó lại có giá trị:
 
-* **Verifiable Randomness:**  Anyone can confirm that the generated number is truly random and hasn't been tampered with, fostering trust in blockchain applications.
-* **Seamless Integration:** VRRF integrates effortlessly with smart contracts, enabling efficient on-chain processing of random values.
-* **Cost-Effective:** VRRF provides a secure and cost-effective way to generate random numbers within smart contracts.
+* **Ngẫu Nhiên Có Thể Xác Minh:** Ai cũng có thể xác nhận rằng số được tạo ra thực sự ngẫu nhiên và không bị can thiệp, tạo dựng lòng tin trong các ứng dụng blockchain.
+* **Tích Hợp Mượt Mà:** VRRF tích hợp dễ dàng với hợp đồng thông minh, cho phép xử lý giá trị ngẫu nhiên hiệu quả trên chuỗi.
+* **Chi Phí Thấp:** VRRF cung cấp một cách tạo số ngẫu nhiên an toàn và hiệu quả chi phí trong hợp đồng thông minh.
 
-## VRRF Applications: Beyond Dice Games
+## Ứng Dụng VRRF: Vượt Ra Ngoài Trò Chơi Súc Sắc
 
-While dice games highlight VRRF's fun potential, its use cases go much further. VRRF enables fair task distribution, ensuring rewards or assignments are allocated transparently and without bias. It also powers unpredictable NFT minting, adding an exciting layer of randomness and surprise to the creation of unique collectibles.
+Mặc dù trò chơi súc sắc làm nổi bật tiềm năng vui nhộn của VRRF, nhưng các trường hợp sử dụng của nó còn vượt xa hơn thế. VRRF cho phép phân phối công việc công bằng, đảm bảo rằng phần thưởng hoặc nhiệm vụ được phân bổ minh bạch và không thiên vị. Nó cũng là động lực cho việc đúc NFT không thể đoán trước, thêm một lớp ngẫu nhiên và bất ngờ vào việc tạo ra các bộ sưu tập độc đáo.
 
-> ❗**Don't forget**
-> For this submission, provide the transaction of the invokation of the `roll` method in the Dice deployed on Viction.
+> ❗**Đừng quên**
+> Đối với lần nộp bài này, hãy cung cấp giao dịch của việc gọi phương thức `roll` trong Dice đã được triển khai trên Viction.
