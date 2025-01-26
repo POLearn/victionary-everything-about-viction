@@ -1,22 +1,22 @@
-# Gasless Tokens with VicIssuer
+# गैसलैस टोकन के साथ VicIssuer
 
-## Learning Objectives:
+## शिक्षण उद्देश्य:
 
-* Understand the role of the `VicIssuer` contract in managing VRC25 tokens.
-* Explore the concept and implementation of the `VicIssuer` contract and its implications for issuers.
-* Gain insights into how the `VicIssuer` contract enhances security and control within the Viction ecosystem and interacts with the platform.
+* VRC25 टोकनों को प्रबंधित करने में `VicIssuer` कॉन्ट्रैक्ट की भूमिका को समझें।
+* `VicIssuer` कॉन्ट्रैक्ट की अवधारणा और कार्यान्वयन का अन्वेषण करें और यह जारीकर्ताओं के लिए क्या प्रभाव डालता है।
+* यह जानें कि `VicIssuer` कॉन्ट्रैक्ट Viction पारिस्थितिकी तंत्र के भीतर सुरक्षा और नियंत्रण को कैसे बढ़ाता है और मंच के साथ कैसे इंटरएक्ट करता है।
 
-## What is the VicIssuer
+## VicIssuer क्या है
 
-The `VRC25Issuer` contract facilitates the management of token issuances and transaction fees within the Viction ecosystem. VicIssuer simplifies the process for businesses and entrepreneurs by facilitating the issuance of these tokens. By incorporating features like gasless transactions and robust security measures, Viction empowers users to seamlessly interact with the blockchain and unlock the full potential of the VRC25 ecosystem.
+`VRC25Issuer` कॉन्ट्रैक्ट Viction पारिस्थितिकी तंत्र के भीतर टोकन जारी करने और लेन-देन शुल्क को प्रबंधित करने की सुविधा प्रदान करता है। VicIssuer व्यवसायों और उद्यमियों के लिए इन टोकनों को जारी करने की प्रक्रिया को सरल बनाता है। गैसलैस लेन-देन और मजबूत सुरक्षा उपायों जैसी सुविधाओं को शामिल करके, Viction उपयोगकर्ताओं को ब्लॉकचेन के साथ सहज रूप से इंटरएक्ट करने और VRC25 पारिस्थितिकी तंत्र की पूरी क्षमता को अनलॉक करने का अवसर प्रदान करता है।
 
-| Network   | Address                                    |
-| --------- | ------------------------------------------ |
-| Mainnet   | 0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee |
-| Testnet   | 0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee |
+| नेटवर्क   | पता                                         |
+| --------- | ------------------------------------------- |
+| मेननेट   | 0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee |
+| टेस्टनेट   | 0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee |
 
-## Zero Gas Protocol
+## जीरो गैस प्रोटोकॉल
 
-Viction's commitment to user-centricity extends beyond gasless transactions. The Zero Gas Protocol further enhances the user experience by minimizing transaction costs for a wide range of interactions. This innovative mechanism allows for certain types of transactions, such as simple token transfers and basic interactions, to be executed without incurring any gas fees.
+Viction की उपयोगकर्ता-केंद्रितता की प्रतिबद्धता गैसलैस लेन-देन से परे जाती है। Zero Gas Protocol उपयोगकर्ता अनुभव को और बढ़ाता है, लेन-देन लागत को विभिन्न प्रकार की इंटरएक्शन के लिए कम करके। यह अभिनव तंत्र कुछ प्रकार के लेन-देन, जैसे साधारण टोकन ट्रांसफर और बुनियादी इंटरएक्शन, को बिना किसी गैस शुल्क के निष्पादित करने की अनुमति देता है।
 
-By combining the power of VicIssuer with the Zero Gas Protocol, Viction creates a truly user-friendly and cost-effective environment for developers and users to thrive within the blockchain ecosystem.
+VicIssuer की शक्ति को Zero Gas Protocol के साथ मिलाकर, Viction ब्लॉकचेन पारिस्थितिकी तंत्र में विकासकर्ताओं और उपयोगकर्ताओं के लिए एक सचमुच उपयोगकर्ता-मित्रवत और लागत-प्रभावी वातावरण बनाता है।

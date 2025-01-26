@@ -1,45 +1,45 @@
-## Apply for Zero Gas Protocol
+## Zero Gas प्रोटोकॉल के लिए आवेदन करें
 
-When you deploy or register your VRC25 on Viction, it won’t automatically qualify for gasless transactions. To enable this feature, you need to apply for the *Zero Gas Protocol*. In this section, we’ll explore how to achieve this through the VicIssuer smart contract, providing insights into the inner workings of the VIC Issuer.
+जब आप अपना VRC25 Viction पर तैनात या रजिस्टर करते हैं, तो यह स्वचालित रूप से गैसलैस लेन-देन के लिए योग्य नहीं होगा। इस सुविधा को सक्षम करने के लिए, आपको *Zero Gas प्रोटोकॉल* के लिए आवेदन करना होगा। इस खंड में, हम VicIssuer स्मार्ट कॉन्ट्रैक्ट के माध्यम से इसे प्राप्त करने के तरीके का अन्वेषण करेंगे, जिससे VIC Issuer के आंतरिक कार्यों पर प्रकाश डाला जाएगा।
 
-To follow along, load the VIC Issuer contract, compile, and deploy it using the issuer address specified earlier. For the testnet, use `0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee`.
+इसके साथ पालन करने के लिए, VIC Issuer कॉन्ट्रैक्ट को लोड करें, संकलित करें और पहले बताए गए जारीकर्ता पते का उपयोग करके इसे तैनात करें। टेस्टनेट के लिए, `0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee` का उपयोग करें।
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_contract.png)
 
-*Alternatively, you can access it directly via our IDE - [https://solide0x.tech/address/89/0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee](https://solide0x.tech/address/89/0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee)*
+*वैकल्पिक रूप से, आप इसे हमारे IDE के माध्यम से सीधे एक्सेस कर सकते हैं - [https://solide0x.tech/address/89/0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee](https://solide0x.tech/address/89/0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee)*
 
-Once loaded into the IDE, call the `minCap` value. This should be set to `10000000000000000000`, which corresponds to 10 VIC tokens. These tokens are required as a deposit to apply for gasless transactions. This value will be important as it'll need to be passed as the `msg.value` when invoking `apply` and thus applying the VRC25 token to the Zero Gas Integration.
+IDE में लोड होने के बाद, `minCap` मान को कॉल करें। इसे `10000000000000000000` पर सेट किया जाना चाहिए, जो 10 VIC टोकन के बराबर है। ये टोकन गैसलैस लेन-देन के लिए आवेदन करने के लिए जमा के रूप में आवश्यक हैं। इस मान का महत्व है क्योंकि इसे `apply` को कॉल करते समय `msg.value` के रूप में पास किया जाना चाहिए और इस प्रकार VRC25 टोकन को Zero Gas इंटीग्रेशन पर लागू किया जाएगा।
 
 ```
-10 $VIC * 18 (decimals) = 10000000000000000000 wei
+10 $VIC * 18 (दशमलव) = 10000000000000000000 wei
 ```
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_mincap.png)
 
-## Quest - Apply your VRC25 to VicIssuer
+## क्वेस्ट - अपने VRC25 को VicIssuer में आवेदन करें
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_apply.png)
 
-You can enable gasless transactions for your VRC25 token by deploying the token and invoking the `apply` method. This process allows the token to support gasless operations, making transactions smoother and more user-friendly. Make sure to include a deposit of 10 VIC during this step, which will be used to sponsor the gas fees. This ensures that all transactions remain gasless, enhancing the user experience. 
+आप अपना VRC25 टोकन तैनात करके और `apply` विधि को कॉल करके गैसलैस लेन-देन सक्षम कर सकते हैं। यह प्रक्रिया टोकन को गैसलैस ऑपरेशन्स को समर्थन करने की अनुमति देती है, जिससे लेन-देन और अधिक सुगम और उपयोगकर्ता-मित्रवत हो जाते हैं। इस कदम के दौरान 10 VIC का जमा करना सुनिश्चित करें, जिसे गैस शुल्कों को प्रायोजित करने के लिए उपयोग किया जाएगा। यह सुनिश्चित करता है कि सभी लेन-देन गैसलैस रहें, जिससे उपयोगकर्ता अनुभव बढ़ता है।
 
-You (or anyone) can choose to make this deposit at a later stage, but incorporating it during the initial deployment is advisable. You can check the details in the blockchain explorer to confirm that your VRC25 token has been successfully set up for gasless transactions.
+आप (या कोई अन्य) बाद में इस जमा को कर सकते हैं, लेकिन प्रारंभिक तैनाती के दौरान इसे शामिल करना सलाहकार है। आप यह सुनिश्चित करने के लिए ब्लॉकचेन एक्सप्लोरर में विवरण की जांच कर सकते हैं कि आपका VRC25 टोकन गैसलैस लेन-देन के लिए सफलतापूर्वक सेटअप हो चुका है।
 
-#### Token Verification
+#### टोकन सत्यापन
 
-If you call the `tokens()` method, you can confirm your token’s inclusion in the VIC Issuer’s list. The address of your applied token should appear in the returned list. Make sure that the token address you applied for is in the token list.
+यदि आप `tokens()` विधि को कॉल करते हैं, तो आप अपने टोकन की VIC Issuer की सूची में समावेश की पुष्टि कर सकते हैं। आपका लागू किया गया टोकन पता लौटाई गई सूची में दिखाई देना चाहिए। सुनिश्चित करें कि आपके द्वारा आवेदन किए गए टोकन का पता टोकन सूची में है।
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_tokens.png)
 
-If everything is set up correctly, you can also verify your token's status on the **Issuer Dashboard**. Visit [https://issuer.viction.xyz](https://issuer.viction.xyz) for the mainnet or [https://issuer-testnet.viction.xyz](https://issuer-testnet.viction.xyz) for the testnet.  
+यदि सब कुछ सही सेटअप है, तो आप अपने टोकन की स्थिति **Issuer Dashboard** पर भी सत्यापित कर सकते हैं। मुख्यनेट के लिए [https://issuer.viction.xyz](https://issuer.viction.xyz) या टेस्टनेट के लिए [https://issuer-testnet.viction.xyz](https://issuer-testnet.viction.xyz) पर जाएं।
 
-For reference, here’s the token applied during this course:  
-[Example Applied Token](https://issuer-testnet.viction.xyz/token/0xbba5098BF9c7726EC69C7BE3AE35C10DDC0B866a)
+संदर्भ के लिए, यहाँ इस पाठ्यक्रम के दौरान लागू किया गया टोकन है:  
+[उदाहरण लागू टोकन](https://issuer-testnet.viction.xyz/token/0xbba5098BF9c7726EC69C7BE3AE35C10DDC0B866a)
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_dashboard.png)
 
-## What happened?
+## क्या हुआ?
 
-An important aspect of creating a gasless token is to *apply* the token to the VicIssuer. This means, setting up the token address. 
+गैसलैस टोकन बनाने का एक महत्वपूर्ण पहलू है टोकन को VicIssuer में *आवेदन* करना। इसका मतलब है, टोकन पते को सेट करना।
 
 ```solidity
 function apply(address token) public payable onlyValidCapacity(token) {
@@ -48,8 +48,7 @@ function apply(address token) public payable onlyValidCapacity(token) {
     _tokens.push(token);
     tokensState[token] = tokensState[token].add(msg.value);
     emit Apply(msg.sender, token, msg.value);
-
 }
 ```
 
-On `Line 98` is the implementation of `apply`. Note only that only the token owner (or `issuer`) can apply a token to the Issuer. After that, we see that the token gets appended to `_tokens` which is a list of all registeretokensen for gasless and updates the issuance state (`tokensState`) with the amount of Ether provided (`msg.value`). This step effectively registers the token issuer within the `VRC25Issuer` contract, enabling subsequent operations related to token management and fee charging.
+`लाइन 98` में `apply` का कार्यान्वयन है। ध्यान दें कि केवल टोकन मालिक (या `issuer`) ही टोकन को Issuer में आवेदन कर सकता है। इसके बाद, हम देखते हैं कि टोकन को `_tokens` में जोड़ा जाता है, जो सभी रजिस्टर्ड गैसलैस टोकन की सूची है, और जारी किए गए राज्य (`tokensState`) को प्रदान की गई Ether राशि (`msg.value`) से अपडेट किया जाता है। यह कदम प्रभावी रूप से टोकन जारीकर्ता को `VRC25Issuer` कॉन्ट्रैक्ट में रजिस्टर करता है, जिससे टोकन प्रबंधन और शुल्क चार्जिंग से संबंधित बाद की प्रक्रियाओं को सक्षम किया जाता है।

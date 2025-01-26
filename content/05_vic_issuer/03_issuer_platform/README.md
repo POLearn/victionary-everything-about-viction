@@ -1,32 +1,32 @@
-## Quest - Gasless Burn
+## क्वेस्ट - गैसलैस बर्न
 
-In this final segment, we’ll experience the Zero Gas Protocol through a gasless minting transaction. By now, you should have minted `100000000000000000000` tokens of your VRC25 token to **Address Y**. Let’s replicate this process, but with a this time, the transaction should incur no gas fees, thanks to the VicIssuer integration.
+इस अंतिम खंड में, हम Zero Gas Protocol का अनुभव करेंगे एक गैसलैस मिंटिंग लेन-देन के माध्यम से। अब तक, आपने **पता Y** पर अपने VRC25 टोकन के `100000000000000000000` टोकन मिंट किए होंगे। हम इस प्रक्रिया को फिर से दोहराएंगे, लेकिन इस बार लेन-देन में कोई गैस शुल्क नहीं लगेगा, VicIssuer इंटीग्रेशन के कारण।
 
-Load your VRC25 token into your wallet or IDE, then use **Address Y** to mint `100000000000000000000` tokens again. Unlike before, this action no longer requires gas fees, thanks to the VicIssuer integration, which enables gasless minting, burning, and transferring of tokens.
+अपने VRC25 टोकन को अपने वॉलेट या IDE में लोड करें, फिर **पता Y** का उपयोग करके फिर से `100000000000000000000` टोकन मिंट करें। पहले की तरह, इस क्रिया के लिए अब गैस शुल्क की आवश्यकता नहीं है, क्योंकि VicIssuer इंटीग्रेशन के कारण गैसलैस मिंटिंग, बर्निंग और ट्रांसफरिंग संभव हो गया है।
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_mint.png)
 
-After completing the minting, retrieve the transaction hash and review the details in the blockchain explorer. Here's an example of a gasless transaction:  
-[Transaction Example](https://testnet.vicscan.xyz/tx/0xd684697e21af4218d74beb94862746672b30d9e11bc2a9c6ee6eb99d7148a367).  
+मिंटिंग पूरी करने के बाद, लेन-देन हैश को प्राप्त करें और ब्लॉकचेन एक्सप्लोरर में विवरण देखें। यहां एक गैसलैस लेन-देन का उदाहरण है:  
+[लेन-देन का उदाहरण](https://testnet.vicscan.xyz/tx/0xd684697e21af4218d74beb94862746672b30d9e11bc2a9c6ee6eb99d7148a367).  
 
-In the explorer, note the transaction type: **Gas Sponsored**.
+एक्सप्लोरर में, लेन-देन प्रकार नोट करें: **गैस प्रायोजित**।
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_gas_sponsor.png)
 
-After the transaction, check the wallet balance or view the address on the explorer. The VIC balance should remain untouched, confirming that no gas fees were deducted for this action.
+लेन-देन के बाद, वॉलेट बैलेंस चेक करें या पता एक्सप्लोरर पर देखें। VIC बैलेंस बिना बदले रहना चाहिए, यह पुष्टि करते हुए कि इस क्रिया के लिए कोई गैस शुल्क कटौती नहीं की गई थी।
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_gas_dashboard.png)
 
-> Make sure to submit that transaction to complete the course and mint your POL POAP!
+> सुनिश्चित करें कि आपने उस लेन-देन को सबमिट किया है ताकि कोर्स पूरा हो सके और आपका POL POAP मिंट हो सके!
 
-## VicIssuer Platform
+## VicIssuer प्लेटफार्म
 
-This section highlighted the use of the VICIssuer Dashboard for managing token applications and enabling gasless transactions. Beyond its dashboard capabilities, VICIssuer serves as a powerful all-in-one Token Issuance Platform, designed to make token creation and management accessible to everyone. 
+इस खंड में VICIssuer डैशबोर्ड का उपयोग किया गया है टोकन आवेदन प्रबंधित करने और गैसलैस लेन-देन सक्षम करने के लिए। डैशबोर्ड क्षमताओं से परे, VICIssuer एक शक्तिशाली ऑल-इन-वन टोकन इशूअन प्लेटफॉर्म के रूप में कार्य करता है, जो टोकन निर्माण और प्रबंधन को हर किसी के लिए सुलभ बनाने के लिए डिज़ाइन किया गया है। 
 
-By simplifying the technical aspects of token deployment, VICIssuer opens the doors to streamlined tokenization for businesses and individuals alike. The platform automates complex processes, ensuring that even users with no prior blockchain experience can issue and manage tokens with ease. Whether you're a company looking to integrate blockchain into your operations or an individual innovator exploring new opportunities, VICIssuer provides the tools and support needed to create tokens, enhance utility, and build engaging communities without unnecessary technical hurdles.
+टोकन परिनियोजन के तकनीकी पहलुओं को सरल बनाकर, VICIssuer व्यवसायों और व्यक्तियों के लिए टोकनकरण के दरवाजे खोलता है। यह प्लेटफॉर्म जटिल प्रक्रियाओं को स्वचालित करता है, यह सुनिश्चित करते हुए कि बिना किसी पूर्व ब्लॉकचेन अनुभव के उपयोगकर्ता भी आसानी से टोकन जारी और प्रबंधित कर सकते हैं। चाहे आप एक कंपनी हों जो अपने संचालन में ब्लॉकचेन को एकीकृत करना चाहती हो या एक व्यक्तिगत नवप्रवर्तनकर्ता जो नई संभावनाओं का अन्वेषण कर रहा हो, VICIssuer आपको टोकन बनाने, उपयोगिता बढ़ाने और आकर्षक समुदाय बनाने के लिए आवश्यक उपकरण और समर्थन प्रदान करता है, बिना किसी अनावश्यक तकनीकी अड़चनों के।
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_platform.png)
 
-## Complete the Quest and Claim Your Reward
+## क्वेस्ट को पूरा करें और अपना पुरस्कार प्राप्त करें
 
-To finalize the course, ensure the transaction is submitted and verified. Upon completion, you’ll earn your POL POAP - a token of your achievement.
+कोर्स को अंतिम रूप देने के लिए, सुनिश्चित करें कि लेन-देन सबमिट और सत्यापित किया गया है। पूर्ण होने पर, आपको आपका POL POAP मिलेगा - आपके उपलब्धि का एक टोकन।

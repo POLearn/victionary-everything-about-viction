@@ -1,15 +1,15 @@
-# Minting Token for Gasless Transaciton 
+## गैसलेस लेन-देन के लिए टोकन मिंटिंग
 
-With your newly deployed VRC25, we can see the token in action, by minting to an Address called Address Y. With this funding, we can mint the sample VRC25 token to *Address Y*. While this initial interaction will incur gas fees, the minted tokens will enable Address Y to participate in token burning. In the Vic Issuer section of this course, we will apply Viction's Issuer functionality to allow Address Y to burn tokens without incurring gas fees (as well as minting), making the process https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/vic and cost-effective.
+अब जब आपने अपना नया VRC25 टोकन तैनात कर लिया है, तो हम इसे क्रियावान होते हुए देख सकते हैं, *Address Y* नामक एक पते पर मिंट करके। इस फंडिंग के साथ, हम सैंपल VRC25 टोकन *Address Y* को मिंट कर सकते हैं। जबकि यह प्रारंभिक इंटरएक्शन गैस शुल्क उत्पन्न करेगा, मिंट किए गए टोकन Address Y को टोकन बर्निंग में भाग लेने के लिए सक्षम करेंगे। इस कोर्स के विक इश्यूअर सेक्शन में, हम Viction के इश्यूअर कार्यक्षमता का उपयोग करेंगे, ताकि Address Y बिना गैस शुल्क के (जैसे मिंटिंग के समय) टोकन जलाने की प्रक्रिया को लागू कर सके, जिससे यह प्रक्रिया अधिक सुलभ और लागत-प्रभावी बन सके।
 
 ## Fund Address Y
 
-Access the [Viction Testnet Faucet](https://faucet-testnet.viction.xyz/) to . Send these tokens to your desired recipient address, Address Y. This initial funding will be used for the first minting transaction, which might incur a gas fee depending on network conditions. However, subsequently minted tokens will benefit from gasless transactions.
+[विक्शन टेस्टनेट फॉसेट](https://faucet-testnet.viction.xyz/) तक पहुँचें। इन टोकनों को अपनी इच्छित प्राप्तकर्ता पते, Address Y, पर भेजें। यह प्रारंभिक फंडिंग पहले मिंटिंग लेन-देन के लिए उपयोग की जाएगी, जो नेटवर्क की स्थितियों के आधार पर गैस शुल्क उत्पन्न कर सकता है। हालांकि, इसके बाद मिंट किए गए टोकन गैसलेस लेन-देन से लाभान्वित होंगे।
 
 ## Quest - Mint
 
-In this quest, you'll mint `100000000000000000000` woth of the tokens to Address Y.
+इस खोज में, आप `100000000000000000000` टोकन Address Y को मिंट करेंगे।
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc25_mint.png)
 
-The VRC25 standard introduces advanced token management features while conforming to the familiar ERC20 structure, ensuring compatibility and ease of integration. With unique methods like `issuer` and `estimateFee`, VRC25 enhances security, transparency, and user control, making it a robust solution for token operations on the Viction blockchain. The following guide will focus on another smart contract known as the `VicIssuer` which delves into the integration for enabling gasless operations.
+VRC25 मानक उन्नत टोकन प्रबंधन सुविधाएँ प्रदान करता है, जबकि परिचित ERC20 संरचना के साथ संगतता बनाए रखते हुए, एकीकृत करने में सरलता सुनिश्चित करता है। जैसे अद्वितीय तरीके `issuer` और `estimateFee`, VRC25 सुरक्षा, पारदर्शिता, और उपयोगकर्ता नियंत्रण को बढ़ाता है, जिससे यह विक्शन ब्लॉकचेन पर टोकन संचालन के लिए एक मजबूत समाधान बनता है। निम्नलिखित गाइड एक अन्य स्मार्ट अनुबंध, `VicIssuer`, पर केंद्रित होगी जो गैसलेस संचालन को सक्षम करने के लिए एकीकरण में गहराई से विवरण प्रदान करती है।

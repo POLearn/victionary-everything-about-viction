@@ -1,35 +1,36 @@
-## Example Smart Contract: SampleVRC25
+## उदाहरण स्मार्ट कॉन्ट्रैक्ट: SampleVRC25
 
-To recap, VRC25 stands out as an innovative extension of the ERC20 token standard, designed to streamline transactions on the Viction network. Its key feature? Gasless transactions! By leveraging smart contract sponsorship of transaction fees, VRC25 removes a barrier for new blockchain users and fosters a smoother user experience.
+सारांश के रूप में, VRC25 ERC20 टोकन मानक का एक नवाचारी विस्तार है, जिसे Viction नेटवर्क पर लेन-देन को सुगम बनाने के लिए डिज़ाइन किया गया है। इसका मुख्य फीचर? गैसलेस लेन-देन! ट्रांजेक्शन शुल्क के स्मार्ट कॉन्ट्रैक्ट स्पॉन्सरशिप का लाभ उठाकर, VRC25 नए ब्लॉकचेन उपयोगकर्ताओं के लिए एक बाधा को समाप्त करता है और एक सुगम उपयोगकर्ता अनुभव को बढ़ावा देता है।
 
-Let's deploy a practical example of the VRC25 token standard on the Viction blockchain. Entire source code can be found from the official Viction Repository: [https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/POLVRC25.sol](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/POLVRC25.sol)
+आइए VRC25 टोकन मानक का एक व्यावहारिक उदाहरण Viction ब्लॉकचेन पर तैनात करें। पूरा स्रोत कोड Viction रिपॉजिटरी से प्राप्त किया जा सकता है: [https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/POLVRC25.sol](https://github.com/POLearn/victionary-everything-about-viction/blob/master/contract/POLVRC25.sol)
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc25_contract.png)
 
-We can load the entire Solide IDE implementation with the `VRC25` and `VRC25Permit` implementation. If you want to take a look and understand the implementation you can view the implementation but this resource should provide sufficient information to understand the VRC25 token under the hood. By inheriting from both `VRC25` and `VRC25Permit`, the contract gains access to all the functionalities of the VRC25 standard, including token management and fee estimation. Additionally, the VRC25Permit extension empowers gasless transactions through off-chain signatures, significantly enhancing user convenience.
+हम पूरी Solide IDE कार्यान्वयन को `VRC25` और `VRC25Permit` कार्यान्वयन के साथ लोड कर सकते हैं। यदि आप देखना चाहते हैं और कार्यान्वयन को समझना चाहते हैं, तो आप कार्यान्वयन देख सकते हैं लेकिन यह संसाधन VRC25 टोकन को समझने के लिए पर्याप्त जानकारी प्रदान करना चाहिए। `VRC25` और `VRC25Permit` से इनहेरिट करते हुए, कॉन्ट्रैक्ट VRC25 मानक की सभी कार्यात्मकताओं तक पहुंच प्राप्त करता है, जिसमें टोकन प्रबंधन और शुल्क अनुमान शामिल हैं। इसके अतिरिक्त, VRC25Permit एक्सटेंशन ऑफ-चेन सिग्नेचर के माध्यम से गैसलेस लेन-देन को सक्षम करता है, जिससे उपयोगकर्ता की सुविधा में महत्वपूर्ण सुधार होता है।
 
-## Customizing Your VRC25 Token
+## अपने VRC25 टोकन को कस्टमाइज करना
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc25_contstructor.png)
 
-Taking a look at `Line 10`, you can modify within the constructor to set a more suitable name and symbol for your VRC25 token. Here's an example:
+`लाइन 10` को देखकर, आप कंस्ट्रक्टर में उपयुक्त नाम और प्रतीक सेट करने के लिए इसे संशोधित कर सकते हैं। एक उदाहरण यहां है:
 
 ```solidity
 constructor() public VRC25("Example Fungible Token", "EFT", 0)
 ```
-### Deployment Considerations
 
-- If you encounter an error message stating "Abstract contracts cannot have public constructors. Remove the 'public' keyword to fix this," you'll need to address this in the `VRC25Permit.sol` file.
-- Simply remove the `public` keyword from the constructor within `VRC25Permit.sol`. Here's the corrected code:
+### तैनाती विचार
+
+- यदि आपको एक त्रुटि संदेश प्राप्त होता है जो कहता है "अवधारणा कॉन्ट्रैक्ट्स में सार्वजनिक कंस्ट्रक्टर नहीं हो सकते। इसे ठीक करने के लिए 'public' कीवर्ड को हटा दें," तो आपको इसे `VRC25Permit.sol` फ़ाइल में संबोधित करना होगा।
+- बस `VRC25Permit.sol` में कंस्ट्रक्टर से `public` कीवर्ड हटा दें। यहाँ सुधारित कोड है:
 
 ```solidity
 constructor() EIP712("VRC25", "1") { }
 ```
 
-## Quest - Deploy your own VRC25 Token 🪙
+## क्वेस्ट - अपना VRC25 टोकन तैनात करें 🪙
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc25_deploy.png)
 
-To complete this submission, deploy the `POLVRC25.sol` contract from the provided template. Compile the contract using **Solidity version 0.8.19**. Again, if you encounter the error *"Abstract contracts cannot have public constructors"*, navigate to `VRC25Permit.sol` and remove the `public` keyword from the constructor as noted in *Deployment Considerations*
+इस सबमिशन को पूरा करने के लिए, प्रदान किए गए टेम्पलेट से `POLVRC25.sol` कॉन्ट्रैक्ट को तैनात करें। **Solidity संस्करण 0.8.19** का उपयोग करके कॉन्ट्रैक्ट को संकलित करें। फिर से, यदि आपको त्रुटि *"अवधारणा कॉन्ट्रैक्ट्स में सार्वजनिक कंस्ट्रक्टर नहीं हो सकते"* मिलती है, तो `VRC25Permit.sol` में जाएं और *तैनाती विचार* में बताए अनुसार कंस्ट्रक्टर से `public` कीवर्ड हटा दें।
 
-Once fixed, proceed with your deployment and congratulations. You’ve successfully deployed your VRC25 token on Viction! To complete this quest, share your **transaction hash** as proof of deployment.
+जब इसे ठीक कर लिया जाए, तो अपनी तैनाती के साथ आगे बढ़ें और बधाई हो। आपने सफलतापूर्वक Viction पर अपना VRC25 टोकन तैनात कर लिया है! इस क्वेस्ट को पूरा करने के लिए, अपनी **लेन-देन हैश** साझा करें जो तैनाती का प्रमाण है।

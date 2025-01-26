@@ -1,31 +1,31 @@
 # Viction Overview
 
-Viction is a scalable, Proof-of-Stake Voting (PoSV) powered public blockchain, designed to support decentralized applications and provide a seamless Web3 experience. This overview highlights Viction's architecture, unique consensus mechanism, and growing ecosystem.
+Viction एक स्केलेबल, प्रूफ-ऑफ-स्टेक वोटिंग (PoSV) द्वारा संचालित पब्लिक ब्लॉकचेन है, जिसे विकेंद्रीकृत अनुप्रयोगों (dApps) का समर्थन करने और एक सहज Web3 अनुभव प्रदान करने के लिए डिज़ाइन किया गया है। यह अवलोकन Viction की संरचना, अद्वितीय सर्वसम्मति तंत्र, और बढ़ते पारिस्थितिकी तंत्र को उजागर करता है।
 
 ## Key Design Goals  
-Viction blockchain is built to:
+Viction ब्लॉकचेन को निम्नलिखित उद्देश्यों को पूरा करने के लिए बनाया गया है:
 
-- Achieve fast finality and secure transaction validation.
-- Deliver high transaction throughput to support real-world applications.
-- Minimize the cost of blockchain operations through near-zero gas fees.
-- Lower entry barriers for both developers and end-users to easily interact with blockchain technology.
-- Provide a developer-friendly environment for seamless adoption across industries and use cases.
+- तेज़ अंतिमता प्राप्त करना और सुरक्षित लेन-देन सत्यापन।
+- वास्तविक दुनिया के अनुप्रयोगों का समर्थन करने के लिए उच्च लेन-देन थ्रूपुट प्रदान करना।
+- लगभग शून्य गैस शुल्क के माध्यम से ब्लॉकचेन संचालन की लागत को न्यूनतम करना।
+- डेवलपर्स और एंड-यूजर्स दोनों के लिए ब्लॉकचेन प्रौद्योगिकी के साथ आसानी से इंटरएक्ट करने के लिए प्रवेश बाधाओं को कम करना।
+- उद्योगों और उपयोग मामलों में सहज स्वीकृति के लिए डेवलपर-अनुकूल वातावरण प्रदान करना।
 
 ## Core Specifications  
-Viction blockchain offers:
+Viction ब्लॉकचेन प्रदान करता है:
 
-- 2-second block generation and confirmation time.
-- Processing capability of 2,000 transactions per second (TPS).
-- Extremely low gas fees, often close to zero, for cost-efficient operations.
-- Full Ethereum Virtual Machine (EVM) compatibility, enabling Solidity-based smart contracts.
-- A governance model based on Proof-of-Stake Voting (PoSV), supported by a network of up to 150 Masternodes.
+- 2 सेकंड का ब्लॉक जेनरेशन और कन्फर्मेशन समय।
+- प्रति सेकंड 2,000 लेन-देन (TPS) की प्रसंस्करण क्षमता।
+- अत्यंत कम गैस शुल्क, जो अक्सर शून्य के पास होता है, लागत-प्रभावी संचालन के लिए।
+- पूर्ण Ethereum वर्चुअल मशीन (EVM) संगतता, जो Solidity-आधारित स्मार्ट कॉन्ट्रैक्ट्स को सक्षम बनाती है।
+- एक शासन मॉडल जो प्रूफ-ऑफ-स्टेक वोटिंग (PoSV) पर आधारित है, जिसे 150 तक मास्टरनोड्स के नेटवर्क द्वारा समर्थित किया जाता है।
 
-Viction aims to simplify blockchain interactions and accelerate mass adoption through its efficient architecture and user-centric design.
+Viction अपने कुशल आर्किटेक्चर और उपयोगकर्ता-केंद्रित डिज़ाइन के माध्यम से ब्लॉकचेन इंटरएक्शन को सरल बनाने और मास अडॉप्शन को तेज़ करने का लक्ष्य रखता है।
 
 ## Viction Blockchain
 
-The Viction blockchain is a powerful and scalable platform designed to support decentralized applications (dApps), Web3 projects, and the native VIC token. Since its launch in 2018, Viction has prioritized community-driven growth, providing developers with a fast, low-cost, and highly secure environment to build innovative blockchain solutions. Its key feature is the Proof-of-Stake Voting (PoSV) consensus mechanism, which allows for 2,000 transactions per second (TPS) with near-zero gas fees, while ensuring decentralization and security.
+Viction ब्लॉकचेन एक शक्तिशाली और स्केलेबल प्लेटफ़ॉर्म है जिसे विकेंद्रीकृत अनुप्रयोगों (dApps), Web3 परियोजनाओं और स्वदेशी VIC टोकन का समर्थन करने के लिए डिज़ाइन किया गया है। 2018 में लॉन्च होने के बाद से, Viction ने सामुदायिक-प्रेरित विकास को प्राथमिकता दी है, डेवलपर्स को एक तेज़, कम-लागत, और अत्यधिक सुरक्षित वातावरण प्रदान किया है ताकि वे नवोन्मेषी ब्लॉकचेन समाधान बना सकें। इसकी मुख्य विशेषता प्रूफ-ऑफ-स्टेक वोटिंग (PoSV) सर्वसम्मति तंत्र है, जो 2,000 लेन-देन प्रति सेकंड (TPS) की अनुमति देता है और शून्य गैस शुल्क के पास होते हुए विकेंद्रीकरण और सुरक्षा सुनिश्चित करता है।
 
-Viction offers a fully Ethereum Virtual Machine (EVM) compatible network, enabling developers to seamlessly deploy and run smart contracts. Its design focuses on simplifying blockchain adoption by reducing complexity, making it an ideal choice for both experienced and new blockchain developers. The network's infrastructure supports high performance, privacy, and liquidity, offering everything developers need to create feature-rich dApps that meet modern users' demands.
+Viction एक पूर्ण Ethereum वर्चुअल मशीन (EVM) संगत नेटवर्क प्रदान करता है, जिससे डेवलपर्स को स्मार्ट कॉन्ट्रैक्ट्स को सहज रूप से तैनात और चलाने में मदद मिलती है। इसका डिज़ाइन ब्लॉकचेन स्वीकृति को सरल बनाने पर केंद्रित है, जिससे यह अनुभवी और नए दोनों प्रकार के ब्लॉकचेन डेवलपर्स के लिए आदर्श विकल्प बनता है। नेटवर्क का बुनियादी ढांचा उच्च प्रदर्शन, गोपनीयता और तरलता का समर्थन करता है, जिससे डेवलपर्स को फीचर-समृद्ध dApps बनाने के लिए सभी आवश्यकताएँ प्राप्त होती हैं, जो आधुनिक उपयोगकर्ताओं की मांगों को पूरा करती हैं।
 
-Viction's unique approach and powerful features make it an optimal solution for accelerating Web3 mass adoption, offering blockchain technology that is fast, efficient, and easy to integrate.
+Viction का अद्वितीय दृष्टिकोण और शक्तिशाली विशेषताएँ इसे Web3 के मास अडॉप्शन को तेज़ी से बढ़ावा देने के लिए एक आदर्श समाधान बनाती हैं, जो तेज़, कुशल और एकीकृत करने में आसान ब्लॉकचेन प्रौद्योगिकी प्रदान करती है।

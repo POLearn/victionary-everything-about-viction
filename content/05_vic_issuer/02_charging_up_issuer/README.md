@@ -1,8 +1,8 @@
-# Charging Gasless Transactions
+# गैसलैस लेन-देन शुल्क 
 
-This section is important for maintaining the capacity for gasless transactions, which is a critical aspect of creating a smooth and user-friendly experience with your VRC25 token. The **VicIssuer** contract includes a method called `charge`, which enables you to add funds to your token's capacity. By doing so, you ensure that the token can consistently support transaction fees, keeping the user experience seamless.
+यह खंड गैसलैस लेन-देन के लिए क्षमता बनाए रखने के लिए महत्वपूर्ण है, जो आपके VRC25 टोकन के साथ एक सुगम और उपयोगकर्ता-मित्रवत अनुभव बनाने का एक महत्वपूर्ण पहलू है। **VicIssuer** कॉन्ट्रैक्ट में `charge` नामक एक विधि शामिल है, जो आपको अपने टोकन की क्षमता में धन जोड़ने की अनुमति देती है। ऐसा करने से, आप यह सुनिश्चित करते हैं कि टोकन लगातार लेन-देन शुल्कों का समर्थन कर सके, जिससे उपयोगकर्ता अनुभव निर्बाध बना रहता है।
 
-The `charge` method is straightforward and efficient. It accepts an address representing the token you want to recharge and the value (in $VIC or equivalent) you wish to deposit. This value is added to the token's state, increasing its capacity to sponsor gasless transactions. Here's the method definition:
+`charge` विधि सीधी और प्रभावी है। यह उस टोकन का पता स्वीकार करती है जिसे आप रिचार्ज करना चाहते हैं और उस राशि (जो $VIC या समकक्ष में हो) जिसे आप जमा करना चाहते हैं। यह राशि टोकन की स्थिति में जोड़ी जाती है, जिससे गैसलैस लेन-देन को प्रायोजित करने के लिए इसकी क्षमता बढ़ती है। यहां विधि की परिभाषा है:
 
 ```solidity
 function charge(address token) public payable {
@@ -11,4 +11,4 @@ function charge(address token) public payable {
 }
 ```
 
-Once executed, the function updates the `tokensState` mapping and emits a `Charge` event, allowing for transparency and easy tracking of recharge transactions.
+एक बार निष्पादित होने के बाद, यह विधि `tokensState` मानचित्र को अपडेट करती है और एक `Charge` इवेंट उत्सर्जित करती है, जिससे रिचार्ज लेन-देन की पारदर्शिता और आसान ट्रैकिंग संभव होती है।

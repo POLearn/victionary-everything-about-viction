@@ -1,6 +1,6 @@
-# Diving Deeper into VRC25
+## VRC25 में गहरी जानकारी
 
-Now that we understand the core principles of VRC25 and its similarities to ERC20, let's explore two key functions that differentiate VRC25 and enhance its functionality: `issuer()` and `estimateFee()`.
+अब जब हम VRC25 के मूल सिद्धांतों और इसके ERC20 से मिलते-जुलते पहलुओं को समझ चुके हैं, तो आइए दो प्रमुख कार्यों का अन्वेषण करें जो VRC25 को अलग करते हैं और इसकी कार्यक्षमता को बढ़ाते हैं: `issuer()` और `estimateFee()`।
 
 ## `issuer()`
 
@@ -8,18 +8,17 @@ Now that we understand the core principles of VRC25 and its similarities to ERC2
 function issuer() external view returns (address);
 ```
 
-The `issuer` function verifies the address of the token issuer, ensuring only the designated issuer can manage transaction fees. This adds a layer of security and accountability, maintaining the token's integrity.
-* **Ensure authenticity:** Verify the genuine source of the token and its associated fee management.
-* **Enhance trust:** Build trust within the ecosystem by clearly defining the entity responsible for managing transaction fees.
+`issuer` फंक्शन टोकन जारीकर्ता के पते की पुष्टि करता है, यह सुनिश्चित करते हुए कि केवल निर्दिष्ट जारीकर्ता ही लेन-देन शुल्क का प्रबंधन कर सकता है। यह सुरक्षा और जिम्मेदारी की एक परत जोड़ता है, जिससे टोकन की अखंडता बनी रहती है।
+* **प्रामाणिकता सुनिश्चित करें:** टोकन और इसके संबंधित शुल्क प्रबंधन के असली स्रोत की पुष्टि करें।
+* **विश्वास बढ़ाएं:** पारिस्थितिकी तंत्र में विश्वास बनाएं, यह स्पष्ट रूप से परिभाषित करके कि लेन-देन शुल्क का प्रबंधन कौन करेगा।
 
 ### `estimateFee()`
-
 
 ```solidity
 function estimateFee(uint256 value) external view returns (uint256);
 ```
 
-The `estimateFee` function calculates the transaction fee in VRC25 tokens, which is payable to the token issuer. This function allows for customized fee structures, enhancing flexibility for issuers.
-* **Calculate transaction costs:** Before initiating a transaction, users can estimate the associated VRC25 fee. This provides valuable information for budgeting and financial planning.
-* **Customize fee structures:** Issuers can dynamically adjust fee structures based on various factors, such as transaction volume or network congestion.
-* **Enhance transparency:** By providing an estimate of transaction fees upfront, VRC25 promotes transparency and user trust.
+`estimateFee` फंक्शन VRC25 टोकन में लेन-देन शुल्क की गणना करता है, जो टोकन जारीकर्ता को भुगतान किया जाता है। यह फंक्शन कस्टम शुल्क संरचनाओं की अनुमति देता है, जिससे जारीकर्ताओं के लिए लचीलापन बढ़ता है।
+* **लेन-देन लागत की गणना करें:** लेन-देन शुरू करने से पहले, उपयोगकर्ता संबंधित VRC25 शुल्क का अनुमान लगा सकते हैं। यह बजट बनाने और वित्तीय योजना के लिए मूल्यवान जानकारी प्रदान करता है।
+* **शुल्क संरचनाओं को कस्टमाइज़ करें:** जारीकर्ता विभिन्न कारकों, जैसे लेन-देन की मात्रा या नेटवर्क भीड़-भाड़ के आधार पर शुल्क संरचनाओं को गतिशील रूप से समायोजित कर सकते हैं।
+* **पारदर्शिता बढ़ाएं:** लेन-देन शुल्क का अनुमान पहले से प्रदान करके, VRC25 पारदर्शिता और उपयोगकर्ता विश्वास को बढ़ावा देता है।

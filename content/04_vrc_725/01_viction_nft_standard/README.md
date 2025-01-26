@@ -1,16 +1,15 @@
-# Exploring the IVRC725 Interface
+# IVRC725 इंटरफेस का अन्वेषण
 
-The `IVRC725` interface defines the core functionalities of VRC725 tokens. Let's delve into two key functions:
+`IVRC725` इंटरफेस VRC725 टोकन की मुख्य कार्यात्मकताओं को परिभाषित करता है। आइए दो प्रमुख कार्यों में गहराई से देखें:
 
 ```solidity
 interface IVRC725 is IERC721, IERC4494, IERC721Metadata {
     function permitForAll(address owner, address spender, uint256 deadline, bytes memory signature) external;
     function nonceByAddress(address owner) external view returns(uint256);
-
 }
 ```
 
-The `permitForAll` function allows users to grant gasless approvals for NFT transfers via off-chain signatures, ensuring cost-effective, user-friendly interactions while incorporating a secure nonce mechanism to prevent replay attacks. The `nonceByAddress` function tracks the nonce for each owner, further enhancing transaction security by preventing the reuse of old signatures.
+`permitForAll` फ़ंक्शन उपयोगकर्ताओं को ऑफ-चेन सिग्नेचर के माध्यम से NFT ट्रांसफर के लिए गैसलेस अनुमतियाँ प्रदान करने की अनुमति देता है, जिससे लागत-कुशल, उपयोगकर्ता-मित्र इंटरएक्शन सुनिश्चित होते हैं और एक सुरक्षित नॉनस मैकेनिज़्म को शामिल किया जाता है जो रिप्ले हमलों को रोकता है। `nonceByAddress` फ़ंक्शन प्रत्येक मालिक के लिए नॉनस को ट्रैक करता है, जिससे ट्रांजेक्शन सुरक्षा और बढ़ जाती है और पुराने सिग्नेचर के पुन: उपयोग को रोका जाता है।
 
 ## `permitForAll`
 
@@ -31,9 +30,9 @@ function permitForAll(address owner, address spender, uint256 deadline, bytes me
 }
 ```
 
-The main implementation of IVRC725 `permitForAll` is using `ECDSA.tryRecover` to extract the address from the signature and digest, resulting in the `recoverAddress`. This address should match the owner's address if the signature is valid. This is ensured via the `require` statement, which confirms that the `recoverAddress` or `signature` matches the owner, thereby validating that the permit is genuinely authorized by the owner.
+IVRC725 `permitForAll` का मुख्य कार्यान्वयन `ECDSA.tryRecover` का उपयोग करता है जिससे सिग्नेचर और डाइजेस्ट से पता निकाला जाता है, जो `recoverAddress` का परिणाम होता है। इस पते को मालिक के पते से मेल खाना चाहिए यदि सिग्नेचर मान्य है। यह `require` स्टेटमेंट द्वारा सुनिश्चित किया जाता है, जो यह पुष्टि करता है कि `recoverAddress` या `signature` मालिक से मेल खाता है, इस प्रकार यह प्रमाणित करता है कि अनुमति वास्तव में मालिक द्वारा अधिकृत है।
 
-Additionally, the **nonce** is manually incremented here to prevent replay attacks by ensuring each permit request is unique. Since the owner's address is included in the digest, each time the method is called, the nonce increments, making old signatures invalid. This guarantees that each signature can only be used once, enhancing the security of the NFT.
+इसके अतिरिक्त, **नॉनस** यहां मैन्युअल रूप से बढ़ाया जाता है ताकि रिप्ले हमलों को रोका जा सके और यह सुनिश्चित किया जा सके कि प्रत्येक अनुमति अनुरोध अद्वितीय है। चूंकि मालिक का पता डाइजेस्ट में शामिल होता है, प्रत्येक बार जब यह विधि कॉल की जाती है, नॉनस बढ़ता है, जिससे पुराने सिग्नेचर अमान्य हो जाते हैं। यह यह सुनिश्चित करता है कि प्रत्येक सिग्नेचर केवल एक बार ही इस्तेमाल किया जा सकता है, जिससे NFT की सुरक्षा बढ़ती है।
 
 ## `nonceByAddress`
 
@@ -43,4 +42,4 @@ function nonceByAddress(address owner) external view returns(uint256) {
 }
 ```
 
-As mention the nonce is useful for tracking the number of permits issued for each token and address. In the case of the VRC725 implementation, this is stored as a `mapping` of an address to a `uint256` number to indicate the number of calls. This enhances the security and integrity of the permit mechanism within the contract.
+जैसा कि पहले उल्लेख किया गया है, नॉनस प्रत्येक टोकन और पते के लिए जारी अनुमतियों की संख्या को ट्रैक करने के लिए उपयोगी है। VRC725 कार्यान्वयन में, इसे एक `mapping` के रूप में एक पते से `uint256` संख्या में संग्रहित किया जाता है, जो कॉल्स की संख्या को सूचित करता है। यह अनुबंध के भीतर अनुमतियों की प्रक्रिया के सुरक्षा और सत्यनिष्ठा को बढ़ाता है।

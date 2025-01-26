@@ -1,14 +1,14 @@
 # State Trie
 
-Learning about Viction (or blockchain in general), then a concept that's important is **State Trie**. It is a fundamental data structure to efficiently store and manage the **state** of the blockchain. So, think of a blockchain as a database, that keeps a track off all accounts balances and transactions. It is part of the Viction protocol and plays a crucial role in maintaining the current state of all accounts and their respective balances, storage, and other data.
+Viction (या सामान्य रूप से ब्लॉकचेन) के बारे में सीखते समय, एक महत्वपूर्ण संकल्पना है **State Trie**। यह ब्लॉकचेन की **state** को कुशलतापूर्वक स्टोर और प्रबंधित करने के लिए एक बुनियादी डेटा संरचना है। तो, ब्लॉकचेन को एक डेटाबेस के रूप में सोचें, जो सभी खाता बैलेंस और लेन-देन का ट्रैक रखता है। यह Viction प्रोटोकॉल का हिस्सा है और सभी खातों की वर्तमान स्थिति, उनके संबंधित बैलेंस, स्टोरेज और अन्य डेटा को बनाए रखने में एक महत्वपूर्ण भूमिका निभाता है।
 
-### What is a Trie?
-If we go basic to Computer Science or data structures. A [trie](https://en.wikipedia.org/wiki/Trie) is a type of *tree structure* that helps store and retrieve data efficiently. Tries are particularly useful when you need to look up information quickly, which is exactly what Ethereum needs to do when managing thousands of accounts and transactions.
+### Trie क्या है?
+अगर हम कंप्यूटर विज्ञान या डेटा संरचनाओं की मूल बातें देखें। एक [trie](https://en.wikipedia.org/wiki/Trie) एक प्रकार की *ट्री संरचना* है जो डेटा को कुशलतापूर्वक स्टोर और पुनः प्राप्त करने में मदद करती है। ट्राई विशेष रूप से तब उपयोगी होती है जब आपको जल्दी से जानकारी देखनी होती है, जो कि एथेरियम को हजारों खातों और लेन-देन का प्रबंधन करते समय करना पड़ता है।
 
-The state trie can be thought of as a mapping structure where:
-- Key: The account address.
-- Value: The account state, which includes details like nonce, balance, and more.
-An example could be the information for an account,
+State trie को एक मैपिंग संरचना के रूप में सोचा जा सकता है, जहाँ:
+- कुंजी: खाता पता।
+- मान: खाता स्थिति, जिसमें नॉनस, बैलेंस, और अधिक विवरण शामिल होते हैं।
+एक उदाहरण हो सकता है एक खाते की जानकारी,
 
 ```json
 {
@@ -19,4 +19,4 @@ An example could be the information for an account,
 }
 ```
 
-This object represents the account state associated with the specified address. However, since storing all this data in each block would be inefficient, only the root hash of the state trie is included in each block header. This root hash acts as a commitment to the data within the trie for that specific block. For example, in [Block 85453443](https://www.vicscan.xyz/block/85453443) on Viction, the block contains a state root that is a hash of the block information, ensuring that any modifications to account states during transaction processing are accurately reflected. This allows nodes to validate the integrity of the blockchain and efficiently verify account states through Merkle proofs, maintaining trust in the network's data while ensuring scalability.
+यह ऑब्जेक्ट उस विशिष्ट पते से संबंधित खाते की स्थिति का प्रतिनिधित्व करता है। हालांकि, चूंकि यह सभी डेटा को प्रत्येक ब्लॉक में स्टोर करना अव्यवहारिक होगा, केवल state trie की रूट हैश को प्रत्येक ब्लॉक हेडर में शामिल किया जाता है। यह रूट हैश उस विशेष ब्लॉक के भीतर ट्राई के डेटा के लिए एक प्रतिबद्धता के रूप में कार्य करता है। उदाहरण के लिए, [Block 85453443](https://www.vicscan.xyz/block/85453443) पर Viction में, ब्लॉक में एक state root है, जो ब्लॉक की जानकारी का हैश है, यह सुनिश्चित करता है कि लेन-देन प्रसंस्करण के दौरान खाता स्थितियों में कोई भी परिवर्तन सही ढंग से परिलक्षित हो। इससे नोड्स को ब्लॉकचेन की अखंडता को सत्यापित करने और Merkle प्रमाणों के माध्यम से खाता स्थितियों को कुशलतापूर्वक सत्यापित करने में मदद मिलती है, जो नेटवर्क के डेटा में विश्वास बनाए रखते हुए स्केलेबिलिटी सुनिश्चित करता है।

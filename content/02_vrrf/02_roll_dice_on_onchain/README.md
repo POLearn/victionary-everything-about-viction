@@ -1,42 +1,42 @@
-# Ready to Roll?
+# तैयार हैं खेलने के लिए?
 
-If you're new to deploying smart contracts, fret not! We can leverage an existing Dice contract. Here's what you'll need to do:
+अगर आप स्मार्ट कॉन्ट्रैक्ट्स को डिप्लॉय करने में नए हैं, तो चिंता न करें! हम पहले से मौजूद एक डाइस कॉन्ट्रैक्ट का उपयोग कर सकते हैं। आपको जो करने की आवश्यकता है, वह यहाँ है:
 
-## Load the Contract
+## कॉन्ट्रैक्ट को लोड करें
 
-Head over to [Solide IDE](https://solide0x.tech/address/89/0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D) and interact with the contract at this address: `0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D`.
+[Solide IDE](https://solide0x.tech/address/89/0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D) पर जाएं और इस पते पर कॉन्ट्रैक्ट के साथ इंटरएक्ट करें: `0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D`।
 
-## Roll the Dice!
+## डाइस रोल करें!
 
-Click on the `roll` function within the IDE. This will initiate a transaction simulating a dice roll. Confirmation might take a few seconds due to VRRF's workings.
+IDE में `roll` फंक्शन पर क्लिक करें। इससे एक लेन-देन शुरू होगा जो डाइस रोल को सिमुलेट करेगा। पुष्टि होने में कुछ सेकंड लग सकते हैं, क्योंकि VRRF के कार्यप्रणाली के अनुसार यह प्रक्रिया थोड़ी समय ले सकती है।
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_roll.png)
 
-*Note, that the result will change upon after a few seconds. According to the Viction documentation it is good to note that *VRRF relies on the order of calling transaction, protocols who make use of VRRF must wait for a short period of time (say 8-10 seconds) before displaying random result to end-users to avoid issues related to block re-org.*
+*ध्यान दें कि परिणाम कुछ सेकंड बाद बदल जाएगा। Viction दस्तावेज़ों के अनुसार यह ध्यान रखना महत्वपूर्ण है कि *VRRF लेन-देन के कॉल की क्रम पर निर्भर करता है, उन प्रोटोकॉल्स को जो VRRF का उपयोग करते हैं, उन्हें रैंडम परिणामों को अंत-उपयोगकर्ताओं को दिखाने से पहले थोड़ी देर (जैसे 8-10 सेकंड) का इंतजार करना चाहिए, ताकि ब्लॉक रीरग के कारण समस्याओं से बचा जा सके।*
 
-## Understanding the Roll Event
+## रोल इवेंट को समझना
 
-The contract emits a `RollEvent` whenever a dice roll is executed. Let's navigate to the Dice contract on Vicscan and explore the *Event* tab to find this emitted event. This event holds the key to decoding the roll value:
+जब भी डाइस रोल किया जाता है, तो कॉन्ट्रैक्ट एक `RollEvent` इवेंट भेजता है। चलिए Vicscan पर डाइस कॉन्ट्रैक्ट पर जाएं और *Event* टैब में इस इवेंट को देखें। इस इवेंट में रोल वैल्यू को डिकोड करने की कुंजी होती है:
 
 ```
 0x0000000000000000000000000000000000000000000000000000000000fa8674b6c634d1fa355a3b605f762247847be8da437e46c55627c8ed747367298250e40000000000000000000000000000000000000000000000000000000000000001
 ```
 
-By decoding this data, we discover the roll value to be **2**. Additionally, the event provides a raw VRRF value denoted by the key `n`. This `bytes32` value can be converted to a standard number (`uint256`) for on-chain operations, as demonstrated in the Dice contract itself. (You can find a screenshot of the Roll Event Log [here](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/build-with-viction-vrrf/assets/logs.png) for reference).
+इस डेटा को डिकोड करके, हमें रोल वैल्यू **2** मिलती है। इसके अतिरिक्त, इवेंट में एक कच्चा VRRF मान होता है जिसे `n` के रूप में चिह्नित किया गया है। यह `bytes32` मान को `uint256` मान में बदला जा सकता है, जैसा कि डाइस कॉन्ट्रैक्ट में दिखाया गया है। (रोल इवेंट लॉग की एक स्क्रीनशॉट [यहां](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/build-with-viction-vrrf/assets/logs.png) संदर्भ के लिए देखें)।
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_log.png)
 
-## The Power of VRRF
+## VRRF की शक्ति
 
-VRRF shines as a reliable and verifiable solution for generating random numbers on the Viction blockchain. Here's why it's so valuable:
+VRRF Viction ब्लॉकचेन पर रैंडम नंबर जनरेट करने के लिए एक विश्वसनीय और प्रमाणित समाधान के रूप में चमकता है। यह इतना मूल्यवान क्यों है, जानिए:
 
-* **Verifiable Randomness:**  Anyone can confirm that the generated number is truly random and hasn't been tampered with, fostering trust in blockchain applications.
-* **Seamless Integration:** VRRF integrates effortlessly with smart contracts, enabling efficient on-chain processing of random values.
-* **Cost-Effective:** VRRF provides a secure and cost-effective way to generate random numbers within smart contracts.
+* **सत्यापन योग्य रैंडमनेस:** कोई भी यह पुष्टि कर सकता है कि उत्पन्न किया गया नंबर वास्तव में रैंडम है और इसमें छेड़छाड़ नहीं की गई है, जिससे ब्लॉकचेन अनुप्रयोगों में विश्वास पैदा होता है।
+* **सहज एकीकरण:** VRRF स्मार्ट कॉन्ट्रैक्ट्स के साथ आसानी से एकीकृत होता है, जिससे रैंडम मानों का प्रभावी ऑन-चेन प्रोसेसिंग संभव होता है।
+* **लागत-कुशल:** VRRF स्मार्ट कॉन्ट्रैक्ट्स के भीतर रैंडम नंबर जनरेट करने के लिए एक सुरक्षित और लागत-कुशल तरीका प्रदान करता है।
 
-## VRRF Applications: Beyond Dice Games
+## VRRF अनुप्रयोग: डाइस खेलों से आगे
 
-While dice games highlight VRRF's fun potential, its use cases go much further. VRRF enables fair task distribution, ensuring rewards or assignments are allocated transparently and without bias. It also powers unpredictable NFT minting, adding an exciting layer of randomness and surprise to the creation of unique collectibles.
+जहाँ डाइस खेल VRRF की मजेदार संभावनाओं को उजागर करते हैं, वहीं इसके उपयोग के मामले इससे कहीं अधिक हैं। VRRF निष्पक्ष कार्य वितरण सक्षम करता है, यह सुनिश्चित करता है कि पुरस्कार या असाइनमेंट पारदर्शी और बिना पक्षपाती तरीके से वितरित किए जाएं। यह अप्रत्याशित NFT मिंटिंग को भी पावर करता है, जो अद्वितीय कलेक्टिबल्स की सृजन में एक रोमांचक रैंडमनेस और सरप्राइज़ का तत्त्व जोड़ता है।
 
-> ❗**Don't forget**
-> For this submission, provide the transaction of the invokation of the `roll` method in the Dice deployed on Viction.
+> ❗**भूलें नहीं**
+> इस सबमिशन के लिए, Viction पर डिप्लॉय किए गए डाइस में `roll` विधि को कॉल करने के लेन-देन को प्रदान करें।

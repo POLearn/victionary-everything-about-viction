@@ -1,33 +1,33 @@
-# Interacting with VRC25 Using Viem: A Hands-on Guide
+# VRC25 के साथ इंटरएक्ट करना Viem का उपयोग करके: एक हाथों-हाथ मार्गदर्शिका
 
-In this section, we'll dive into the practical aspects of interacting with VRC25 contracts on the Viction blockchain. We'll utilize Viem, a powerful JavaScript library, to connect to the blockchain and seamlessly interact with smart contracts. 
+इस सेक्शन में, हम Viction ब्लॉकचेन पर VRC25 अनुबंधों के साथ इंटरएक्ट करने के व्यावहारिक पहलुओं पर चर्चा करेंगे। हम Viem का उपयोग करेंगे, जो एक शक्तिशाली JavaScript लाइब्रेरी है, ब्लॉकचेन से कनेक्ट होने और स्मार्ट अनुबंधों के साथ निर्बाध रूप से इंटरएक्ट करने के लिए। 
 
-## Installing Viem
+## Viem स्थापित करना
 
-Before we begin, let's ensure we have the necessary tools. Viem is readily available as an npm package. To install it within your project, simply execute the following command in your terminal:
+शुरू करने से पहले, चलिए यह सुनिश्चित करते हैं कि हमारे पास आवश्यक उपकरण हैं। Viem आसानी से एक npm पैकेज के रूप में उपलब्ध है। इसे अपने प्रोजेक्ट में स्थापित करने के लिए, बस अपने टर्मिनल में निम्नलिखित कमांड चलाएं:
 
 ```bash
 npm install viem
 ```
 
-## Connecting to Viction
+## Viction से कनेक्ट करना
 
-Now, let's establish a connection to the Viction network. We'll utilize Viem's `createPublicClient` function to create a client instance:
+अब, हम Viction नेटवर्क से कनेक्शन स्थापित करेंगे। हम Viem की `createPublicClient` फ़ंक्शन का उपयोग करेंगे, ताकि एक क्लाइंट इंस्टेंस बनाया जा सके:
 
 ```typescript
 import { createPublicClient, http } from 'viem';
-import { victionTestnet } from 'viem/chains'; // Use 'viction' for mainnet
+import { victionTestnet } from 'viem/chains'; // मुख्यनेट के लिए 'viction' का उपयोग करें
 
 const client = createPublicClient({
   chain: victionTestnet, 
   transport: http()
 });
 ```
-This client acts as your gateway to the Viction blockchain, enabling you to query chain data, send transactions, and interact with smart contracts.
+यह क्लाइंट Viction ब्लॉकचेन तक पहुँचने का गेटवे है, जो आपको चेन डेटा को क्वेरी करने, लेन-देन भेजने, और स्मार्ट अनुबंधों के साथ इंटरएक्ट करने की अनुमति देता है।
 
-## eading Data from a VRC25 Contract
+## VRC25 अनुबंध से डेटा पढ़ना
 
-Let's demonstrate how to read data from a VRC25 contract using Viem. We'll focus on a common use case: retrieving the token balance of a specific address. 
+आइए Viem का उपयोग करके VRC25 अनुबंध से डेटा पढ़ने का तरीका दिखाते हैं। हम एक सामान्य उपयोग मामले पर ध्यान केंद्रित करेंगे: एक विशिष्ट पते का टोकन बैलेंस प्राप्त करना। 
 
 ```typescript
 import { client } from './client' 
@@ -42,14 +42,14 @@ const data = await publicClient.readContract({
 });
 ```
 
-In this code snippet:
+इस कोड स्निपेट में:
 
-- `publicClient.readContract()` is a powerful function that allows us to interact with contract functions that don't modify the blockchain's state.
-- We specify the contract address, its ABI (Application Binary Interface), the function name (`balanceOf`), and the address for which we want to retrieve the balance.
+- `publicClient.readContract()` एक शक्तिशाली फ़ंक्शन है जो हमें उन अनुबंध फ़ंक्शनों के साथ इंटरएक्ट करने की अनुमति देता है, जो ब्लॉकचेन की स्थिति को संशोधित नहीं करते।
+- हम अनुबंध का पता, उसका ABI (एप्लिकेशन बाइनरी इंटरफ़ेस), फ़ंक्शन का नाम (`balanceOf`), और उस पते को निर्दिष्ट करते हैं, जिसके लिए हम बैलेंस प्राप्त करना चाहते हैं।
 
-## Interacting with the Token
+## टोकन के साथ इंटरएक्ट करना
 
-To perform actions that modify the blockchain state (e.g., minting tokens), we need a wallet. Let's create a `walletClient` using Viem:
+उन क्रियाओं को करने के लिए जो ब्लॉकचेन की स्थिति को संशोधित करती हैं (जैसे टोकन मिंटिंग), हमें एक वॉलेट की आवश्यकता होती है। चलिए हम Viem का उपयोग करके एक `walletClient` बनाएंगे:
 
 ```typescript
 import { createWalletClient, custom, http } from 'viem'
@@ -62,9 +62,9 @@ export const walletClient = createWalletClient({
 });
 ```
 
-This `walletClient` allows us to send transactions and interact with the blockchain securely.
+यह `walletClient` हमें लेन-देन भेजने और ब्लॉकचेन के साथ सुरक्षित रूप से इंटरएक्ट करने की अनुमति देता है।
 
-Now, let's use the `writeContract` function to mint new tokens:
+अब, चलिए हम `writeContract` फ़ंक्शन का उपयोग करके नए टोकन मिंट करते हैं:
 
 ```typescript
 import { walletClient } from './config'
@@ -79,7 +79,6 @@ await walletClient.writeContract({
 });
 ```
 
-This code sends a transaction to the VRC25 contract, instructing it to mint 69420 tokens and send them to the specified address. 
+यह कोड VRC25 अनुबंध को एक लेन-देन भेजता है, जिससे यह 69420 टोकन मिंट करता है और उन्हें निर्दिष्ट पते पर भेजता है। 
 
-Viem provides a user-friendly and efficient way to interact with Viction and its smart contracts. By following these steps, you can seamlessly connect to the blockchain, read data, and execute transactions with ease. This empowers you to build innovative applications on the Viction network, all while benefiting from the streamlined transaction experience offered by the VRC25 standard.
-
+Viem Viction और इसके स्मार्ट अनुबंधों के साथ इंटरएक्ट करने के लिए एक उपयोगकर्ता-मित्र और प्रभावी तरीका प्रदान करता है। इन कदमों का पालन करके, आप निर्बाध रूप से ब्लॉकचेन से कनेक्ट हो सकते हैं, डेटा पढ़ सकते हैं, और आसानी से लेन-देन निष्पादित कर सकते हैं। यह आपको Viction नेटवर्क पर नवाचारपूर्ण अनुप्रयोग बनाने के लिए सशक्त बनाता है, साथ ही VRC25 मानक द्वारा प्रदान किए गए सहज लेन-देन अनुभव का लाभ उठाते हुए।

@@ -1,35 +1,35 @@
 # Viction Dice Game Quest
 
-In this exciting topic, you'll embark on a journey to understand and leverage Viction's Verifiable Relatively Random Function (VRRF) in a smart contract on the Viction blockchain. We'll build a Dice smart contract that allows users to roll a virtual dice and receive a fair and verifiable random outcome between 1 and 6.
+इस रोमांचक विषय में, आप Viction के Verifiable Relatively Random Function (VRRF) को समझने और उसे Viction ब्लॉकचेन पर स्मार्ट कॉन्ट्रैक्ट में उपयोग करने की यात्रा पर निकलेंगे। हम एक Dice स्मार्ट कॉन्ट्रैक्ट बनाएंगे जो उपयोगकर्ताओं को एक वर्चुअल डाइस रोल करने की अनुमति देगा और 1 से 6 के बीच एक निष्पक्ष और प्रमाणिक रैंडम परिणाम प्राप्त होगा।
 
 ## Learning Objectives:
 
-- Gain a solid understanding of VRF and its role in ensuring randomness on-chain.
-- Explore the Dice smart contract code and its functionalities.
-- Deploy the Dice contract on the Viction Testnet.
-- Interact with the deployed contract to experience a verifiable dice roll.
+- VRF को अच्छी तरह से समझें और यह ऑन-चेन रैंडमनेस को सुनिश्चित करने में किस प्रकार भूमिका निभाता है।
+- Dice स्मार्ट कॉन्ट्रैक्ट कोड और उसकी कार्यक्षमताओं का अन्वेषण करें।
+- Dice कॉन्ट्रैक्ट को Viction टेस्टनेट पर डिप्लॉय करें।
+- डिप्लॉय किए गए कॉन्ट्रैक्ट के साथ इंटरैक्ट करें और प्रमाणिक डाइस रोल का अनुभव करें।
 
 ## What is VRRF?
 
-Imagine a scenario where you're playing a dice game on a blockchain platform. How can you be sure the dice roll is truly random and hasn't been tampered with? Enter VRRF, a hero in the blockchain world, designed specifically for this purpose.
+कल्पना करें कि आप एक ब्लॉकचेन प्लेटफ़ॉर्म पर डाइस खेल रहे हैं। आप कैसे सुनिश्चित कर सकते हैं कि डाइस रोल वास्तव में रैंडम है और इसमें किसी प्रकार की छेड़छाड़ नहीं हुई है? VRRF का परिचय इस समस्या को हल करने के लिए किया गया है, जो ब्लॉकचेन दुनिया का एक हीरो है, जिसे खासतौर पर इस उद्देश्य के लिए डिज़ाइन किया गया है।
 
-VRRF stands for Verifiable Relatively Random Function. It's a special type of function that generates pseudo-random numbers – numbers that appear random but are actually derived from a mathematical formula. The key here is that VRRF offers two crucial features:
+VRRF का मतलब है Verifiable Relatively Random Function। यह एक विशेष प्रकार का फ़ंक्शन है जो पीसोडो-रैंडम नंबर उत्पन्न करता है – ऐसे नंबर जो रैंडम प्रतीत होते हैं लेकिन वास्तव में एक गणितीय सूत्र से निकाले जाते हैं। यहां कुंजी यह है कि VRRF दो महत्वपूर्ण फीचर्स प्रदान करता है:
 
-1. **Verifiable:**  Anyone can verify that the random number was generated fairly and hasn't been manipulated. This transparency is essential for building trust in blockchain applications.
-2. **Relatively Random:** While not mathematically perfect, VRRF produces unpredictable results that are difficult to guess beforehand. This ensures fairness in games, auctions, and other applications that rely on randomness.
+1. **Verifiable:** कोई भी यह सत्यापित कर सकता है कि रैंडम नंबर निष्पक्ष रूप से उत्पन्न किया गया था और इसमें कोई छेड़छाड़ नहीं की गई है। यह पारदर्शिता ब्लॉकचेन अनुप्रयोगों में विश्वास बनाने के लिए आवश्यक है।
+2. **Relatively Random:** हालांकि यह गणितीय रूप से परफेक्ट नहीं है, VRRF अनिश्चित परिणाम उत्पन्न करता है जिन्हें पहले से अनुमानित करना कठिन है। यह खेलों, नीलामी और अन्य अनुप्रयोगों में निष्पक्षता सुनिश्चित करता है जो रैंडमनेस पर निर्भर करते हैं।
 
 ## How Does VRRF Work?
 
-VRRF combines several clever techniques to achieve its goals:
+VRRF अपने लक्ष्यों को प्राप्त करने के लिए कई चतुर तकनीकों का संयोजन करता है:
 
-* **Deterministic Outputs:**  For the same inputs, VRRF always produces the same output. This might seem counterintuitive for randomness, but it's the key to verification.
-* **Unpredictability:** VRRF uses a combination of factors to generate the random number, including previous results, on-chain parameters, and a user-provided "salt" value. This salt acts like a secret ingredient, making it nearly impossible to predict the outcome.
-* **Manipulation Resistance:** VRRF is designed to be resistant to manipulation attempts. Even if someone tries to tamper with the process, it can be detected and prevented.
-* **On-chain Processing:** VRRF operates entirely within a single blockchain transaction, ensuring a fast and secure process.
+* **Deterministic Outputs:** समान इनपुट के लिए VRRF हमेशा समान आउटपुट उत्पन्न करता है। यह रैंडमनेस के लिए उल्टा प्रतीत हो सकता है, लेकिन यह सत्यापन की कुंजी है।
+* **Unpredictability:** VRRF रैंडम नंबर उत्पन्न करने के लिए कई कारकों का संयोजन करता है, जिसमें पिछले परिणाम, ऑन-चेन पैरामीटर और उपयोगकर्ता द्वारा प्रदान किया गया "salt" मान शामिल है। यह salt एक गुप्त घटक की तरह काम करता है, जिससे परिणाम की भविष्यवाणी करना लगभग असंभव हो जाता है।
+* **Manipulation Resistance:** VRRF को छेड़छाड़ के प्रयासों से बचने के लिए डिज़ाइन किया गया है। यहां तक कि अगर कोई प्रक्रिया के साथ छेड़छाड़ करने की कोशिश करता है, तो उसे पहचाना और रोका जा सकता है।
+* **On-chain Processing:** VRRF पूरी तरह से एक ब्लॉकचेन ट्रांजैक्शन के भीतर काम करता है, जो एक तेज़ और सुरक्षित प्रक्रिया सुनिश्चित करता है।
 
 ## VRRF Interface
 
-To leverage VRRF's power in your smart contracts, you'll interact with an interface called `IVRRF`. This interface provides a single function:
+अपने स्मार्ट कॉन्ट्रैक्ट्स में VRRF की शक्ति का उपयोग करने के लिए, आप एक इंटरफ़ेस से इंटरैक्ट करेंगे जिसे `IVRRF` कहा जाता है। यह इंटरफ़ेस एकल फ़ंक्शन प्रदान करता है:
 
 ```solidity
 interface IVRRF {
@@ -41,23 +41,23 @@ interface IVRRF {
 }
 ```
 
-This `random` function takes a `bytes32 salt` value as input. Remember the salt? It's your chance to add a layer of customization to the randomness. You can provide a unique salt for each random number generation, further enhancing unpredictability.
+यह `random` फ़ंक्शन एक `bytes32 salt` मान को इनपुट के रूप में लेता है। याद रखें salt को? यह आपकी रैंडमनेस में एक कस्टमाइजेशन का स्तर जोड़ने का मौका है। आप प्रत्येक रैंडम नंबर जनरेशन के लिए एक अनूठा salt प्रदान कर सकते हैं, जिससे अनिश्चितता और भी बढ़ जाती है।
 
-The function then returns a `bytes32` number, which you can use in various applications like:
+फिर यह फ़ंक्शन एक `bytes32` नंबर लौटाता है, जिसे आप विभिन्न अनुप्रयोगों में उपयोग कर सकते हैं जैसे:
 
-* **Dice Games:** Roll a fair dice in your blockchain-based game.
-* **NFT Generation:** Create unique and unpredictable traits for your non-fungible tokens.
-* **Random Selection:** Select participants for a lottery or raffle in a transparent and verifiable manner.
+* **Dice Games:** अपने ब्लॉकचेन-आधारित खेल में एक निष्पक्ष डाइस रोल करें।
+* **NFT Generation:** अपनी नॉन-फंगिबल टोकन्स के लिए अनूठे और अप्रत्याशित गुण बनाएं।
+* **Random Selection:** लॉटरी या रैफल के लिए प्रतिभागियों का चयन करें, एक पारदर्शी और प्रमाणिक तरीके से।
 
-By integrating VRRF, you can ensure that your blockchain applications are not only engaging but also fair and trustworthy for all users.
+VRRF का एकीकरण करके, आप यह सुनिश्चित कर सकते हैं कि आपके ब्लॉकचेन अनुप्रयोग न केवल आकर्षक हैं बल्कि सभी उपयोगकर्ताओं के लिए निष्पक्ष और भरोसेमंद भी हैं।
 
 ## VRRF Contracts
 
-To utilize VRRF on Viction, you'll need to interact with the deployed `IVRRF` contract on the specific network (Mainnet or Testnet) you're working with. Here's a table with the VRRF contract addresses for your reference:
+Viction पर VRRF का उपयोग करने के लिए, आपको विशेष नेटवर्क (Mainnet या Testnet) पर डिप्लॉय किए गए `IVRRF` कॉन्ट्रैक्ट के साथ इंटरैक्ट करना होगा। यहां आपके संदर्भ के लिए VRRF कॉन्ट्रैक्ट एड्रेस की एक तालिका दी गई है:
 
 | Network | Address |
 |---|---|
 | Mainnet | 0x53eDcf19e4fb242c9957CB449d2d4106fD760A7F |
 | Testnet | 0xDb14c007634F6589Fb542F64199821c3308A9d92 |
 
-In the next section, we'll explore how to set up your smart contract to interact with VRRF and unlock the potential of fair and verifiable randomness on the Viction blockchain!
+अगले खंड में, हम यह जानेंगे कि आपके स्मार्ट कॉन्ट्रैक्ट को VRRF के साथ इंटरैक्ट करने के लिए कैसे सेटअप किया जाए और Viction ब्लॉकचेन पर निष्पक्ष और प्रमाणिक रैंडमनेस की संभावनाओं को कैसे अनलॉक किया जाए!

@@ -2,42 +2,42 @@
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vicscan.png)
 
-Vicscan is a powerful blockchain explorer that offers a user-friendly interface to navigate the Viction ecosystem. With Vicscan, you can easily access a wealth of information, including:
+Vicscan एक शक्तिशाली ब्लॉकचेन एक्सप्लोरर है जो Viction पारिस्थितिकी तंत्र में नेविगेट करने के लिए एक उपयोगकर्ता-अनुकूल इंटरफ़ेस प्रदान करता है। Vicscan के साथ, आप आसानी से एक समृद्ध जानकारी तक पहुँच सकते हैं, जिसमें शामिल हैं:
 
-- **Blocks**: Discover details about every block in the Viction blockchain, including their height, time, and associated transactions.
-- **Transactions**: View all transactions on the network, complete with their status, amounts, and the wallets involved.
-- **Finality**: Understand the finality of transactions on the blockchain, giving you insights into how quickly transactions are confirmed.
-- **Smart Contracts**: Explore the smart contracts deployed on Viction, including their functions and interaction details.
-- **DApps**: Get to know the decentralized applications (DApps) built on Viction, and see how they’re shaping the blockchain landscape.
-- **Tokens**: Track token information, including total supply, holders, and transfer details.
+- **ब्लॉक**: Viction ब्लॉकचेन में हर ब्लॉक के बारे में विवरण जानें, जिसमें उनकी ऊंचाई, समय, और संबंधित लेन-देन शामिल हैं।
+- **लेन-देन**: नेटवर्क पर सभी लेन-देन देखें, उनके स्थिति, राशियों और शामिल वॉलेट्स के साथ।
+- **अंतिमता**: ब्लॉकचेन पर लेन-देन की अंतिमता को समझें, जिससे आपको यह जानकारी मिलती है कि लेन-देन कितनी जल्दी पुष्टि होते हैं।
+- **स्मार्ट कॉन्ट्रैक्ट्स**: Viction पर तैनात स्मार्ट कॉन्ट्रैक्ट्स की जांच करें, जिसमें उनके कार्य और इंटरएक्शन विवरण शामिल हैं।
+- **DApps**: Viction पर निर्मित विकेंद्रीकृत एप्लिकेशंस (DApps) को जानें, और देखें कि वे ब्लॉकचेन परिदृश्य को कैसे आकार दे रहे हैं।
+- **टोकन**: टोकन की जानकारी ट्रैक करें, जिसमें कुल आपूर्ति, धारक और ट्रांसफर विवरण शामिल हैं।
 
-## Why Use Vicscan?
+## Vicscan का उपयोग क्यों करें?
 
-Vicscan isn't just about raw data; it provides **insights** and **visualizations** that help you grasp the performance of the Viction network at a glance. Here are some features that make Vicscan stand out:
+Vicscan सिर्फ कच्चे डेटा के बारे में नहीं है; यह **अंतर्दृष्टि** और **विज़ुअलाइज़ेशन** प्रदान करता है जो आपको Viction नेटवर्क के प्रदर्शन को एक नज़र में समझने में मदद करता है। Vicscan को विशिष्ट बनाने वाली कुछ विशेषताएँ यहां दी गई हैं:
 
-### Technical Visualizations
+### तकनीकी विज़ुअलाइज़ेशन
 
-Vicscan offers graphical representations of blockchain data, making complex information easier to understand. You can visualize:
+Vicscan ब्लॉकचेन डेटा का ग्राफिकल प्रतिनिधित्व प्रदान करता है, जिससे जटिल जानकारी को समझना आसान हो जाता है। आप इनकी विज़ुअलाइज़ेशन कर सकते हैं:
 
-- Network activity over time
-- The distribution of token holders
-- Transaction volumes and trends
+- समय के साथ नेटवर्क गतिविधि
+- टोकन धारकों का वितरण
+- लेन-देन की मात्रा और प्रवृत्तियाँ
 
-These visual tools can help you make informed decisions whether you’re an investor, developer, or simply curious about the blockchain.
+ये दृश्यात्मक उपकरण आपको सूचित निर्णय लेने में मदद कर सकते हैं, चाहे आप एक निवेशक, डेवलपर हों, या बस ब्लॉकचेन के बारे में जिज्ञासु हों।
 
-### Useful Statistics
+### उपयोगी आँकड़े
 
-With Vicscan, you get access to valuable statistics that highlight Viction’s performance:
+Vicscan के साथ, आपको ऐसे मूल्यवान आँकड़ों तक पहुँच मिलती है जो Viction के प्रदर्शन को उजागर करती हैं:
 
-- **Network Health**: Monitor the overall health and stability of the Viction blockchain.
-- **Token Holder Metrics**: Analyze how tokens are distributed among holders, giving you insights into the community’s engagement.
-- **Transaction Analytics**: See real-time data on transactions to understand the network's activity levels.
+- **नेटवर्क स्वास्थ्य**: Viction ब्लॉकचेन के समग्र स्वास्थ्य और स्थिरता की निगरानी करें।
+- **टोकन धारक मीट्रिक**: जानें कि टोकन धारकों के बीच टोकन कैसे वितरित हैं, जो आपको समुदाय की संलग्नता की जानकारी देती है।
+- **लेन-देन विश्लेषण**: नेटवर्क की गतिविधि स्तरों को समझने के लिए लेन-देन पर रीयल-टाइम डेटा देखें।
 
-## Getting Started with Vicscan
+## Vicscan के साथ शुरुआत करना
 
-Using Vicscan is straightforward! Here’s how you can get started:
+Vicscan का उपयोग करना सीधा है! यहां बताया गया है कि आप कैसे शुरू कर सकते हैं:
 
-1. **Visit the Vicscan Website**: Go to [Vicscan](https://vicscan.viction.xyz).
-2. **Explore the Dashboard**: Familiarize yourself with the layout. The main dashboard provides quick access to blocks, transactions, smart contracts, and more.
-3. **Search Functionality**: Use the search bar to find specific transactions, addresses, or blocks. Just type in what you’re looking for!
-4. **Dive Deeper**: Click on any block, transaction, or contract to see more details. Each page is packed with information to help you understand what’s happening under the hood.
+1. **Vicscan वेबसाइट पर जाएं**: [Vicscan](https://vicscan.viction.xyz) पर जाएं।
+2. **डैशबोर्ड का अन्वेषण करें**: लेआउट से परिचित हो जाएं। मुख्य डैशबोर्ड ब्लॉकों, लेन-देन, स्मार्ट कॉन्ट्रैक्ट्स, और अधिक तक त्वरित पहुँच प्रदान करता है।
+3. **खोज कार्यक्षमता**: विशिष्ट लेन-देन, पते, या ब्लॉकों को ढूंढने के लिए खोज बार का उपयोग करें। बस वह टाइप करें जो आप ढूंढ रहे हैं!
+4. **गहरे तक जाएं**: किसी भी ब्लॉक, लेन-देन, या कॉन्ट्रैक्ट पर क्लिक करें ताकि और विवरण देख सकें। प्रत्येक पृष्ठ में जानकारी से भरा हुआ है जो आपको यह समझने में मदद करता है कि अंदर क्या हो रहा है।
