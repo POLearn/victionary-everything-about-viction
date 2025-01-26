@@ -1,6 +1,6 @@
-# Diving Deeper into VRC25
+# 深入了解 VRC25
 
-Now that we understand the core principles of VRC25 and its similarities to ERC20, let's explore two key functions that differentiate VRC25 and enhance its functionality: `issuer()` and `estimateFee()`.
+现在我们已经理解了 VRC25 的核心原理及其与 ERC20 的相似之处，让我们探讨一下两个关键函数，这些函数使 VRC25 与众不同并增强其功能：`issuer()` 和 `estimateFee()`。
 
 ## `issuer()`
 
@@ -8,9 +8,9 @@ Now that we understand the core principles of VRC25 and its similarities to ERC2
 function issuer() external view returns (address);
 ```
 
-The `issuer` function verifies the address of the token issuer, ensuring only the designated issuer can manage transaction fees. This adds a layer of security and accountability, maintaining the token's integrity.
-* **Ensure authenticity:** Verify the genuine source of the token and its associated fee management.
-* **Enhance trust:** Build trust within the ecosystem by clearly defining the entity responsible for managing transaction fees.
+`issuer` 函数验证代币发行人的地址，确保只有指定的发行人可以管理交易费用。这为代币的完整性增加了一层安全性和责任性。
+* **确保真实性：** 验证代币的真实来源及其相关的费用管理。
+* **增强信任：** 通过明确界定负责管理交易费用的实体，增强生态系统中的信任。
 
 ### `estimateFee()`
 
@@ -19,7 +19,7 @@ The `issuer` function verifies the address of the token issuer, ensuring only th
 function estimateFee(uint256 value) external view returns (uint256);
 ```
 
-The `estimateFee` function calculates the transaction fee in VRC25 tokens, which is payable to the token issuer. This function allows for customized fee structures, enhancing flexibility for issuers.
-* **Calculate transaction costs:** Before initiating a transaction, users can estimate the associated VRC25 fee. This provides valuable information for budgeting and financial planning.
-* **Customize fee structures:** Issuers can dynamically adjust fee structures based on various factors, such as transaction volume or network congestion.
-* **Enhance transparency:** By providing an estimate of transaction fees upfront, VRC25 promotes transparency and user trust.
+`estimateFee` 函数计算 VRC25 代币的交易费用，这些费用需支付给代币发行人。此函数允许定制费用结构，为发行人提供更大的灵活性。
+* **计算交易成本：** 在发起交易之前，用户可以估算相关的 VRC25 费用。这为预算和财务规划提供了有价值的信息。
+* **定制费用结构：** 发行人可以根据不同因素动态调整费用结构，例如交易量或网络拥堵情况。
+* **增强透明度：** 通过提前提供交易费用的估算，VRC25 促进了透明度和用户信任。

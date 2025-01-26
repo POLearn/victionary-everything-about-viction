@@ -1,42 +1,42 @@
-# Ready to Roll?
+# 准备好掷骰子了吗？
 
-If you're new to deploying smart contracts, fret not! We can leverage an existing Dice contract. Here's what you'll need to do:
+如果你是首次部署智能合约，别担心！我们可以利用现有的骰子合约。以下是你需要做的：
 
-## Load the Contract
+## 加载合约
 
-Head over to [Solide IDE](https://solide0x.tech/address/89/0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D) and interact with the contract at this address: `0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D`.
+前往 [Solide IDE](https://solide0x.tech/address/89/0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D)，并与该地址的合约进行交互：`0x42f8A200d7c7BF4FC6aa435ac0c13E0caF40E06D`。
 
-## Roll the Dice!
+## 掷骰子！
 
-Click on the `roll` function within the IDE. This will initiate a transaction simulating a dice roll. Confirmation might take a few seconds due to VRRF's workings.
+点击 IDE 中的 `roll` 函数。这将启动一个模拟掷骰子的交易。由于 VRRF 的工作原理，确认过程可能需要几秒钟。
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_roll.png)
 
-*Note, that the result will change upon after a few seconds. According to the Viction documentation it is good to note that *VRRF relies on the order of calling transaction, protocols who make use of VRRF must wait for a short period of time (say 8-10 seconds) before displaying random result to end-users to avoid issues related to block re-org.*
+*请注意，结果将在几秒钟后改变。根据 Viction 文档，值得注意的是 *VRRF 依赖于调用交易的顺序，使用 VRRF 的协议必须等待短暂的时间（例如 8-10 秒），再向最终用户显示随机结果，以避免与区块重组相关的问题。*
 
-## Understanding the Roll Event
+## 理解掷骰子事件
 
-The contract emits a `RollEvent` whenever a dice roll is executed. Let's navigate to the Dice contract on Vicscan and explore the *Event* tab to find this emitted event. This event holds the key to decoding the roll value:
+每次执行掷骰子时，合约都会触发一个 `RollEvent`。我们可以导航到 Vicscan 上的骰子合约，并查看 *Event* 选项卡，找到这个触发的事件。该事件包含解码掷骰子值的关键信息：
 
 ```
 0x0000000000000000000000000000000000000000000000000000000000fa8674b6c634d1fa355a3b605f762247847be8da437e46c55627c8ed747367298250e40000000000000000000000000000000000000000000000000000000000000001
 ```
 
-By decoding this data, we discover the roll value to be **2**. Additionally, the event provides a raw VRRF value denoted by the key `n`. This `bytes32` value can be converted to a standard number (`uint256`) for on-chain operations, as demonstrated in the Dice contract itself. (You can find a screenshot of the Roll Event Log [here](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/build-with-viction-vrrf/assets/logs.png) for reference).
+通过解码这些数据，我们发现掷骰子的值是 **2**。此外，该事件还提供了一个原始的 VRRF 值，由 `n` 关键字表示。这个 `bytes32` 值可以转换为标准数字（`uint256`），以供链上操作，正如骰子合约中所示。（你可以参考 [这里](https://raw.githubusercontent.com/solide-project/awesome-learn-solidity/master/main/exploring-viction-ecosystem/build-with-viction-vrrf/assets/logs.png) 查看掷骰子事件日志的截图）。
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/dice_log.png)
 
-## The Power of VRRF
+## VRRF 的强大功能
 
-VRRF shines as a reliable and verifiable solution for generating random numbers on the Viction blockchain. Here's why it's so valuable:
+VRRF 作为一个可靠且可验证的解决方案，在 Viction 区块链上生成随机数。以下是它如此有价值的原因：
 
-* **Verifiable Randomness:**  Anyone can confirm that the generated number is truly random and hasn't been tampered with, fostering trust in blockchain applications.
-* **Seamless Integration:** VRRF integrates effortlessly with smart contracts, enabling efficient on-chain processing of random values.
-* **Cost-Effective:** VRRF provides a secure and cost-effective way to generate random numbers within smart contracts.
+* **可验证的随机性：** 任何人都可以确认生成的数字确实是随机的，并且没有被篡改，从而增强区块链应用程序的信任度。
+* **无缝集成：** VRRF 与智能合约无缝集成，实现了随机值的高效链上处理。
+* **成本效益：** VRRF 提供了一种安全且具有成本效益的方式来生成智能合约中的随机数。
 
-## VRRF Applications: Beyond Dice Games
+## VRRF 应用：不仅仅是掷骰子游戏
 
-While dice games highlight VRRF's fun potential, its use cases go much further. VRRF enables fair task distribution, ensuring rewards or assignments are allocated transparently and without bias. It also powers unpredictable NFT minting, adding an exciting layer of randomness and surprise to the creation of unique collectibles.
+虽然掷骰子游戏展示了 VRRF 的娱乐潜力，但它的应用远不止于此。VRRF 可以实现公平的任务分配，确保奖励或任务分配透明且不偏不倚。它还推动了不可预测的 NFT 铸造，为创建独特收藏品增添了令人兴奋的随机性和惊喜。
 
-> ❗**Don't forget**
-> For this submission, provide the transaction of the invokation of the `roll` method in the Dice deployed on Viction.
+> ❗**别忘了**
+> 对于此次提交，请提供在 Viction 上部署的骰子合约中调用 `roll` 方法的交易。

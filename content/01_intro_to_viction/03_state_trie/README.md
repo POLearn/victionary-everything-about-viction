@@ -1,14 +1,14 @@
-# State Trie
+# 状态 Trie
 
-Learning about Viction (or blockchain in general), then a concept that's important is **State Trie**. It is a fundamental data structure to efficiently store and manage the **state** of the blockchain. So, think of a blockchain as a database, that keeps a track off all accounts balances and transactions. It is part of the Viction protocol and plays a crucial role in maintaining the current state of all accounts and their respective balances, storage, and other data.
+在学习 Viction（或区块链）的过程中，有一个重要的概念就是 **状态 Trie**。它是一个基本的数据结构，用于高效地存储和管理区块链的 **状态**。可以将区块链看作一个数据库，它跟踪所有账户的余额和交易。它是 Viction 协议的一部分，并在维护所有账户及其各自的余额、存储和其他数据的当前状态方面起着至关重要的作用。
 
-### What is a Trie?
-If we go basic to Computer Science or data structures. A [trie](https://en.wikipedia.org/wiki/Trie) is a type of *tree structure* that helps store and retrieve data efficiently. Tries are particularly useful when you need to look up information quickly, which is exactly what Ethereum needs to do when managing thousands of accounts and transactions.
+### 什么是 Trie？
+如果从计算机科学或数据结构的基础开始，**Trie**（前缀树）是一种 *树形结构*，有助于高效地存储和检索数据。Trie 在需要快速查找信息时特别有用，这正是以太坊在管理成千上万个账户和交易时所需要做的。
 
-The state trie can be thought of as a mapping structure where:
-- Key: The account address.
-- Value: The account state, which includes details like nonce, balance, and more.
-An example could be the information for an account,
+状态 trie 可以被看作是一种映射结构，其中：
+- **键**：账户地址。
+- **值**：账户状态，包含像 nonce、余额等详细信息。
+例如，账户的信息可以是：
 
 ```json
 {
@@ -19,4 +19,4 @@ An example could be the information for an account,
 }
 ```
 
-This object represents the account state associated with the specified address. However, since storing all this data in each block would be inefficient, only the root hash of the state trie is included in each block header. This root hash acts as a commitment to the data within the trie for that specific block. For example, in [Block 85453443](https://www.vicscan.xyz/block/85453443) on Viction, the block contains a state root that is a hash of the block information, ensuring that any modifications to account states during transaction processing are accurately reflected. This allows nodes to validate the integrity of the blockchain and efficiently verify account states through Merkle proofs, maintaining trust in the network's data while ensuring scalability.
+这个对象表示与指定地址相关联的账户状态。然而，由于将所有这些数据存储在每个区块中效率较低，所以每个区块头部只包括状态 trie 的根哈希。这个根哈希作为对该特定区块中的 trie 数据的承诺。例如，在 Viction 的 [区块 85453443](https://www.vicscan.xyz/block/85453443) 中，区块包含一个状态根，它是区块信息的哈希，确保在交易处理期间对账户状态的任何修改都能得到准确反映。这使得节点能够验证区块链的完整性，并通过梅克尔证明有效地验证账户状态，同时确保网络数据的可信性并保障可扩展性。

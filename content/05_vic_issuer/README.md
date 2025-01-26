@@ -1,22 +1,22 @@
-# Gasless Tokens with VicIssuer
+# 无 Gas 代币与 VicIssuer
 
-## Learning Objectives:
+## 学习目标：
 
-* Understand the role of the `VicIssuer` contract in managing VRC25 tokens.
-* Explore the concept and implementation of the `VicIssuer` contract and its implications for issuers.
-* Gain insights into how the `VicIssuer` contract enhances security and control within the Viction ecosystem and interacts with the platform.
+* 了解 `VicIssuer` 合约在管理 VRC25 代币中的角色。
+* 探索 `VicIssuer` 合约的概念和实现，以及它对发行人的影响。
+* 深入了解 `VicIssuer` 合约如何增强 Viction 生态系统中的安全性和控制，并与平台互动。
 
-## What is the VicIssuer
+## 什么是 VicIssuer
 
-The `VRC25Issuer` contract facilitates the management of token issuances and transaction fees within the Viction ecosystem. VicIssuer simplifies the process for businesses and entrepreneurs by facilitating the issuance of these tokens. By incorporating features like gasless transactions and robust security measures, Viction empowers users to seamlessly interact with the blockchain and unlock the full potential of the VRC25 ecosystem.
+`VRC25Issuer` 合约促进了 Viction 生态系统内的代币发行和交易费用管理。VicIssuer 通过简化代币发行流程，为企业和创业者提供便利。通过集成无 Gas 交易和强大的安全措施，Viction 使用户能够无缝地与区块链互动，并解锁 VRC25 生态系统的全部潜力。
 
-| Network   | Address                                    |
-| --------- | ------------------------------------------ |
-| Mainnet   | 0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee |
-| Testnet   | 0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee |
+| 网络      | 地址                                         |
+| --------- | -------------------------------------------- |
+| 主网      | 0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee  |
+| 测试网    | 0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee  |
 
-## Zero Gas Protocol
+## 零 Gas 协议
 
-Viction's commitment to user-centricity extends beyond gasless transactions. The Zero Gas Protocol further enhances the user experience by minimizing transaction costs for a wide range of interactions. This innovative mechanism allows for certain types of transactions, such as simple token transfers and basic interactions, to be executed without incurring any gas fees.
+Viction 对用户体验的承诺不仅仅体现在无 Gas 交易上。零 Gas 协议通过最小化广泛交互的交易成本，进一步提升了用户体验。这个创新机制使得某些类型的交易，例如简单的代币转账和基本交互，可以在不产生任何 Gas 费用的情况下执行。
 
-By combining the power of VicIssuer with the Zero Gas Protocol, Viction creates a truly user-friendly and cost-effective environment for developers and users to thrive within the blockchain ecosystem.
+通过将 VicIssuer 的功能与零 Gas 协议结合，Viction 为开发者和用户创造了一个真正用户友好且具有成本效益的区块链生态环境，使他们在其中茁壮成长。

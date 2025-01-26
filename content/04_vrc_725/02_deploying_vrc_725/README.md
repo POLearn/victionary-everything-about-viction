@@ -1,10 +1,10 @@
-### Deploying a VRC725 NFT Contract on Viction Testnet
+### 在 Viction 测试网部署 VRC725 NFT 合约
 
-Given that we understand aobut VRC725, lets deploy a NFT contract using the standard. We are taking this contract from the offical Viction Repo. The `NFTMock.sol` contract leverages **VRC725Enumerable**, providing functionality similar to ERC721 but tailored to VRC725 allowing for minting, transferring, and approval capabilities, with additional permit functionalities unique to VRC725.  
+既然我们已经了解了 VRC725，接下来让我们使用该标准部署一个 NFT 合约。我们将从官方 Viction 仓库获取该合约。`NFTMock.sol` 合约利用了 **VRC725Enumerable**，提供了类似于 ERC721 的功能，但经过调整以适应 VRC725，允许铸造、转移和批准功能，并附加 VRC725 独特的许可功能。
 
-The `NFTMock` contract inherits from `VRC725Enumerable`, leveraging the VRC725 standard with added enumerable capabilities. The contract initialization follows a pattern similar to ERC721, but for VRC725, it uses `__VRC725_init` for proper setup. After deployment, the ABI will include all ERC721 methods, enabling minting, transferring, approving, with the addition permit functionalities.
+`NFTMock` 合约继承自 `VRC725Enumerable`，利用了 VRC725 标准并增加了枚举功能。合约初始化遵循类似于 ERC721 的模式，但对于 VRC725，它使用 `__VRC725_init` 进行适当的设置。部署后，ABI 将包括所有 ERC721 方法，支持铸造、转移、批准，并新增许可功能。
 
-Let's deploy a practical example of the `VRC725` token standard on the Viction blockchain. Entire source code can be found from the official Viction Repository: [https://github.com/BuildOnViction/vrc725/blob/main/contracts/tests/NFTMock.sol](https://github.com/BuildOnViction/vrc725/blob/main/contracts/tests/NFTMock.sol)
+让我们在 Viction 区块链上部署一个实际的 `VRC725` 代币标准示例。完整的源代码可以在官方 Viction 仓库找到：[https://github.com/BuildOnViction/vrc725/blob/main/contracts/tests/NFTMock.sol](https://github.com/BuildOnViction/vrc725/blob/main/contracts/tests/NFTMock.sol)
 
 ```solidity
 contract NFTMock is VRC725Enumerable {
@@ -17,19 +17,20 @@ contract NFTMock is VRC725Enumerable {
     }
 }
 ```
-## Quest - Deploy V725
 
-You can load the above contract in a desired IDE or environment and compile `NFTMock.sol` using **Solidity version 0.8.19** and deploy the contract.
+## 任务 - 部署 V725
+
+你可以在所选 IDE 或环境中加载上述合约，并使用 **Solidity 版本 0.8.19** 编译 `NFTMock.sol` 并部署合约。
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc25_contract.png)
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/vrc725_deploy.png)
 
-Then to deploy the contract, provide the following as its token parameters.
-- **Name:** "POL VRC725"  
-- **Symbol:** "POL"  
-- **Issuer Address:** `0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee`  
+然后，部署合约时，提供以下作为其代币参数：
+- **名称：** "POL VRC725"  
+- **符号：** "POL"  
+- **发行人地址：** `0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee`  
 
-What's important to note here is the is, the contract must be registered with the Viction Issuer contract. In this case its the `0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee`. We will go through in more detail,  But essentially,  the contract owner needs to deposit 10+ $VIC to support and sponsor gas fees for their users. By providing the Issuer Address, users can interact and be spsonsored making it gasless experience for tokens and NFTs.
+需要注意的是，合约必须注册到 Viction 发行人合约。在本例中，发行人地址为 `0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee`。稍后我们将详细说明，但本质上，合约拥有者需要存入 10+ $VIC，以支持并资助用户的 gas 费用。通过提供发行人地址，用户可以与合约进行交互，并享受由发行人提供的 gasless 体验。
 
-Once deployed, your VRC725 NFT contract is ready to revolutionize how NFTs operate on the Viction Testnet. Don’t forget to submit your transaction hash to complete the quest and showcase your achievement! 🎉
+部署完成后，你的 VRC725 NFT 合约已经准备好在 Viction 测试网上改变 NFT 的运作方式。不要忘记提交你的交易哈希来完成任务并展示你的成就！ 🎉

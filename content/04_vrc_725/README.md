@@ -1,21 +1,21 @@
-## Viction's NFT VRC725
+## Viction 的 NFT VRC725
 
-In this section, it's all about NFT mainly VRC725, the official standard on Viction. Building on the foundation of the widely recognized ERC721 standard, VRC725 introduces enhanced features such as gas-free operations and extended metadata support. This standard provides a streamlined and efficient approach to creating, tracking, and transferring unique tokens, making it the simplest form of NFTs on Viction. By incorporating mechanisms for gasless transactions and maintaining robust security measures, VRC725 ensures a seamless user experience while supporting diverse use cases from virtual collectibles to tangible property ownership.
+在本节中，我们将重点介绍 NFT，主要是 VRC725，这是 Viction 上的官方标准。基于广泛认可的 ERC721 标准，VRC725 引入了增强的功能，如免气费操作和扩展的元数据支持。该标准提供了一个简化且高效的方法来创建、跟踪和转移独特的代币，使其成为 Viction 上最简单的 NFT 形式。通过结合免气交易机制和保持强大的安全措施，VRC725 确保了无缝的用户体验，同时支持从虚拟收藏品到有形财产所有权等多种用例。
 
-**Learning Objectives:**
+**学习目标：**
 
-* Grasp the core principles of the VRC725 NFT standard.
-* Deploy VRC725 NFT on Viction.
+* 理解 VRC725 NFT 标准的核心原理。
+* 在 Viction 上部署 VRC725 NFT。
 
-## Advantages of VRC725
+## VRC725 的优势
 
-* **Gasless Transactions:** VRC725 eliminates the need for users to hold native tokens for transaction fees. Smart contracts sponsor these fees, significantly reducing barriers to entry and enhancing user experience.
-* **Extended Metadata Support:** VRC725 offers robust support for rich metadata. This allows creators to embed additional information within their NFTs, such as descriptions, licenses, or even multimedia content.
-* **Simplified NFT Management:** VRC725 streamlines the process of creating, transferring, and managing NFTs. This user-friendly approach makes VRC725 ideal for a wider range of applications, from digital collectibles to tokenized representations of real-world assets.
+* **免气交易：** VRC725 消除了用户持有原生代币支付交易费用的需求。智能合约将资助这些费用，从而显著降低了入门门槛并提升了用户体验。
+* **扩展的元数据支持：** VRC725 提供了强大的元数据支持。创作者可以在 NFT 中嵌入附加信息，如描述、许可证甚至多媒体内容。
+* **简化的 NFT 管理：** VRC725 简化了创建、转移和管理 NFT 的过程。这个用户友好的方法使得 VRC725 适用于更广泛的应用场景，从数字收藏品到现实世界资产的代币化表示。
 
-## VRC725 vs. ERC721: A Side-by-Side Look
+## VRC725 与 ERC721：逐一比较
 
-When examining the relationship between VRC725 and ERC721, it's essential to understand that VRC725 inherits from ERC721. This inheritance means that VRC725 tokens are fundamentally ERC721 tokens, adhering to the [EIP 721 standard](https://eips.ethereum.org/EIPS/eip-721), which ensures compatibility with other Ethereum Virtual Machine (EVM) chains—a significant advantage. However, what truly sets VRC725 apart are the additional features and extensions it incorporates, particularly those defined in the IVRC725 interface.
+在考察 VRC725 和 ERC721 的关系时，必须理解 VRC725 是继承自 ERC721 的。这种继承意味着 VRC725 代币从根本上是 ERC721 代币，遵循 [EIP 721 标准](https://eips.ethereum.org/EIPS/eip-721)，确保与其他以太坊虚拟机（EVM）链兼容，这是一个重要的优势。然而，真正使 VRC725 与众不同的是它所包含的附加功能和扩展，特别是那些在 IVRC725 接口中定义的功能。
 
 ```solidity
 interface ERC721 {
@@ -35,4 +35,4 @@ interface ERC721 {
 }
 ```
 
-*For the official overview of the VRC25 specification, take a look at Viction's VRC25 Documentation: [VRC25 Specification](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc725-specification).*
+*欲了解 VRC725 规范的官方概述，请查看 Viction 的 VRC725 文档：[VRC25 规范](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc725-specification).*

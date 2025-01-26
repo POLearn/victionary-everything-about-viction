@@ -1,42 +1,42 @@
-# EOA and Smart Contract Accounts on Viction
+# Viction 上的 EOA 和智能合约账户
 
-In the Viction blockchain ecosystem, there are two primary types of accounts: **Externally Owned Accounts (EOAs)** and **Smart Contract Accounts**. Understanding how they work is key to interacting with the network and building decentralized applications (dApps) efficiently.
+在 Viction 区块链生态系统中，有两种主要的账户类型：**外部拥有账户（EOA）** 和 **智能合约账户**。了解它们如何工作对于与网络交互以及高效构建去中心化应用（dApp）至关重要。
 
-## Externally Owned Accounts (EOAs) 📒
+## 外部拥有账户（EOA）📒
 
-An **EOA** is a simple, user-controlled account that holds the native token **VIC** and can initiate transactions. EOAs are managed by private keys, meaning that only the person with access to the private key can sign and authorize transactions.
+**EOA** 是一个简单的、由用户控制的账户，持有本地代币 **VIC** 并能发起交易。EOA 由私钥管理，意味着只有拥有私钥的人才能签署和授权交易。
 
-- **Key Features of EOAs**:
-  - **User-Controlled**: EOAs are controlled by users through private keys, typically managed by wallets like MetaMask or hardware wallets.
-  - **Initiating Transactions**: EOAs can send VIC, interact with smart contracts, and vote for Masternodes in Viction's PoSV consensus.
-  - **No Code**: EOAs are not programmable, meaning they cannot execute code on the blockchain; they only send transactions or interact with smart contracts.
+- **EOA 的主要特点**：
+  - **用户控制**：EOA 通过私钥由用户控制，通常由像 MetaMask 或硬件钱包这样的工具进行管理。
+  - **发起交易**：EOA 可以发送 VIC，交互智能合约，并在 Viction 的 PoSV 共识中为 Masternode 投票。
+  - **不可编程**：EOA 不是可编程的，这意味着它们不能在区块链上执行代码；它们只是发送交易或与智能合约交互。
 
-EOAs are the simplest type of account on Viction and are crucial for users interacting with the network or dApps. Transactions from EOAs require the user to sign with their private key to confirm any actions, such as sending tokens or executing functions in a smart contract.
+EOA 是 Viction 上最简单的账户类型，对于用户与网络或 dApp 交互至关重要。EOA 发起的交易需要用户用其私钥签名以确认任何操作，例如发送代币或在智能合约中执行功能。
 
-## Smart Contract Accounts 📜
+## 智能合约账户 📜
 
-A **Smart Contract Account**, on the other hand, is a programmable account controlled by code rather than a private key. Smart contracts on Viction are deployed to the blockchain by EOAs and are executed by the Viction Virtual Machine (VVM).
+另一方面，**智能合约账户** 是由代码控制的可编程账户，而非由私钥控制。Viction 上的智能合约由 EOA 部署到区块链，并由 Viction 虚拟机（VVM）执行。
 
-- **Key Features of Smart Contract Accounts**:
-  - **Programmable Logic**: Smart contracts can automate complex functions like DeFi protocols, NFTs, or dApp logic by executing code when certain conditions are met.
-  - **Interaction with EOAs**: Smart contracts can’t initiate transactions on their own; they respond to transactions initiated by EOAs.
-  - **Autonomous Execution**: Once deployed, smart contracts run autonomously according to their code, which means they are tamper-proof and cannot be altered unless specifically programmed.
+- **智能合约账户的主要特点**：
+  - **可编程逻辑**：智能合约可以通过在满足特定条件时执行代码，自动化复杂的功能，如 DeFi 协议、NFT 或 dApp 逻辑。
+  - **与 EOA 的交互**：智能合约不能自行发起交易；它们只能响应 EOA 发起的交易。
+  - **自动执行**：一旦部署，智能合约会根据其代码自动运行，这意味着它们是防篡改的，除非特别编程，否则无法更改。
 
-## Differences Between EOAs and Smart Contract Accounts
+## EOA 与智能合约账户的区别
 
-| Feature                | Externally Owned Accounts (EOA)              | Smart Contract Accounts                    |
-|------------------------|---------------------------------------------|-------------------------------------------|
-| **Controlled By**       | Private Key                                 | Smart Contract Code                       |
-| **Can Initiate Txns?**  | Yes                                         | No (can only react to incoming transactions) |
-| **Programmable?**       | No                                          | Yes, can execute complex operations       |
-| **Example Usage**       | Sending VIC, interacting with smart contracts | Automating DeFi protocols, handling NFTs  |
+| 特性                   | 外部拥有账户（EOA）                         | 智能合约账户                             |
+|------------------------|-------------------------------------------|----------------------------------------|
+| **由谁控制**           | 私钥                                       | 智能合约代码                           |
+| **能否发起交易？**      | 是                                         | 否（只能响应传入交易）                 |
+| **可编程吗？**          | 否                                         | 是，能执行复杂操作                     |
+| **使用示例**            | 发送 VIC、与智能合约交互                    | 自动化 DeFi 协议、处理 NFT            |
 
-## How They Work Together on Viction
+## 它们在 Viction 上如何协同工作
 
-EOAs are essential for users to interact with the Viction network, while smart contracts enable developers to build dApps and decentralized services. For example:
-- A user with an EOA might initiate a transaction to a DeFi smart contract, triggering automated functions like staking or liquidity provision.
-- Smart contracts can then perform operations like transferring tokens or executing governance votes, all while relying on EOAs to initiate the interactions.
+EOA 对于用户与 Viction 网络的交互至关重要，而智能合约使开发者能够构建 dApp 和去中心化服务。例如：
+- 一个拥有 EOA 的用户可能会发起一个交易到 DeFi 智能合约，触发自动化功能，如质押或提供流动性。
+- 智能合约可以执行如转移代币或执行治理投票等操作，同时依赖 EOA 发起交互。
 
-Together, **EOAs** and **Smart Contract Accounts** form the backbone of decentralized applications and blockchain interactions on Viction, enabling a flexible and scalable ecosystem for developers and users alike.
+**EOA** 和 **智能合约账户** 共同构成了 Viction 上去中心化应用和区块链交互的支柱，使得开发者和用户都能在一个灵活且可扩展的生态系统中运作。
 
-Understanding the distinction between EOAs and smart contracts is key to navigating Viction’s platform, whether you're a developer building dApps or a user interacting with decentralized services.
+理解 EOA 和智能合约之间的区别对于在 Viction 平台上导航至关重要，无论你是开发去中心化应用的开发者，还是与去中心化服务交互的用户。

@@ -1,31 +1,33 @@
-# Viction Overview
+Here is the translation into Chinese:
 
-Viction is a scalable, Proof-of-Stake Voting (PoSV) powered public blockchain, designed to support decentralized applications and provide a seamless Web3 experience. This overview highlights Viction's architecture, unique consensus mechanism, and growing ecosystem.
+# Viction 概览
 
-## Key Design Goals  
-Viction blockchain is built to:
+Viction 是一个可扩展的、基于权益证明投票（PoSV）机制的公共区块链，旨在支持去中心化应用程序并提供无缝的 Web3 体验。本概览强调了 Viction 的架构、独特的共识机制以及不断增长的生态系统。
 
-- Achieve fast finality and secure transaction validation.
-- Deliver high transaction throughput to support real-world applications.
-- Minimize the cost of blockchain operations through near-zero gas fees.
-- Lower entry barriers for both developers and end-users to easily interact with blockchain technology.
-- Provide a developer-friendly environment for seamless adoption across industries and use cases.
+## 关键设计目标  
+Viction 区块链的构建目标是：
 
-## Core Specifications  
-Viction blockchain offers:
+- 实现快速的最终确认和安全的交易验证。
+- 提供高交易吞吐量，支持现实世界的应用程序。
+- 通过接近零的 gas 费用最小化区块链操作成本。
+- 降低开发者和最终用户的进入门槛，使其能够轻松与区块链技术互动。
+- 提供一个对开发者友好的环境，推动跨行业和用例的无缝采用。
 
-- 2-second block generation and confirmation time.
-- Processing capability of 2,000 transactions per second (TPS).
-- Extremely low gas fees, often close to zero, for cost-efficient operations.
-- Full Ethereum Virtual Machine (EVM) compatibility, enabling Solidity-based smart contracts.
-- A governance model based on Proof-of-Stake Voting (PoSV), supported by a network of up to 150 Masternodes.
+## 核心规格  
+Viction 区块链提供：
 
-Viction aims to simplify blockchain interactions and accelerate mass adoption through its efficient architecture and user-centric design.
+- 2 秒的区块生成和确认时间。
+- 每秒处理 2,000 笔交易（TPS）的能力。
+- 极低的 gas 费用，通常接近零，确保成本高效的操作。
+- 完全兼容以太坊虚拟机（EVM），支持基于 Solidity 的智能合约。
+- 基于权益证明投票（PoSV）的治理模型，支持最多 150 个主节点的网络。
 
-## Viction Blockchain
+Viction 旨在通过其高效的架构和以用户为中心的设计简化区块链交互并加速大规模应用。
 
-The Viction blockchain is a powerful and scalable platform designed to support decentralized applications (dApps), Web3 projects, and the native VIC token. Since its launch in 2018, Viction has prioritized community-driven growth, providing developers with a fast, low-cost, and highly secure environment to build innovative blockchain solutions. Its key feature is the Proof-of-Stake Voting (PoSV) consensus mechanism, which allows for 2,000 transactions per second (TPS) with near-zero gas fees, while ensuring decentralization and security.
+## Viction 区块链
 
-Viction offers a fully Ethereum Virtual Machine (EVM) compatible network, enabling developers to seamlessly deploy and run smart contracts. Its design focuses on simplifying blockchain adoption by reducing complexity, making it an ideal choice for both experienced and new blockchain developers. The network's infrastructure supports high performance, privacy, and liquidity, offering everything developers need to create feature-rich dApps that meet modern users' demands.
+Viction 区块链是一个强大且可扩展的平台，旨在支持去中心化应用程序（dApps）、Web3 项目和原生 VIC 代币。自 2018 年推出以来，Viction 优先考虑社区驱动的增长，为开发者提供了一个快速、低成本且高度安全的环境，以构建创新的区块链解决方案。其关键特性是基于权益证明投票（PoSV）机制的共识机制，该机制支持每秒 2,000 笔交易（TPS）并拥有接近零的 gas 费用，同时确保去中心化和安全性。
 
-Viction's unique approach and powerful features make it an optimal solution for accelerating Web3 mass adoption, offering blockchain technology that is fast, efficient, and easy to integrate.
+Viction 提供一个完全兼容以太坊虚拟机（EVM）的网络，使开发者能够无缝地部署和运行智能合约。其设计重点是简化区块链的采用，减少复杂性，使其成为有经验的和新手区块链开发者的理想选择。该网络的基础设施支持高性能、隐私和流动性，为开发者提供了创建功能丰富的去中心化应用程序所需的一切，满足现代用户的需求。
+
+Viction 独特的方法和强大的特性使其成为加速 Web3 大规模采用的最佳解决方案，提供快速、高效且易于集成的区块链技术。

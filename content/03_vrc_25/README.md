@@ -1,23 +1,23 @@
-## Unveiling VRC25
+## 揭示 VRC25
 
-In this section, we'll delve into VRC25, a token standard designed to streamline transactions on the Viction blockchain. VRC25 stands out as an innovative extension of existing token standards.
+在本节中，我们将深入探讨 VRC25，这是一种旨在简化 Viction 区块链交易的代币标准。VRC25 作为现有代币标准的创新扩展，具备了许多独特的优势。
 
-* **Gasless Transfers:** Forget the need for native tokens to cover transaction fees! VRC25 empowers smart contracts to sponsor these fees, eliminating a barrier for new blockchain users.
-* **Enhanced User Experience:** By removing the burden of managing gas fees, VRC25 simplifies the transaction process, making it more user-friendly and encouraging wider adoption.
-* **Focus on User-Centricity:** Viction's commitment to user experience shines through with VRC25. This standard prioritizes ease of use, paving the way for a more welcoming blockchain environment.
+* **无燃料费转账:** 不再需要使用本地代币来支付交易费用！VRC25 使智能合约能够资助这些费用，消除了新区块链用户的障碍。
+* **增强的用户体验:** 通过去除管理燃料费的负担，VRC25 简化了交易过程，使其更加用户友好，鼓励更广泛的采用。
+* **专注于用户中心:** Viction 对用户体验的承诺通过 VRC25 得以体现。该标准优先考虑易用性，为更具包容性的区块链环境铺平了道路。
 
-## Learning Objectives:
+## 学习目标：
 
-* Understand the core principles of the VRC25 token standard.
-* Deploy the VRC25 Token on the Viction Testnet.
-* Implement the token into your dapp using `viem`.
-* Setup for gasless token interaction on Viction.
+* 理解 VRC25 代币标准的核心原理。
+* 在 Viction 测试网上部署 VRC25 代币。
+* 使用 `viem` 将代币集成到您的 DApp 中。
+* 设置在 Viction 上进行无燃料费代币交互。
 
-## VRC25 vs. ERC20: A Side-by-Side Look
+## VRC25 与 ERC20：一览对比
 
-Before diving into practical VRC25 applications, let's compare it to the widely used ERC20 standard. At first glance, VRC25's `IVRC25` interface in Solidity might seem familiar to ERC20 users. This is intentional! VRC25 prioritizes compatibility and ease of adoption.
+在深入实践 VRC25 应用之前，让我们先将它与广泛使用的 ERC20 标准进行比较。乍一看，VRC25 中的 `IVRC25` 接口在 Solidity 中可能与 ERC20 用户非常熟悉。这是故意为之！VRC25 优先考虑兼容性和易于采纳。
 
-Here's a breakdown of the `IVRC25` code:
+以下是 `IVRC25` 代码的拆解：
 
 ```solidity
 interface IVRC25 {
@@ -37,7 +37,7 @@ interface IVRC25 {
 }
 ```
 
-Now, let's take a look at a simplified `IERC20.sol` interface for comparison:
+现在，让我们来看一下简化版的 `IERC20.sol` 接口，以便做对比：
 
 ```solidity
 interface IERC20 { 
@@ -50,8 +50,8 @@ interface IERC20 {
 }
 ```
 
-As you can see, the structures are remarkably similar. Both interfaces include functions like `totalSupply`, `balanceOf`, `transfer`, `allowance`, `approve`, and `transferFrom`. This similarity ensures seamless compatibility and simplifies integration for developers familiar with ERC20. VRC25 retains these core functionalities while introducing the revolutionary concept of gasless transactions, making it a user-centric upgrade to the existing standard.
+正如您所见，这两个接口的结构非常相似。它们都包含了 `totalSupply`、`balanceOf`、`transfer`、`allowance`、`approve` 和 `transferFrom` 等函数。这样的相似性确保了无缝的兼容性，并简化了熟悉 ERC20 的开发者的集成工作。VRC25 保留了这些核心功能，同时引入了革命性的无燃料交易概念，使其成为现有标准的用户中心升级。
 
-In the next section, we'll delve into practical applications of VRC25 and how it empowers developers to create a smoother user experience within their Viction smart contracts. Stay tuned!
+在接下来的部分中，我们将深入探讨 VRC25 的实际应用，并展示它如何帮助开发者在 Viction 智能合约中创建更顺畅的用户体验。敬请期待！
 
-*For the official overview of the VRC25 specification, take a look at Viction's VRC25 Documentation: [VRC25 Specification](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc25-specification).*
+*要了解 VRC25 规范的官方概述，请查看 Viction 的 VRC25 文档：[VRC25 规范](https://docs.viction.xyz/developer-guide/standards-and-specification/vrc25-specification).*

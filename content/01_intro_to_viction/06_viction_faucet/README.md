@@ -1,21 +1,21 @@
 # Viction Faucet
 
-The Viction Faucet is a service that provides free VIC tokens on the Viction testnet. These tokens can be used to test dApps, smart contracts, and other blockchain functionalities without any financial commitment. 
+Viction Faucet 是一个服务，提供免费的 VIC 代币用于 Viction 测试网络。这些代币可以用来测试去中心化应用（dApps）、智能合约和其他区块链功能，无需任何财务承诺。
 
 ## Getting Started
 
-### Step 1: Access the Faucet
+### Step 1: 访问 Faucet
 
-To access the Viction Faucet, visit the following URL: [Viction Faucet](https://faucet-testnet.viction.xyz/).
+要访问 Viction Faucet，请访问以下网址：[Viction Faucet](https://faucet-testnet.viction.xyz/)。
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/faucet_page.png)
 
-### Step 2: Request VIC Tokens
+### Step 2: 请求 VIC 代币
 
-Once your address is input, locate the **Request VIC** button on the faucet page.
+输入您的地址后，找到 Faucet 页面上的 **Request VIC** 按钮。
 
-### Step 3: Check Your Wallet Balance
+### Step 3: 检查您的钱包余额
 
-Once the transaction is confirmed, the requested VIC tokens will be credited to your wallet. You can check your balance in your wallet interface.
+一旦交易确认，所请求的 VIC 代币将被存入您的钱包。您可以在钱包界面中查看余额。
 
 ![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/faucet_success.png)

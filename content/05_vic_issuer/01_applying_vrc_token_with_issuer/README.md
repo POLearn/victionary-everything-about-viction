@@ -1,45 +1,47 @@
-## Apply for Zero Gas Protocol
+## 申请 Zero Gas 协议
 
-When you deploy or register your VRC25 on Viction, it won’t automatically qualify for gasless transactions. To enable this feature, you need to apply for the *Zero Gas Protocol*. In this section, we’ll explore how to achieve this through the VicIssuer smart contract, providing insights into the inner workings of the VIC Issuer.
+当您在 Viction 上部署或注册您的 VRC25 时，它不会自动支持无 Gas 交易。要启用此功能，您需要申请 *Zero Gas 协议*。在本部分中，我们将探索如何通过 VicIssuer 智能合约来实现这一目标，并提供有关 VIC Issuer 内部工作原理的见解。
 
-To follow along, load the VIC Issuer contract, compile, and deploy it using the issuer address specified earlier. For the testnet, use `0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee`.
+### 如何申请
 
-![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_contract.png)
+首先，加载 VIC Issuer 合约，编译并部署它，使用先前指定的发行者地址。对于测试网，使用 `0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee`。
 
-*Alternatively, you can access it directly via our IDE - [https://solide0x.tech/address/89/0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee](https://solide0x.tech/address/89/0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee)*
+![Issuer Contract](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_contract.png)
 
-Once loaded into the IDE, call the `minCap` value. This should be set to `10000000000000000000`, which corresponds to 10 VIC tokens. These tokens are required as a deposit to apply for gasless transactions. This value will be important as it'll need to be passed as the `msg.value` when invoking `apply` and thus applying the VRC25 token to the Zero Gas Integration.
+*或者，您可以通过我们的 IDE 直接访问 - [Solide IDE - VicIssuer](https://solide0x.tech/address/89/0x8c0faeb5c6bed2129b8674f262fd45c4e9468bee)*
+
+加载到 IDE 后，调用 `minCap` 值。它应设置为 `10000000000000000000`，即 10 VIC 代币。这些代币是申请无 Gas 交易所必需的存款。这个值非常重要，因为它需要在调用 `apply` 时作为 `msg.value` 传递，从而将 VRC25 代币应用于 Zero Gas 集成。
 
 ```
-10 $VIC * 18 (decimals) = 10000000000000000000 wei
+10 $VIC * 18 (小数位) = 10000000000000000000 wei
 ```
 
-![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_mincap.png)
+![Issuer MinCap](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_mincap.png)
 
-## Quest - Apply your VRC25 to VicIssuer
+## Quest - 申请将您的 VRC25 代币应用于 VicIssuer
 
-![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_apply.png)
+您可以通过部署代币并调用 `apply` 方法来启用 VRC25 代币的无 Gas 交易。这一过程允许该代币支持无 Gas 操作，使交易更加流畅和用户友好。请确保在此步骤中包含 10 VIC 存款，这将用于资助 Gas 费用。这样可以确保所有交易保持无 Gas，提高用户体验。
 
-You can enable gasless transactions for your VRC25 token by deploying the token and invoking the `apply` method. This process allows the token to support gasless operations, making transactions smoother and more user-friendly. Make sure to include a deposit of 10 VIC during this step, which will be used to sponsor the gas fees. This ensures that all transactions remain gasless, enhancing the user experience. 
+建议在初始部署时包含此存款，但您也可以选择稍后在其他阶段进行此存款。您可以在区块链浏览器中检查详细信息，以确认您的 VRC25 代币已成功设置为无 Gas 交易。
 
-You (or anyone) can choose to make this deposit at a later stage, but incorporating it during the initial deployment is advisable. You can check the details in the blockchain explorer to confirm that your VRC25 token has been successfully set up for gasless transactions.
+#### 代币验证
 
-#### Token Verification
+如果您调用 `tokens()` 方法，您可以确认您的代币是否包含在 VIC Issuer 的代币列表中。已申请代币的地址应出现在返回的列表中。请确保已申请的代币地址在代币列表中。
 
-If you call the `tokens()` method, you can confirm your token’s inclusion in the VIC Issuer’s list. The address of your applied token should appear in the returned list. Make sure that the token address you applied for is in the token list.
+![Issuer Tokens](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_tokens.png)
 
-![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_tokens.png)
+如果一切设置正确，您还可以在 **Issuer Dashboard** 上验证代币的状态。访问以下链接查看主网或测试网状态：
 
-If everything is set up correctly, you can also verify your token's status on the **Issuer Dashboard**. Visit [https://issuer.viction.xyz](https://issuer.viction.xyz) for the mainnet or [https://issuer-testnet.viction.xyz](https://issuer-testnet.viction.xyz) for the testnet.  
+- [Issuer Dashboard (主网)](https://issuer.viction.xyz)
+- [Issuer Dashboard (测试网)](https://issuer-testnet.viction.xyz)
 
-For reference, here’s the token applied during this course:  
-[Example Applied Token](https://issuer-testnet.viction.xyz/token/0xbba5098BF9c7726EC69C7BE3AE35C10DDC0B866a)
+参考：这是本课程中应用的代币：[Example Applied Token](https://issuer-testnet.viction.xyz/token/0xbba5098BF9c7726EC69C7BE3AE35C10DDC0B866a)
 
-![](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_dashboard.png)
+![Issuer Dashboard](https://raw.githubusercontent.com/POLearn/victionary-everything-about-viction/refs/heads/master/content/assets/images/issuer_dashboard.png)
 
-## What happened?
+## 发生了什么？
 
-An important aspect of creating a gasless token is to *apply* the token to the VicIssuer. This means, setting up the token address. 
+创建无 Gas 代币的一个重要方面是 *申请* 代币到 VicIssuer。这意味着设置代币地址。
 
 ```solidity
 function apply(address token) public payable onlyValidCapacity(token) {
@@ -48,8 +50,7 @@ function apply(address token) public payable onlyValidCapacity(token) {
     _tokens.push(token);
     tokensState[token] = tokensState[token].add(msg.value);
     emit Apply(msg.sender, token, msg.value);
-
 }
 ```
 
-On `Line 98` is the implementation of `apply`. Note only that only the token owner (or `issuer`) can apply a token to the Issuer. After that, we see that the token gets appended to `_tokens` which is a list of all registeretokensen for gasless and updates the issuance state (`tokensState`) with the amount of Ether provided (`msg.value`). This step effectively registers the token issuer within the `VRC25Issuer` contract, enabling subsequent operations related to token management and fee charging.
+在第 98 行是 `apply` 的实现。请注意，只有代币的拥有者（或 `issuer`）才能将代币应用于 Issuer。之后，代币会被追加到 `_tokens`，这是一个所有注册的无 Gas 代币的列表，并且会使用提供的以太币（`msg.value`）更新发行状态（`tokensState`）。这个步骤有效地将代币发行者注册到 `VRC25Issuer` 合约中，从而启用与代币管理和费用收取相关的后续操作。
